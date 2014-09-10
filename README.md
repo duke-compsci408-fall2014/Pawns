@@ -1,4 +1,4 @@
-app
+Bay Area Chess Mobile Application
 ===
 
-Empty repository for team project
+A mobile application for Bay Area Chess
