@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0DC84219C9497100A05E54 /* BayAreaChessLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0DC84119C9497100A05E54 /* BayAreaChessLogo.png */; };
 		2C7054CD19C7CBAE0049BE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054CC19C7CBAE0049BE83 /* AppDelegate.swift */; };
 		2C7054CF19C7CBAE0049BE83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054CE19C7CBAE0049BE83 /* ViewController.swift */; };
 		2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D019C7CBAE0049BE83 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0DC84119C9497100A05E54 /* BayAreaChessLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BayAreaChessLogo.png; path = ../../BayAreaChessLogo.png; sourceTree = "<group>"; };
 		2C7054C719C7CBAE0049BE83 /* BayAreaChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayAreaChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7054CB19C7CBAE0049BE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C7054CC19C7CBAE0049BE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		2C7054CA19C7CBAE0049BE83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C0DC84119C9497100A05E54 /* BayAreaChessLogo.png */,
 				2C7054CB19C7CBAE0049BE83 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -191,6 +194,7 @@
 			files = (
 				2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */,
 				2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */,
+				2C0DC84219C9497100A05E54 /* BayAreaChessLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +399,7 @@
 				2C7054E519C7CBAE0049BE83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C7054E619C7CBAE0049BE83 /* Build configuration list for PBXNativeTarget "BayAreaChessTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +408,7 @@
 				2C7054E819C7CBAE0049BE83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
