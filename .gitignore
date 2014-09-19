@@ -13,3 +13,6 @@ xcuserdata
 *.moved-aside
 DerivedData
 *.xcuserstate
+
+### Apple ###
+.DS_Store
