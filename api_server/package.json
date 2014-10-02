@@ -1,0 +1,12 @@
+{
+  "name": "api_server",
+  "version": "0.0.0",
+  "description": "An API server for the Bay Area Chess iOS app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "czarlos",
+  "license": "ISC"
+}
