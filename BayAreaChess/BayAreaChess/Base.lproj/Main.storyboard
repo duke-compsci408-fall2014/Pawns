@@ -420,10 +420,10 @@
             </objects>
             <point key="canvasLocation" x="-309" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Tournaments-->
         <scene sceneID="qyo-wQ-1qq">
             <objects>
-                <viewController id="Fs3-AP-O6b" sceneMemberID="viewController">
+                <viewController id="Fs3-AP-O6b" customClass="Tournaments" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LdT-xp-8fx"/>
                         <viewControllerLayoutGuide type="bottom" id="Bxz-D2-ahQ"/>
@@ -558,15 +558,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBJ-uu-kkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862.5" y="337"/>
+            <point key="canvasLocation" x="858" y="315"/>
         </scene>
     </scenes>
     <resources>
         <image name="BayAreaChessLogo.png" width="540" height="154"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wiv-OI-dZ3"/>
-        <segue reference="eMP-92-pm2"/>
+        <segue reference="Kne-Tz-i3A"/>
         <segue reference="B2P-7e-yGg"/>
+        <segue reference="pQX-bT-5g3"/>
     </inferredMetricsTieBreakers>
 </document>
