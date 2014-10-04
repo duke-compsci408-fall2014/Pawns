@@ -17,7 +17,7 @@
 10 error You can get their info via:
 10 error     npm owner ls api_server
 10 error There is likely additional logging output above.
-11 error System Linux 3.13.0-35-generic
+11 error System Linux 3.13.0-36-generic
 12 error command "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 13 error cwd /home/czarlos/Documents/Pawns/api_server
 14 error node -v v0.10.31

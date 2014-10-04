@@ -11,8 +11,16 @@ var connectionpool = mysql.createPool({
 
 
 router.get('/', function(req,res){
-    console.log("THIS");
-    connectionpool.getConnection(function(err, connection) {
+    var query = 'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now()';
+    runQuery(connectionpool, query, req, res, doStuff);
+});
+
+function doStuff(res) {
+    console.log(res);
+}
+
+var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
+    connectionPool.getConnection(function(err, connection) {
         if (err) {
             console.error('CONNECTION error: ',err);
             res.statusCode = 503;
@@ -21,7 +29,7 @@ router.get('/', function(req,res){
                 err:    err.code
             });
         } else {
-            var query = 'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now()';
+            var query = sqlQuery; //'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now()';
             console.log(query);
             connection.query(query, req.params.id, function(err, rows, fields) {
 
@@ -34,6 +42,7 @@ router.get('/', function(req,res){
                     });
                 }
                 else {
+                    callback({json: rows});
                     res.send({
                         result: 'success',
                         err:    '',
@@ -46,6 +55,6 @@ router.get('/', function(req,res){
             });
         }
     });
-});
+}
 
 module.exports = router;
