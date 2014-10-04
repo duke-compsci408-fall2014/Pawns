@@ -95,6 +95,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!");
+        self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
     
     /* Delegate End */
@@ -107,14 +108,13 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     }
     func loadDateList (l : [String]) {
         for item in l {
-            var formatter: NSDateFormatter = NSDateFormatter()
-            formatter.dateFormat = "dd-MM-yyyy"
-            let stringDate: String = formatter.stringFromDate(NSDate())
+            var formatter: NSDateFormatter = NSDateFormatter();
+            formatter.dateFormat = "dd-MM-yyyy";
+            let stringDate: String = formatter.stringFromDate(NSDate());
 
             println(stringDate);
             dateList.append(stringDate);
         }
-//        dateList = l;
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {

@@ -158,6 +158,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXF-aG-yRR" id="dmL-RZ-vBf">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fDm-CN-7aP" kind="show" identifier="selectEvent" id="X3v-eM-Pxl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -171,6 +174,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi1-AM-qnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981" y="617"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uup-2d-do7">
+            <objects>
+                <viewController id="fDm-CN-7aP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5WT-fm-ISY"/>
+                        <viewControllerLayoutGuide type="bottom" id="JMz-Jz-YI6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e9p-fV-Amm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm9-UP-AII">
+                                <rect key="frame" x="139" y="96" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WG-ma-HlC">
+                                <rect key="frame" x="16" y="28" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iJe-eQ-IiQ" kind="show" id="Dwx-pA-hDq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbO-81-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="617"/>
         </scene>
         <!--Registration-->
         <scene sceneID="96w-9V-J0e">
@@ -451,8 +490,9 @@
         <image name="BayAreaChessLogo.png" width="540" height="154"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B2P-7e-yGg"/>
-        <segue reference="wiv-OI-dZ3"/>
         <segue reference="pQX-bT-5g3"/>
+        <segue reference="wiv-OI-dZ3"/>
+        <segue reference="B2P-7e-yGg"/>
+        <segue reference="Dwx-pA-hDq"/>
     </inferredMetricsTieBreakers>
 </document>
