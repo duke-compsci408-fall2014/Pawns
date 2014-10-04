@@ -13,9 +13,14 @@ class Tournaments : UIViewController {
     
     var json_data : NSDictionary!
     
-    let URL_STRING = "http://neptune.carlos.vc:3000/tournaments/";
-    let NAME = "name";
-    let DESCRIPTION = "description";
+    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
+    let NAME : String = "name";
+    let DESCRIPTION : String = "description";
+    let NEWLINE : String = "\n";
+    let NAME_LABEL : String = "Name:";
+    let DESC_LABEL : String = "Description:";
+    let DID_RECEIVE : String = "didReceiveResponse";
+    
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -39,11 +44,11 @@ class Tournaments : UIViewController {
     
     
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        println("didReceiveResponse")
+        println(DID_RECEIVE);
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
-        self.data.appendData(conData)
+        self.data.appendData(conData);
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
@@ -64,8 +69,8 @@ class Tournaments : UIViewController {
     func placeData (dataSetOne : [String], dataSetTwo : [String]) {
         var tournamentInfo : String = "";
         for (var i = 0; i<dataSetOne.count; i++) {
-            println("Name: " + dataSetOne[i] + " Description: " + dataSetTwo[i]);
-            tournamentInfo += "Name: " + dataSetOne[i] + " Description: " + dataSetTwo[i];
+            tournamentInfo += NAME_LABEL + " " + dataSetOne[i] + NEWLINE +
+                                DESCRIPTION + " " + dataSetTwo[i] + NEWLINE + NEWLINE;
         }
         textview.text = tournamentInfo;
     }
