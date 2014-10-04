@@ -51,8 +51,8 @@ class Tournaments : UIViewController {
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         var names = getTournamentData(json, field: NAME);
         var description = getTournamentData(json, field: DESCRIPTION);
-
-        println(names);
+        
+        placeData(names, dataSetTwo: description);
     }
     
     deinit {
@@ -60,6 +60,15 @@ class Tournaments : UIViewController {
     }
     
     /* End Networking */
+    
+    func placeData (dataSetOne : [String], dataSetTwo : [String]) {
+        var tournamentInfo : String = "";
+        for (var i = 0; i<dataSetOne.count; i++) {
+            println("Name: " + dataSetOne[i] + " Description: " + dataSetTwo[i]);
+            tournamentInfo += "Name: " + dataSetOne[i] + " Description: " + dataSetTwo[i];
+        }
+        textview.text = tournamentInfo;
+    }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
         var tournamentData = [String]();
