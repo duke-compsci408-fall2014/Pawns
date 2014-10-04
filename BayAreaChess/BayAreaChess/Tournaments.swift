@@ -12,7 +12,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     //@IBOutlet var tableView : UITableView!;
     
     var json_data : NSDictionary!;
-    var items: [String] = ["We", "Heart", "Swift"];
+    var eventList: [String] = [];
     
     let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
     let NAME : String = "name";
@@ -25,10 +25,9 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell");
-
         self.connect("");
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,10 +60,9 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         var names = getTournamentData(json, field: NAME);
         var description = getTournamentData(json, field: DESCRIPTION);
         
+        loadEventList(names);
         
-//        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
-        //placeData(names, dataSetTwo: description);
+        self.tableView.reloadData();
     }
     
     deinit {
@@ -77,12 +75,12 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     /* Delegate Start */
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count;
+        return self.eventList.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.textLabel?.text = self.eventList[indexPath.row]
         return cell
     }
 
@@ -90,24 +88,10 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         println("You selected cell #\(indexPath.row)!");
     }
     
-    
     /* Delegate End */
-
     
-    
-    func placeData (dataSetOne : [String], dataSetTwo : [String]) {
-        
-        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell;
-        
-        if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CELL")
-        }
-        
-        cell!.textLabel?.text = dataSetOne[1];
-        cell!.detailTextLabel?.text = dataSetTwo[1];
-        self.tableView.addSubview(cell!);
-        
-        
+    func loadEventList (el : [String]) {
+        eventList = el;
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
