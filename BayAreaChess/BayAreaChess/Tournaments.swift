@@ -8,10 +8,11 @@
 
 import UIKit
 
-class Tournaments : UIViewController {
-    @IBOutlet var textview : UITextView!
+class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataSource {
+    //@IBOutlet var tableView : UITableView!;
     
-    var json_data : NSDictionary!
+    var json_data : NSDictionary!;
+    var items: [String] = ["We", "Heart", "Swift"];
     
     let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
     let NAME : String = "name";
@@ -24,6 +25,9 @@ class Tournaments : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell");
+
         self.connect("");
     }
     
@@ -57,7 +61,10 @@ class Tournaments : UIViewController {
         var names = getTournamentData(json, field: NAME);
         var description = getTournamentData(json, field: DESCRIPTION);
         
-        placeData(names, dataSetTwo: description);
+        
+//        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+        //placeData(names, dataSetTwo: description);
     }
     
     deinit {
@@ -66,13 +73,41 @@ class Tournaments : UIViewController {
     
     /* End Networking */
     
+    
+    /* Delegate Start */
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count;
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        cell.textLabel?.text = self.items[indexPath.row]
+        return cell
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!");
+    }
+    
+    
+    /* Delegate End */
+
+    
+    
     func placeData (dataSetOne : [String], dataSetTwo : [String]) {
-        var tournamentInfo : String = "";
-        for (var i = 0; i<dataSetOne.count; i++) {
-            tournamentInfo += NAME_LABEL + " " + dataSetOne[i] + NEWLINE +
-                                DESCRIPTION + " " + dataSetTwo[i] + NEWLINE + NEWLINE;
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell;
+        
+        if (cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CELL")
         }
-        textview.text = tournamentInfo;
+        
+        cell!.textLabel?.text = dataSetOne[1];
+        cell!.detailTextLabel?.text = dataSetTwo[1];
+        self.tableView.addSubview(cell!);
+        
+        
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
