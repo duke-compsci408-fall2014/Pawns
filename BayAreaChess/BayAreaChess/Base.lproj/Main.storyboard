@@ -73,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BayAreaChessLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rUe-fK-evp">
-                                <rect key="frame" x="16" y="20" width="283" height="86"/>
+                                <rect key="frame" x="16" y="20" width="283" height="83"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBk-sF-zhc">
                                 <rect key="frame" x="41" y="178" width="90" height="30"/>
@@ -147,13 +147,13 @@
         <!--Tournaments-->
         <scene sceneID="ZI9-HW-tmH">
             <objects>
-                <tableViewController id="iJe-eQ-IiQ" customClass="Tournaments" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UGE-M0-r8H">
+                <tableViewController title="Tournaments" id="iJe-eQ-IiQ" customClass="Tournaments" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="UGE-M0-r8H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="OXF-aG-yRR">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="61" id="OXF-aG-yRR">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXF-aG-yRR" id="dmL-RZ-vBf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -165,11 +165,12 @@
                             <outlet property="delegate" destination="iJe-eQ-IiQ" id="YIY-OQ-SJi"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi1-AM-qnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="833"/>
+            <point key="canvasLocation" x="981" y="617"/>
         </scene>
         <!--Registration-->
         <scene sceneID="96w-9V-J0e">

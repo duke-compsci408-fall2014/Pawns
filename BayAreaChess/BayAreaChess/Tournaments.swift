@@ -9,14 +9,16 @@
 import UIKit
 
 class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataSource {
-    //@IBOutlet var tableView : UITableView!;
     
     var json_data : NSDictionary!;
     var eventList: [String] = [];
+    var descriptionList: [String] = [];
+    var dateList: [String] = [];
     
     let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
+    let DATE : String = "start_date";
     let NEWLINE : String = "\n";
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
@@ -57,10 +59,13 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        var names = getTournamentData(json, field: NAME);
-        var description = getTournamentData(json, field: DESCRIPTION);
+        var events = getTournamentData(json, field: NAME);
+        var descriptions = getTournamentData(json, field: DESCRIPTION);
+        var dates = getTournamentData(json, field: DATE);
         
-        loadEventList(names);
+        loadEventList(events)
+        loadDescriptionList(descriptions);
+        loadDateList(dates);
         
         self.tableView.reloadData();
     }
@@ -79,9 +84,13 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        cell.textLabel?.text = self.eventList[indexPath.row]
-        return cell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
+        
+        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")!;
+        
+        cell.textLabel?.text = self.eventList[indexPath.row];
+        cell.detailTextLabel?.text = self.dateList[indexPath.row];
+        return cell;
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -90,8 +99,14 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     
     /* Delegate End */
     
-    func loadEventList (el : [String]) {
-        eventList = el;
+    func loadEventList (l : [String]) {
+        eventList = l;
+    }
+    func loadDescriptionList (l : [String]) {
+        descriptionList = l;
+    }
+    func loadDateList (l : [String]) {
+        dateList = l;
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
