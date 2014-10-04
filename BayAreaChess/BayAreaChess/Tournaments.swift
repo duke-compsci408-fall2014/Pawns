@@ -106,7 +106,15 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         descriptionList = l;
     }
     func loadDateList (l : [String]) {
-        dateList = l;
+        for item in l {
+            var formatter: NSDateFormatter = NSDateFormatter()
+            formatter.dateFormat = "dd-MM-yyyy"
+            let stringDate: String = formatter.stringFromDate(NSDate())
+
+            println(stringDate);
+            dateList.append(stringDate);
+        }
+//        dateList = l;
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
