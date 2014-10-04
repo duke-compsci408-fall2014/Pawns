@@ -183,7 +183,7 @@
                         <viewControllerLayoutGuide type="top" id="5WT-fm-ISY"/>
                         <viewControllerLayoutGuide type="bottom" id="JMz-Jz-YI6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e9p-fV-Amm">
+                    <view key="view" contentMode="scaleToFill" id="e9p-fV-Amm" customClass="SpecificTournament">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
