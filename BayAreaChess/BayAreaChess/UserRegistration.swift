@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Registration: UIViewController {
+class UserRegistration: UIViewController {
 	@IBOutlet var firstName : UITextField!
 	@IBOutlet var lastName : UITextField!
 	@IBOutlet var username : UITextField!
@@ -16,6 +16,14 @@ class Registration: UIViewController {
 	@IBOutlet var confirmedPassword : UITextField!
 	@IBOutlet var email : UITextField!
 	
+    override func viewDidLoad() {
+        super.viewDidLoad();        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning();
+    }
+    
 	func verifyData () -> Bool{
 		// Makes API call to verify username/email
 		// Verifies password and confirmedPassword locally

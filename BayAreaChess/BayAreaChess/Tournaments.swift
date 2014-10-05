@@ -15,7 +15,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     var descriptionList: [String] = [];
     var dateList: [String] = [];
     
-    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
+    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";

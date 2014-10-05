@@ -16,7 +16,7 @@
 		811809C819E0879000252A70 /* SpecificTournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811809C719E0879000252A70 /* SpecificTournament.swift */; };
 		81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BD15CE19DDF6F100890AEF /* Tournaments.swift */; };
 		B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14F819CBAE9A0001BE7C /* Login.swift */; };
-		B3BE14FB19CBBA600001BE7C /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14FA19CBBA600001BE7C /* Registration.swift */; };
+		B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		811809C719E0879000252A70 /* SpecificTournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTournament.swift; sourceTree = "<group>"; };
 		81BD15CE19DDF6F100890AEF /* Tournaments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournaments.swift; sourceTree = "<group>"; };
 		B3BE14F819CBAE9A0001BE7C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		B3BE14FA19CBBA600001BE7C /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 				2C7054D319C7CBAE0049BE83 /* Images.xcassets */,
 				2C7054CA19C7CBAE0049BE83 /* Supporting Files */,
 				B3BE14F819CBAE9A0001BE7C /* Login.swift */,
-				B3BE14FA19CBBA600001BE7C /* Registration.swift */,
+				B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */,
 				81BD15CE19DDF6F100890AEF /* Tournaments.swift */,
 				811809C719E0879000252A70 /* SpecificTournament.swift */,
 			);
@@ -224,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3BE14FB19CBBA600001BE7C /* Registration.swift in Sources */,
+				B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */,
 				81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */,
 				B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */,
 				2C7054CF19C7CBAE0049BE83 /* ViewController.swift in Sources */,
