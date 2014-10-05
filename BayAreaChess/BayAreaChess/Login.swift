@@ -23,12 +23,7 @@ class Login: UIViewController {
         super.didReceiveMemoryWarning();
 		// Dispose of any resources that can be recreated.
 	}
-	
-	/* 
-		This is where we'll normally be making database requests.
-		It triggers the segue to transition back to the homepage
-		if the creditials are accepted. 
-	*/
+
 	@IBAction func verifyLogin (sender : AnyObject) {
 		if (username.text == "Pawns" && password.text == "Pawns") {
 			self.performSegueWithIdentifier("login", sender: sender as UIButton);
