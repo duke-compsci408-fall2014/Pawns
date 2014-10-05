@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="279" y="1138"/>
         </scene>
-        <!--View Controller-->
+        <!--User-->
         <scene sceneID="6ca-L6-neE">
             <objects>
-                <viewController storyboardIdentifier="login" id="hXa-LD-oke" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="hXa-LD-oke" customClass="User" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qf1-Dd-4ao"/>
                         <viewControllerLayoutGuide type="bottom" id="qqE-E5-fup"/>
@@ -495,7 +495,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="b3B-hV-w88"/>
-        <segue reference="riC-BN-Of3"/>
+        <segue reference="3kh-Ym-jko"/>
         <segue reference="V3e-Y1-FVc"/>
         <segue reference="B2P-7e-yGg"/>
         <segue reference="IAU-Ys-L3o"/>
