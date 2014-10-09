@@ -1,21 +1,16 @@
 //
-//  Tournaments.swift
+//  SpecificTournament.swift
 //  BayAreaChess
 //
-//  Created by Carlos Reyes on 10/2/14.
+//  Created by Carlos Reyes on 10/4/14.
 //  Copyright (c) 2014 Bay Area Chess. All rights reserved.
 //
 
 import UIKit
 
-class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class SpecificTournaments : UITableViewController {
     
-    var json_data : NSDictionary!;
-    var eventList: [String] = [];
-    var descriptionList: [String] = [];
-    var dateList: [String] = [];
-    
-    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
+    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -29,15 +24,12 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad();
         self.connect("");
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
-        // Dispose of any resources that can be recreated.
     }
-    
-    /* This is networking */
     
     var data = NSMutableData();
     
@@ -63,58 +55,11 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);
         
-        loadEventList(events)
-        loadDescriptionList(descriptions);
-        loadDateList(dates);
-        
         self.tableView.reloadData();
     }
     
     deinit {
         println("deiniting");
-    }
-    
-    /* End Networking */
-    
-    
-    /* Delegate Start */
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.eventList.count;
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
-        
-        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")!;
-        
-        cell.textLabel?.text = self.eventList[indexPath.row];
-        cell.detailTextLabel?.text = self.dateList[indexPath.row];
-        return cell;
-    }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!");
-        self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
-    }
-    
-    /* Delegate End */
-    
-    func loadEventList (l : [String]) {
-        eventList = l;
-    }
-    func loadDescriptionList (l : [String]) {
-        descriptionList = l;
-    }
-    func loadDateList (l : [String]) {
-        for item in l {
-            var formatter: NSDateFormatter = NSDateFormatter();
-            formatter.dateFormat = "dd-MM-yyyy";
-            let stringDate: String = formatter.stringFromDate(NSDate());
-
-            println(stringDate);
-            dateList.append(stringDate);
-        }
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
@@ -126,6 +71,4 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         }
         return tournamentData;
     }
-    
-    
 }
