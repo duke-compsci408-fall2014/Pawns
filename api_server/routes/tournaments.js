@@ -10,14 +10,20 @@ var connectionpool = mysql.createPool({
 
 
 
-router.get('/', function(req,res){
-    var query = 'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now()';
+router.get('/base', function(req,res){
+    var query = 'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
     runQuery(connectionpool, query, req, res, doStuff);
 });
 
 function doStuff(res) {
     console.log(res);
 }
+
+router.get('/base/:id', function(req, res) {
+    var query = 'SELECT name, description, amount, cash_prize, discount, status, start_date, end_date FROM tournament_tournaments WHERE id=' + req.params.id;
+    runQuery(connectionpool, query, req, res, doStuff);
+});
+
 
 var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
     connectionPool.getConnection(function(err, connection) {
