@@ -11,7 +11,6 @@ import UIKit
 class UserRegistration: UIViewController {
 	@IBOutlet var firstName : UITextField!
 	@IBOutlet var lastName : UITextField!
-	@IBOutlet var username : UITextField!
 	@IBOutlet var password : UITextField!
 	@IBOutlet var confirmedPassword : UITextField!
 	@IBOutlet var email : UITextField!
@@ -28,6 +27,19 @@ class UserRegistration: UIViewController {
 		// Makes API call to verify username/email
 		// Verifies password and confirmedPassword locally
 		// Return false if something fails
+        
+        if (password != confirmedPassword) {
+            return false;
+        }
+        if (firstName == nil) {
+            return false;
+        }
+        if (lastName == nil) {
+            return false;
+        }
+        if (email == nil) {
+            return false;
+        }
 		return true;
 	}
 	
