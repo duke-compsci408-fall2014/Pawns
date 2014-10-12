@@ -16,3 +16,9 @@ DerivedData
 
 ### Apple ###
 .DS_Store
+
+### Node ###
+#npm-debug.log
+
+### DB ###
+backup.sql
