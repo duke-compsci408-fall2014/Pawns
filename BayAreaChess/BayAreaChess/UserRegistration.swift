@@ -24,10 +24,6 @@ class UserRegistration: UIViewController {
     }
     
 	func verifyData () -> Bool{
-		// Makes API call to verify username/email
-		// Verifies password and confirmedPassword locally
-		// Return false if something fails
-        
         if (password != confirmedPassword) {
             return false;
         }
@@ -44,9 +40,9 @@ class UserRegistration: UIViewController {
 	}
 	
 	@IBAction func sendRegistrationRequest () {
-		// 1. Call verify data
-		// 2. Hash and salt password with bcrypt algorithm
-		// 3. API POST, which updates database
-		// 4. This is called on the Register button click
+        verifyData();
+		// 2. API POST, hashes, salts and inputs the info
+		// 3. This is called on the Register button click
+        
 	}
 }
