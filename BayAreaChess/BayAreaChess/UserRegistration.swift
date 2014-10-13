@@ -42,7 +42,5 @@ class UserRegistration: UIViewController {
 	@IBAction func sendRegistrationRequest () {
         verifyData();
 		// 2. API POST, hashes, salts and inputs the info
-		// 3. This is called on the Register button click
-        
 	}
 }
