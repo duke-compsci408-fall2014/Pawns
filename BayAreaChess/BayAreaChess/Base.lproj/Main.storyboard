@@ -696,10 +696,10 @@
             </objects>
             <point key="canvasLocation" x="1269" y="295"/>
         </scene>
-        <!--View Controller-->
+        <!--Tournament Registration-->
         <scene sceneID="Xsy-A5-Z8o">
             <objects>
-                <viewController id="gLv-Oa-69P" sceneMemberID="viewController">
+                <viewController id="gLv-Oa-69P" customClass="TournamentRegistration" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aQT-ky-Eu8"/>
                         <viewControllerLayoutGuide type="bottom" id="JA6-4Y-B26"/>
@@ -761,6 +761,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="email" destination="j7Q-Ih-WtV" id="ZYn-jK-OPf"/>
+                        <outlet property="firstName" destination="PVi-W1-iut" id="mtd-is-zly"/>
+                        <outlet property="lastName" destination="lpd-VD-ZS1" id="TRa-Rx-hil"/>
+                        <outlet property="phoneNumber" destination="ifN-OW-O6e" id="skC-6T-dO9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1En-U0-N2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
