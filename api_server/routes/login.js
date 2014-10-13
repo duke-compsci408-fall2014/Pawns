@@ -9,11 +9,7 @@ var express = require('express'),
         database : 'backup'
     });
 
-app.use('/tournaments', tournaments);
-app.use('/login');
-app.use('/users');
-
-app.get('/login/:user', function(req,res){
+router.get('/:user', function(req,res){
     connectionpool.getConnection(function(err, connection) {
         if (err) {
             console.error('CONNECTION error: ',err);
@@ -51,10 +47,4 @@ app.get('/login/:user', function(req,res){
     });
 });
 
-app.get('/:table/:id', function(req,res){});
-app.post('/:table', function(req,res){});
-app.put('/:table/:id', function(req,res){});
-app.delete('/:table/:id', function(req,res){});
-app.listen(3000);
-console.log('Rest Server Listening on port 3000');
-module.exports = app;
+module.exports = router;

@@ -9,7 +9,7 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
-router.get('/users/:id', function (req, res) {
+router.get('/:id', function (req, res) {
     var query = 'SELECT username, firstname, lastname, email, date_joined
                 FROM auth_user WHERE ' + req.params.id;
     utils.runQuery(connectionpool, query, req, res, callback);
