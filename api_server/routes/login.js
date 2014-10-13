@@ -1,8 +1,8 @@
-var express = require('express'),
-    tournaments = require('./routes/tournaments'),
-    app     = express(),
-    mysql   = require('mysql'),
-    connectionpool = mysql.createPool({
+var express = require('express');
+var router = express.Router();
+var mysql = require('mysql');
+var utils = require('../utils');
+var connectionpool = mysql.createPool({
         host     : 'localhost',
         user     : 'root',
         password : process.env.BACKUP,
