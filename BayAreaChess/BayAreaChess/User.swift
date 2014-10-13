@@ -10,6 +10,13 @@ import UIKit
 
 class User: UIViewController {
     
+    @IBOutlet var firstName : UILabel!;
+    @IBOutlet var lastName : UILabel!;
+    @IBOutlet var email : UILabel!;
+    @IBOutlet var username : UILabel!;
+    @IBOutlet var dateJoined : UILabel!;
+
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         // Do any additional setup after loading the view, typically from a nib.
