@@ -341,8 +341,14 @@ Executive Director</mutableString>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.4549019608" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-0q-vOV">
+                                <rect key="frame" x="26" y="85" width="268" height="89"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-pp-2AC">
+                                <rect key="frame" x="26" y="408" width="268" height="145"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-qN-wls">
-                                <rect key="frame" x="40" y="234" width="240" height="100"/>
+                                <rect key="frame" x="21" y="242" width="268" height="83"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Bay Area Chess provides everyone with enjoyable activities that develop intellectual, mathematical, analytical, visual, and personal skills.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -995,9 +1001,11 @@ Executive Director</mutableString>
     </scenes>
     <resources>
         <image name="BayAreaChessLogo.png" width="540" height="154"/>
+        <image name="about.jpg" width="800" height="150"/>
+        <image name="about2.png" width="940" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mYB-Dz-gI6"/>
+        <segue reference="AbE-cS-tXL"/>
         <segue reference="tuA-zX-daY"/>
         <segue reference="b3B-hV-w88"/>
         <segue reference="iuP-Jy-XI9"/>
