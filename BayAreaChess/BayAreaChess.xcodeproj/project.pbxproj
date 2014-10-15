@@ -18,6 +18,8 @@
 		8193588B19EDEE4800B79AA0 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8193588819EDEE4800B79AA0 /* about.jpg */; };
 		8193588C19EDEE4800B79AA0 /* about2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588919EDEE4800B79AA0 /* about2.png */; };
 		8193588D19EDEE4800B79AA0 /* BayAreaChessLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */; };
+		8193589019EDF15A00B79AA0 /* chevron-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588E19EDF15A00B79AA0 /* chevron-left.png */; };
+		8193589119EDF15A00B79AA0 /* chevron-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588F19EDF15A00B79AA0 /* chevron-right.png */; };
 		81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BD15CE19DDF6F100890AEF /* Tournaments.swift */; };
 		B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14F819CBAE9A0001BE7C /* Login.swift */; };
 		B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */; };
@@ -49,6 +51,8 @@
 		8193588819EDEE4800B79AA0 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = about.jpg; path = ../../resources/about.jpg; sourceTree = "<group>"; };
 		8193588919EDEE4800B79AA0 /* about2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about2.png; path = ../../resources/about2.png; sourceTree = "<group>"; };
 		8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BayAreaChessLogo.png; path = ../../resources/BayAreaChessLogo.png; sourceTree = "<group>"; };
+		8193588E19EDF15A00B79AA0 /* chevron-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chevron-left.png"; path = "../../resources/chevron-left.png"; sourceTree = "<group>"; };
+		8193588F19EDF15A00B79AA0 /* chevron-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chevron-right.png"; path = "../../resources/chevron-right.png"; sourceTree = "<group>"; };
 		81BD15CE19DDF6F100890AEF /* Tournaments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournaments.swift; sourceTree = "<group>"; };
 		B3BE14F819CBAE9A0001BE7C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		2C7054CA19C7CBAE0049BE83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8193588E19EDF15A00B79AA0 /* chevron-left.png */,
+				8193588F19EDF15A00B79AA0 /* chevron-right.png */,
 				8193588819EDEE4800B79AA0 /* about.jpg */,
 				8193588919EDEE4800B79AA0 /* about2.png */,
 				8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */,
@@ -218,6 +224,8 @@
 			files = (
 				8193588C19EDEE4800B79AA0 /* about2.png in Resources */,
 				2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */,
+				8193589019EDF15A00B79AA0 /* chevron-left.png in Resources */,
+				8193589119EDF15A00B79AA0 /* chevron-right.png in Resources */,
 				2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */,
 				8193588D19EDEE4800B79AA0 /* BayAreaChessLogo.png in Resources */,
 				8193588B19EDEE4800B79AA0 /* about.jpg in Resources */,
