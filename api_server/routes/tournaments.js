@@ -12,7 +12,7 @@ var connectionpool = mysql.createPool({
 
 
 router.get('/base', function(req,res){
-    var query = 'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
+    var query = 'SELECT name,description,start_date,id FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
     utils.runQuery(connectionpool, query, req, res, doStuff);
 });
 

@@ -10,7 +10,7 @@ import UIKit
 
 class SpecificTournaments : UIViewController {
     
-    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/6/";
+    var URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -26,8 +26,14 @@ class SpecificTournaments : UIViewController {
     @IBOutlet var cost : UILabel?;
 
     
+    var myID : Int?;
+    
     override func viewDidLoad() {
         super.viewDidLoad();
+        var s : String = toString(myID!);
+        URL_STRING += s;
+        println(myID!);
+        println(URL_STRING);
         self.connect("");
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
@@ -64,7 +70,7 @@ class SpecificTournaments : UIViewController {
         
         self.reloadInputViews();
         
-        //self.tableView.relo adData();
+        //self.tableView.reloadData();
     }
     
     deinit {

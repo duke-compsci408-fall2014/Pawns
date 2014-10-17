@@ -24,6 +24,8 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
     
+    var selectedID : Int? = 0;
+    
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -96,6 +98,8 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!");
         println(self.eventList[indexPath.row]);
+        selectedID = indexPath.row;
+        println(indexPath.row);
         self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
     
@@ -126,6 +130,13 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
             tournamentData.append(name);
         }
         return tournamentData;
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "selectEvent") {
+            let vc = segue.destinationViewController as SpecificTournaments;
+            vc.myID = selectedID;
+        }
     }
     
     

@@ -1018,10 +1018,10 @@ Executive Director</string>
         <image name="chevron-right.png" width="139" height="261"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cAy-Bb-IZi"/>
-        <segue reference="b3B-hV-w88"/>
         <segue reference="tuA-zX-daY"/>
+        <segue reference="cAy-Bb-IZi"/>
+        <segue reference="X3v-eM-Pxl"/>
         <segue reference="iuP-Jy-XI9"/>
-        <segue reference="IAU-Ys-L3o"/>
+        <segue reference="b3B-hV-w88"/>
     </inferredMetricsTieBreakers>
 </document>
