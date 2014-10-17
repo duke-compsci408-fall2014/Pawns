@@ -112,7 +112,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
             formatter.dateFormat = "dd-MM-yyyy";
             let stringDate: String = formatter.stringFromDate(NSDate());
 
-            println(stringDate);
+            //println(stringDate);
             dateList.append(stringDate);
         }
     }

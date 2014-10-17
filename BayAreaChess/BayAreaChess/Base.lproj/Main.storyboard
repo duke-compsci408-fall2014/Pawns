@@ -923,6 +923,10 @@ Executive Director</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dates" destination="7o8-9b-gER" id="Iv5-yh-eU4"/>
+                        <outlet property="name" destination="T1r-mR-bWH" id="LWa-jh-YZk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbO-81-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

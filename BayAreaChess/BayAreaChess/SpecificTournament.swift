@@ -10,20 +10,25 @@ import UIKit
 
 class SpecificTournaments : UIViewController {
     
-    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
+    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/6/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
+    let AMOUNT : String = "amount";
     let NEWLINE : String = "\n";
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
     
+    @IBOutlet var name : UILabel?;
+    @IBOutlet var descriptions : UILabel?;
+    @IBOutlet var dates : UILabel?;
+    @IBOutlet var cost : UILabel?;
+
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        println("THIS");
-        //self.connect("");
+        self.connect("");
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
     }
@@ -52,9 +57,12 @@ class SpecificTournaments : UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        var events = getTournamentData(json, field: NAME);
-        var descriptions = getTournamentData(json, field: DESCRIPTION);
-        var dates = getTournamentData(json, field: DATE);
+        name?.text = getTournamentData(json, field: NAME);
+        descriptions?.text = getTournamentData(json, field: DESCRIPTION);
+        dates?.text = getTournamentData(json, field: DATE);
+//        cost?.text = getTournamentData(json, field: AMOUNT); //REQUIRES TYPE COERSION
+        
+        self.reloadInputViews();
         
         //self.tableView.relo adData();
     }
@@ -63,13 +71,13 @@ class SpecificTournaments : UIViewController {
         println("deiniting");
     }
     
-    func getTournamentData (input : NSDictionary, field : String) -> [String] {
-        var tournamentData = [String]();
+    func getTournamentData (input : NSDictionary, field : String) -> String {
+        var tournamentData : String!;
         let json : Array = input["json"] as [AnyObject];
+        println(json);
         for (index, element) in enumerate(json) {
             var name : String = element[field] as String
-            tournamentData.append(name);
-            println(name);
+            tournamentData = name;
         }
         return tournamentData;
     }
