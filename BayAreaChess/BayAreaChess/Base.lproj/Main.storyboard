@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A386b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
     </dependencies>
@@ -263,7 +263,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5r-Tn-6KC">
                                 <rect key="frame" x="40" y="97" width="240" height="451"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Bay Area Chess started as a parent volunteer organization when my son moved to a new school with a low-quality high-cost commercial program. Our goal was to sharpen the minds of our own children through top-notch instruction by deeply passionate teachers. 
+                                <string key="text">Bay Area Chess started as a parent volunteer organization when my son moved to a new school with a low-quality high-cost commercial program. Our goal was to sharpen the minds of our own children through top-notch instruction by deeply passionate teachers. 
 
 Our work was so successful that other parents requested programs and events at their school. We had to grow fast and hired professional coaching and administrative staff to support the growth. Nine years later, our values have remained the same and we treat all children like our own and do for them what we would do for our children. We have constantly evolved and improved our program to stay committed to that goal. 
 
@@ -278,7 +278,7 @@ I thank you for your trust in Bay Area Chess team, whether you are new to our co
 Sincerely, 
 
 Salman Azhar, Ph.D., 
-Executive Director</mutableString>
+Executive Director</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -826,10 +826,10 @@ Executive Director</mutableString>
             </objects>
             <point key="canvasLocation" x="842" y="295"/>
         </scene>
-        <!--View Controller-->
+        <!--Specific Tournaments-->
         <scene sceneID="uup-2d-do7">
             <objects>
-                <viewController id="fDm-CN-7aP" sceneMemberID="viewController">
+                <viewController id="fDm-CN-7aP" customClass="SpecificTournaments" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5WT-fm-ISY"/>
                         <viewControllerLayoutGuide type="bottom" id="JMz-Jz-YI6"/>

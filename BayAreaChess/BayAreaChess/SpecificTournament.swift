@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SpecificTournaments : UITableViewController {
+class SpecificTournaments : UIViewController {
     
     let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/";
     let NAME : String = "name";
@@ -22,8 +22,9 @@ class SpecificTournaments : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.connect("");
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        println("THIS");
+        //self.connect("");
+        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
     }
     
@@ -55,7 +56,7 @@ class SpecificTournaments : UITableViewController {
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);
         
-        self.tableView.reloadData();
+        //self.tableView.relo adData();
     }
     
     deinit {
@@ -68,6 +69,7 @@ class SpecificTournaments : UITableViewController {
         for (index, element) in enumerate(json) {
             var name : String = element[field] as String
             tournamentData.append(name);
+            println(name);
         }
         return tournamentData;
     }
