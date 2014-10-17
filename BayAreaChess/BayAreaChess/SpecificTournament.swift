@@ -21,7 +21,7 @@ class SpecificTournaments : UIViewController {
     let DID_RECEIVE : String = "didReceiveResponse";
     
     @IBOutlet var name : UILabel?;
-    @IBOutlet var descriptions : UILabel?;
+    @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
     @IBOutlet var cost : UILabel?;
 
@@ -80,5 +80,13 @@ class SpecificTournaments : UIViewController {
             tournamentData = name;
         }
         return tournamentData;
+    }
+    
+    func formatDate (str : String) -> String {
+        var formatter: NSDateFormatter = NSDateFormatter();
+        formatter.dateFormat = "dd-MM-yyyy";
+        var date = formatter.dateFromString(str);
+        var s : String = formatter.stringFromDate(date!);
+        return s;
     }
 }
