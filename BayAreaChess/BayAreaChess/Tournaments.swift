@@ -95,6 +95,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!");
+        println(self.eventList[indexPath.row]);
         self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
     

@@ -74,7 +74,6 @@ class SpecificTournaments : UIViewController {
     func getTournamentData (input : NSDictionary, field : String) -> String {
         var tournamentData : String!;
         let json : Array = input["json"] as [AnyObject];
-        println(json);
         for (index, element) in enumerate(json) {
             var name : String = element[field] as String
             tournamentData = name;
