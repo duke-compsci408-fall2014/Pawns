@@ -14,6 +14,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     var eventList: [String] = [];
     var descriptionList: [String] = [];
     var dateList: [String] = [];
+    var id_dict: [String:Int]!;
     
     let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
     let NAME : String = "name";
@@ -65,6 +66,8 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);
         
+        self.createDictionary(json);
+        
         loadEventList(events)
         loadDescriptionList(descriptions);
         loadDateList(dates);
@@ -99,7 +102,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         println("You selected cell #\(indexPath.row)!");
         println(self.eventList[indexPath.row]);
         selectedID = indexPath.row;
-        println(indexPath.row);
+//        println(id_dict[self.eventList[indexPath.row]]);
         self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
     
@@ -116,8 +119,6 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
             var formatter: NSDateFormatter = NSDateFormatter();
             formatter.dateFormat = "dd-MM-yyyy";
             let stringDate: String = formatter.stringFromDate(NSDate());
-
-            //println(stringDate);
             dateList.append(stringDate);
         }
     }
@@ -130,6 +131,19 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
             tournamentData.append(name);
         }
         return tournamentData;
+    }
+    
+    func createDictionary (input : NSDictionary) {
+        let json : Array = input["json"] as [AnyObject];
+
+        for (index, element) in enumerate(json) {
+            var name : String = element["name"] as String;
+            var id : Int = element["id"] as Int;
+            println(name);
+            println(id);
+//            id_dict[name] = id;
+        }
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
