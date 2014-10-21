@@ -14,7 +14,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     var eventList: [String] = [];
     var descriptionList: [String] = [];
     var dateList: [String] = [];
-    var id_dict: [String:Int]!;
+    var id_dict: [String:Int]?;
     
     let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
     let NAME : String = "name";
@@ -100,9 +100,11 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!");
-        println(self.eventList[indexPath.row]);
-        selectedID = indexPath.row;
-//        println(id_dict[self.eventList[indexPath.row]]);
+        var s : String = self.eventList[indexPath.row];
+        if (selectedID != nil) {
+            selectedID = id_dict?[s];
+        }
+        println(selectedID);
         self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
     
@@ -139,9 +141,7 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
         for (index, element) in enumerate(json) {
             var name : String = element["name"] as String;
             var id : Int = element["id"] as Int;
-            println(name);
-            println(id);
-//            id_dict[name] = id;
+            id_dict?[name] = id;
         }
 
     }

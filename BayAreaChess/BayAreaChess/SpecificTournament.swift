@@ -26,16 +26,14 @@ class SpecificTournaments : UIViewController {
     @IBOutlet var cost : UILabel?;
 
     
-    var myID : Int?;
+    var myID : Int? = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        var s : String = toString(myID!);
+        var s : String = toString(myID?);
         URL_STRING += s;
-        println(myID!);
         println(URL_STRING);
         self.connect("");
-        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
     }
     
@@ -70,7 +68,6 @@ class SpecificTournaments : UIViewController {
         
         self.reloadInputViews();
         
-        //self.tableView.reloadData();
     }
     
     deinit {
