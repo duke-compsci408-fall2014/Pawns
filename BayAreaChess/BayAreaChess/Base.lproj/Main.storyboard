@@ -646,6 +646,9 @@ Executive Director</string>
                                     <segue destination="Aw3-mt-f2d" kind="show" id="rmw-Sf-FaW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bayarea.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FhI-we-bR0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.45490196078431372" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1014,14 +1017,15 @@ Executive Director</string>
         <image name="BayAreaChessLogo.png" width="540" height="154"/>
         <image name="about.jpg" width="800" height="150"/>
         <image name="about2.png" width="940" height="400"/>
+        <image name="bayarea.jpg" width="760" height="1350"/>
         <image name="chevron-left.png" width="140" height="261"/>
         <image name="chevron-right.png" width="139" height="261"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tuA-zX-daY"/>
         <segue reference="cAy-Bb-IZi"/>
+        <segue reference="rmw-Sf-FaW"/>
+        <segue reference="B2P-7e-yGg"/>
+        <segue reference="GxI-Te-wPI"/>
         <segue reference="X3v-eM-Pxl"/>
-        <segue reference="iuP-Jy-XI9"/>
-        <segue reference="b3B-hV-w88"/>
     </inferredMetricsTieBreakers>
 </document>
