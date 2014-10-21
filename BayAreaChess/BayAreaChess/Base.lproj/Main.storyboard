@@ -583,8 +583,8 @@ Executive Director</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BayAreaChessLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rUe-fK-evp">
-                                <rect key="frame" x="16" y="20" width="283" height="83"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bayarea.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FhI-we-bR0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBk-sF-zhc">
                                 <rect key="frame" x="41" y="178" width="90" height="30"/>
@@ -646,8 +646,14 @@ Executive Director</string>
                                     <segue destination="Aw3-mt-f2d" kind="show" id="rmw-Sf-FaW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bayarea.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FhI-we-bR0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bay Area Chess" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzL-tx-Qfq">
+                                <rect key="frame" x="92" y="20" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.20150996476250316" green="0.20578835227272729" blue="0.20336138086578617" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu.png" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-fz-M9e">
+                                <rect key="frame" x="16" y="21" width="20" height="20"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.45490196078431372" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
@@ -1014,12 +1020,12 @@ Executive Director</string>
         </scene>
     </scenes>
     <resources>
-        <image name="BayAreaChessLogo.png" width="540" height="154"/>
         <image name="about.jpg" width="800" height="150"/>
         <image name="about2.png" width="940" height="400"/>
         <image name="bayarea.jpg" width="760" height="1350"/>
         <image name="chevron-left.png" width="140" height="261"/>
         <image name="chevron-right.png" width="139" height="261"/>
+        <image name="menu.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cAy-Bb-IZi"/>

@@ -30,8 +30,10 @@ class SpecificTournaments : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        var s : String = toString(myID?);
-        URL_STRING += s;
+        
+        var id : Int = myID!;
+        var s : String = toString(id);
+        URL_STRING += s + "/";
         println(URL_STRING);
         self.connect("");
         
@@ -75,7 +77,7 @@ class SpecificTournaments : UIViewController {
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> String {
-        var tournamentData : String!;
+        var tournamentData : String! = "";
         let json : Array = input["json"] as [AnyObject];
         for (index, element) in enumerate(json) {
             var name : String = element[field] as String
