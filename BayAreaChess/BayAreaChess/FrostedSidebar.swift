@@ -24,10 +24,10 @@ public class FrostedSidebar: UIViewController {
     
     //MARK: Public Properties
     
-    public var width:                   CGFloat                     = 145.0
+    public var width:                   CGFloat                     = 130.0
     public var showFromRight:           Bool                        = false
     public var animationDuration:       CGFloat                     = 0.25
-    public var itemSize:                CGSize                      = CGSize(width: 90.0, height: 90.0)
+    public var itemSize:                CGSize                      = CGSize(width: 70.0, height: 70.0)
     public var tintColor:               UIColor                     = UIColor(white: 0.2, alpha: 0.73)
     public var itemBackgroundColor:     UIColor                     = UIColor(white: 1, alpha: 0.25)
     public var borderWidth:             CGFloat                     = 2
