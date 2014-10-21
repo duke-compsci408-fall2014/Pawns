@@ -1,5 +1,5 @@
 //
-//  Calander.swift
+//  About.swift
 //  BayAreaChess
 //
 //  Created by Carlos Reyes on 10/21/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class About: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

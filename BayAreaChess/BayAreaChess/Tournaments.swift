@@ -30,6 +30,9 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     
     var selectedID : Int? = 0;
     
+    @IBAction func onMenu() {
+        (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad();

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Calander: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,4 +24,3 @@ class ViewController: UIViewController {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
 }
-

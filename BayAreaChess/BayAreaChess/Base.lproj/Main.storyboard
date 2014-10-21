@@ -107,16 +107,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pD3-Qd-Po7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXm-84-2u1">
-                                        <rect key="frame" x="8" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="Yz4-2l-7fY"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meet Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okt-J0-AZ6">
                                         <rect key="frame" x="119" y="25" width="82" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -228,10 +218,10 @@ Board of Advisors Member</string>
             </objects>
             <point key="canvasLocation" x="-36" y="1785"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="2Om-Mz-Igp">
             <objects>
-                <viewController id="90y-Bq-Hvc" sceneMemberID="viewController">
+                <viewController id="90y-Bq-Hvc" customClass="About" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZhC-Md-Bwz"/>
                         <viewControllerLayoutGuide type="bottom" id="F6L-mt-Oe4"/>
@@ -243,22 +233,22 @@ Board of Advisors Member</string>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Wl-eX-35t">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvo-Iq-aB2">
-                                        <rect key="frame" x="8" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="mYB-Dz-gI6"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Be-Nq-AyO">
                                         <rect key="frame" x="131" y="23" width="58" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvo-Iq-aB2">
+                                        <rect key="frame" x="18" y="22" width="39" height="30"/>
+                                        <state key="normal" title="Menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMenu" destination="90y-Bq-Hvc" eventType="touchUpInside" id="AiC-z6-eg4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.4549019608" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -298,6 +288,7 @@ Executive Director</string>
                             <outletCollection property="gestureRecognizers" destination="Snh-qZ-rw6" appends="YES" id="q9c-hs-zYZ"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3mZ-lo-Wli"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -330,16 +321,6 @@ Executive Director</string>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lB5-6I-fV5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xb-mS-foJ">
-                                        <rect key="frame" x="13" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="AbE-cS-tXL"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UK-cj-bXK">
                                         <rect key="frame" x="123" y="25" width="75" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -396,13 +377,13 @@ Executive Director</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6w-NQ-CuO">
-                                        <rect key="frame" x="13" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
+                                        <rect key="frame" x="13" y="24" width="35" height="30"/>
+                                        <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="3kh-Ym-jko"/>
+                                            <segue destination="Aw3-mt-f2d" kind="show" id="jCp-8Y-Rat"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OX-Sq-87a">
@@ -491,7 +472,7 @@ Executive Director</string>
             </objects>
             <point key="canvasLocation" x="-466" y="295"/>
         </scene>
-        <!--Login-->
+        <!--Item-->
         <scene sceneID="XbV-nd-yI0">
             <objects>
                 <viewController id="Aw3-mt-f2d" customClass="Login" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
@@ -513,13 +494,13 @@ Executive Director</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-0g-1sV">
-                                        <rect key="frame" x="8" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
+                                        <rect key="frame" x="8" y="24" width="39" height="30"/>
+                                        <state key="normal" title="Menu">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="riC-BN-Of3"/>
+                                            <action selector="onMenu" destination="Aw3-mt-f2d" eventType="touchUpInside" id="taz-7l-3OD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -562,6 +543,7 @@ Executive Director</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="dhj-eK-b1h"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="label" destination="jwW-l2-vEJ" id="Nas-nm-gzj"/>
@@ -589,53 +571,6 @@ Executive Director</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bayarea.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FhI-we-bR0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OK-RW-p1g">
-                                <rect key="frame" x="41" y="297" width="90" height="30"/>
-                                <state key="normal" title="Clubs">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-zA-oFU">
-                                <rect key="frame" x="193" y="297" width="90" height="30"/>
-                                <state key="normal" title="After School">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mO5-GH-M5a" kind="show" id="xEn-ny-Slt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrB-vw-COp">
-                                <rect key="frame" x="41" y="420" width="90" height="30"/>
-                                <state key="normal" title="About Us">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="90y-Bq-Hvc" kind="presentation" id="B2P-7e-yGg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPB-8e-2hm">
-                                <rect key="frame" x="207" y="178" width="62" height="30"/>
-                                <state key="normal" title="Calendar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xYa-4T-8tK" kind="show" id="1od-u2-FMo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QFW-PA-sGP">
-                                <rect key="frame" x="197" y="420" width="83" height="30"/>
-                                <state key="normal" title="My Bay Area Chess">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Aw3-mt-f2d" kind="show" id="rmw-Sf-FaW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bay Area Chess" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzL-tx-Qfq">
                                 <rect key="frame" x="92" y="20" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -660,11 +595,12 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1008" y="295"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="g1L-2b-41B">
             <objects>
-                <viewController id="xYa-4T-8tK" sceneMemberID="viewController">
+                <viewController id="xYa-4T-8tK" customClass="Calander" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b8p-V6-itz"/>
                         <viewControllerLayoutGuide type="bottom" id="FEg-fP-Lsc"/>
@@ -676,28 +612,30 @@ Executive Director</string>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWY-2o-VAO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX0-qH-qdp">
-                                        <rect key="frame" x="13" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="JiP-oi-UIh"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPC-c7-ksE">
                                         <rect key="frame" x="116" y="25" width="88" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew1-T6-hMA">
+                                        <rect key="frame" x="15" y="24" width="39" height="30"/>
+                                        <state key="normal" title="Menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMenu" destination="xYa-4T-8tK" eventType="touchUpInside" id="2nS-n5-hm7"/>
+                                            <action selector="onMenu" destination="Aw3-mt-f2d" eventType="touchUpInside" id="VUH-2B-aaf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.4549019608" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="of4-dO-RLw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdL-T4-8kJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -719,16 +657,6 @@ Executive Director</string>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zW-GI-QZW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOq-XW-n3I">
-                                        <rect key="frame" x="13" y="28" width="41" height="30"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="Ujf-Ge-okS"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="After School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubH-zn-Ehm">
                                         <rect key="frame" x="101" y="29" width="119" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -759,13 +687,16 @@ Executive Director</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="3GC-he-hsb"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="g70-pz-wdw"/>
                         <segue destination="iJe-eQ-IiQ" kind="relationship" relationship="viewControllers" id="5Rw-UP-doB"/>
+                        <segue destination="90y-Bq-Hvc" kind="relationship" relationship="viewControllers" id="emN-3A-E4V"/>
+                        <segue destination="Aw3-mt-f2d" kind="relationship" relationship="viewControllers" id="kuB-Z8-ujj"/>
+                        <segue destination="xYa-4T-8tK" kind="relationship" relationship="viewControllers" id="YYp-18-WFX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqH-Wk-thM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="1040"/>
+            <point key="canvasLocation" x="471" y="842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sD0-DQ-wPJ">
@@ -782,16 +713,6 @@ Executive Director</string>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsY-9M-Ex3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyY-I9-YOi">
-                                        <rect key="frame" x="13" y="24" width="41" height="30"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="cAy-Bb-IZi"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clubs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGo-gI-ooh">
                                         <rect key="frame" x="137" y="25" width="56" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -822,11 +743,11 @@ Executive Director</string>
                         <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aMz-Ek-oyf">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Back">
+                            <state key="normal" title="Menu">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" id="pFh-N3-PML"/>
+                                <action selector="onMenu" destination="iJe-eQ-IiQ" eventType="touchUpInside" id="jiq-D8-0JE"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -851,7 +772,7 @@ Executive Director</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi1-AM-qnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="1040"/>
+            <point key="canvasLocation" x="1008" y="1040"/>
         </scene>
         <!--Specific Tournaments-->
         <scene sceneID="uup-2d-do7">
@@ -1046,10 +967,9 @@ Executive Director</string>
         <image name="menu.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IAU-Ys-L3o"/>
-        <segue reference="iuP-Jy-XI9"/>
-        <segue reference="pFh-N3-PML"/>
-        <segue reference="rmw-Sf-FaW"/>
-        <segue reference="B2P-7e-yGg"/>
+        <segue reference="X3v-eM-Pxl"/>
+        <segue reference="5Rw-UP-doB"/>
+        <segue reference="BXt-uO-gUI"/>
+        <segue reference="jCp-8Y-Rat"/>
     </inferredMetricsTieBreakers>
 </document>

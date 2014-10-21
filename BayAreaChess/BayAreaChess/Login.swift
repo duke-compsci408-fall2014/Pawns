@@ -34,4 +34,8 @@ class Login: UIViewController {
 		}
 	}
     
+    @IBAction func onMenu() {
+        (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
+    }
+    
 }
