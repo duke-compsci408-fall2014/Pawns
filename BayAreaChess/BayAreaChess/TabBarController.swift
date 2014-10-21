@@ -17,7 +17,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         delegate = self
         tabBar.hidden = true
         
-        var uimg : UIImage = UIImage(named: "chevron-left")!;
+        var uimg : UIImage = UIImage(named: "chevron-left.png")!;
         var imgList : [UIImage] = [uimg];
         var colorList : [UIColor] = [UIColor(red: 244, green: 244, blue: 244, alpha: 1)];
         var selectedItemIndices : NSIndexSet = NSIndexSet(index: 0);

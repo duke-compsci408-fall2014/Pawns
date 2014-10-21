@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func onMenu() {
+        (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
+    }
 }
 
