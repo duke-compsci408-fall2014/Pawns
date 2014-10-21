@@ -589,16 +589,6 @@ Executive Director</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bayarea.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FhI-we-bR0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBk-sF-zhc">
-                                <rect key="frame" x="41" y="178" width="90" height="30"/>
-                                <state key="normal" title="Tournaments">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iJe-eQ-IiQ" kind="show" id="GxI-Te-wPI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OK-RW-p1g">
                                 <rect key="frame" x="41" y="297" width="90" height="30"/>
                                 <state key="normal" title="Clubs">
@@ -770,11 +760,12 @@ Executive Director</string>
                     </tabBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="3GC-he-hsb"/>
+                        <segue destination="iJe-eQ-IiQ" kind="relationship" relationship="viewControllers" id="5Rw-UP-doB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqH-Wk-thM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352" y="1063"/>
+            <point key="canvasLocation" x="487" y="1040"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sD0-DQ-wPJ">
@@ -855,11 +846,12 @@ Executive Director</string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="h1w-rP-hTN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi1-AM-qnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="295"/>
+            <point key="canvasLocation" x="920" y="1040"/>
         </scene>
         <!--Specific Tournaments-->
         <scene sceneID="uup-2d-do7">
@@ -966,7 +958,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbO-81-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1269" y="295"/>
+            <point key="canvasLocation" x="1528" y="1040"/>
         </scene>
         <!--Tournament Registration-->
         <scene sceneID="Xsy-A5-Z8o">
@@ -1042,7 +1034,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1En-U0-N2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="295"/>
+            <point key="canvasLocation" x="2095" y="1040"/>
         </scene>
     </scenes>
     <resources>
@@ -1054,9 +1046,9 @@ Executive Director</string>
         <image name="menu.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X3v-eM-Pxl"/>
-        <segue reference="GxI-Te-wPI"/>
-        <segue reference="3GC-he-hsb"/>
+        <segue reference="IAU-Ys-L3o"/>
+        <segue reference="iuP-Jy-XI9"/>
+        <segue reference="pFh-N3-PML"/>
         <segue reference="rmw-Sf-FaW"/>
         <segue reference="B2P-7e-yGg"/>
     </inferredMetricsTieBreakers>
