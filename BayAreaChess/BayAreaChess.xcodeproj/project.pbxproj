@@ -25,7 +25,6 @@
 		81C51B7519F60B570038C4B3 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C51B7419F60B570038C4B3 /* menu.png */; };
 		81C51B7719F6CC970038C4B3 /* FrostedSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */; };
 		81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7819F6D1120038C4B3 /* TabBarController.swift */; };
-		81C51B7B19F6DF7C0038C4B3 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7A19F6DF7C0038C4B3 /* TestController.swift */; };
 		81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7C19F6EAD60038C4B3 /* About.swift */; };
 		81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7E19F6EBB40038C4B3 /* Calander.swift */; };
 		B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14F819CBAE9A0001BE7C /* Login.swift */; };
@@ -65,7 +64,6 @@
 		81C51B7419F60B570038C4B3 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../resources/menu.png; sourceTree = "<group>"; };
 		81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrostedSidebar.swift; sourceTree = "<group>"; };
 		81C51B7819F6D1120038C4B3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		81C51B7A19F6DF7C0038C4B3 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		81C51B7C19F6EAD60038C4B3 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		81C51B7E19F6EBB40038C4B3 /* Calander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calander.swift; sourceTree = "<group>"; };
 		B3BE14F819CBAE9A0001BE7C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				8193588219EC774D00B79AA0 /* TournamentRegistration.swift */,
 				81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */,
 				81C51B7819F6D1120038C4B3 /* TabBarController.swift */,
-				81C51B7A19F6DF7C0038C4B3 /* TestController.swift */,
 				81C51B7C19F6EAD60038C4B3 /* About.swift */,
 				81C51B7E19F6EBB40038C4B3 /* Calander.swift */,
 			);
@@ -273,7 +270,6 @@
 				81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */,
 				B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */,
 				81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */,
-				81C51B7B19F6DF7C0038C4B3 /* TestController.swift in Sources */,
 				81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */,
 				B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */,
 				81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */,
