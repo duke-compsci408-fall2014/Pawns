@@ -39,8 +39,15 @@ router.get('/base', function(req,res){
     utils.runQuery(connectionpool, query, req, res, doStuff);
 });
 
-function doStuff(res) {
-    //console.log(res);
+function doStuff(json, res, req) {
+    res.send(json);
+    /*res.send({
+        result: 'success',
+        err:    '',
+        fields: fields,
+        json:   rows,
+        length: rows.length
+    });*/
 }
 
 router.get('/base/:id', function(req, res) {

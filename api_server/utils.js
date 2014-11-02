@@ -21,7 +21,8 @@ var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
                     });
                 }
                 else {
-                    callback({json: rows}, req);
+                    callback({json: rows}, res, req);
+                    /*
                     res.send({
                         result: 'success',
                         err:    '',
@@ -29,6 +30,7 @@ var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
                         json:   rows,
                         length: rows.length
                     });
+                    */
                 }
                 connection.release();
             });
