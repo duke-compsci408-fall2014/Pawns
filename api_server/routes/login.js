@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var utils = require('../utils');
+var pbkdf2 = require('pbkdf2-sha256');
+
 var connectionpool = mysql.createPool({
         host     : 'localhost',
         user     : 'root',
@@ -9,42 +11,26 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
-router.get('/:user', function(req,res){
-    connectionpool.getConnection(function(err, connection) {
-        if (err) {
-            console.error('CONNECTION error: ',err);
-            res.statusCode = 503;
-            res.send({
-                result: 'error',
-                err:    err.code
-            });
-        } else {
-            var query = 'SELECT * FROM auth_user WHERE username=' + "\"" + req.params.user + "\"";
-            console.log(query);
-            connection.query(query, req.params.id, function(err, rows, fields) {
-
-                if (err) {
-                    console.error(err);
-                    res.statusCode = 500;
-                    res.send({
-                        result: 'error',
-                        err:    err.code
-                    });
-                }
-                else {
-                    //console.log(rows.length);
-                    res.send({
-                        result: 'success',
-                        err:    '',
-                        fields: fields,
-                        json:   rows,
-                        length: rows.length
-                    });
-                }
-                connection.release();
-            });
-        }
-    });
+router.get('/:user/:pass', function (req, res) {
+    var query = 'SELECT * FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";
+    utils.runQuery(connectionpool, query, req, res, validate);
 });
+
+
+function validate (res, req) {
+    if (validatePassword(req.params.pass, res.json[0].password)) {
+        console.log('Success');
+    }
+    else {
+        console.log('Failure');
+    }
+}
+
+var validatePassword = function (key, string) {
+        var parts = string.split('$');
+        var iterations = parts[1];
+        var salt = parts[2];
+        return pbkdf2(key, new Buffer(salt), iterations, 32).toString('base64') === parts[3];
+};
 
 module.exports = router;
