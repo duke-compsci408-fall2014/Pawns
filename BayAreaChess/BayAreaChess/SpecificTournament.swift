@@ -10,7 +10,7 @@ import UIKit
 
 class SpecificTournaments : UIViewController {
     
-    var URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/tournaments/base/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
