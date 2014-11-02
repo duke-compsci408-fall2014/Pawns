@@ -14,8 +14,11 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     var eventList: [String] = [];
     var descriptionList: [String] = [];
     var dateList: [String] = [];
+    var idList : [Int] = [];
     
-    let URL_STRING : String = "http://neptune.carlos.vc:3000/tournaments/base/";
+    var id_dict: [String:Int]?;
+    
+    let URL_STRING : String = "http://bac.colab.duke.edu:3000/tournaments/base/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -23,7 +26,13 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
+    let ID : String = "id";
     
+    var selectedID : Int? = 0;
+    
+    @IBAction func onMenu() {
+        (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -34,7 +43,6 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
-        // Dispose of any resources that can be recreated.
     }
     
     /* This is networking */
@@ -59,13 +67,17 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+
         var events = getTournamentData(json, field: NAME);
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);
+        var ids = getTournamentInt(json, field: "id");
         
-        loadEventList(events)
+        
+        loadEventList(events);
         loadDescriptionList(descriptions);
         loadDateList(dates);
+        loadIDList(ids);
         
         self.tableView.reloadData();
     }
@@ -95,6 +107,9 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!");
+        var s : String = self.eventList[indexPath.row];
+        println(self.idList[indexPath.row]);
+        selectedID = self.idList[indexPath.row];
         self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
     
@@ -111,20 +126,38 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
             var formatter: NSDateFormatter = NSDateFormatter();
             formatter.dateFormat = "dd-MM-yyyy";
             let stringDate: String = formatter.stringFromDate(NSDate());
-
-            println(stringDate);
             dateList.append(stringDate);
         }
+    }
+    func loadIDList (l : [Int]) {
+        idList = l;
     }
     
     func getTournamentData (input : NSDictionary, field : String) -> [String] {
         var tournamentData = [String]();
         let json : Array = input["json"] as [AnyObject];
         for (index, element) in enumerate(json) {
-            var name : String = element[field] as String
+            var name : String = element[field] as String;
             tournamentData.append(name);
         }
         return tournamentData;
+    }
+    
+    func getTournamentInt (input : NSDictionary, field : String) -> [Int] {
+        var tournamentData = [Int]();
+        let json : Array = input["json"] as [AnyObject];
+        for (index, element) in enumerate(json) {
+            var num : Int = element[field] as Int;
+            tournamentData.append(num);
+        }
+        return tournamentData;
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "selectEvent") {
+            let vc = segue.destinationViewController as SpecificTournaments;
+            vc.myID = selectedID;
+        }
     }
     
     
