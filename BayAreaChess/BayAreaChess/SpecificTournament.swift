@@ -63,9 +63,9 @@ class SpecificTournaments : UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        name?.text = getTournamentData(json, field: NAME);
-        descriptions?.text = getTournamentData(json, field: DESCRIPTION);
-        dates?.text = getTournamentData(json, field: DATE);
+        //name?.text = getTournamentData(json, field: NAME);
+        //descriptions?.text = getTournamentData(json, field: DESCRIPTION);
+        //dates?.text = getTournamentData(json, field: DATE);
 //        cost?.text = getTournamentData(json, field: AMOUNT); //REQUIRES TYPE COERSION
         
         self.reloadInputViews();
