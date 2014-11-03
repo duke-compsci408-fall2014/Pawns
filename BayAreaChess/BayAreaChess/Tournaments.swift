@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var json_data : NSDictionary!;
     var eventList: [String] = [];
@@ -30,6 +30,8 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     
     var selectedID : Int? = 0;
     
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
@@ -37,8 +39,9 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad();
         self.connect("");
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell");
+        self.tableView.dataSource = self;
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,12 +70,11 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-
+        
         var events = getTournamentData(json, field: NAME);
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);
-        var ids = getTournamentInt(json, field: "id");
-        
+        var ids = getTournamentInt(json, field: ID);
         
         loadEventList(events);
         loadDescriptionList(descriptions);
@@ -90,22 +92,20 @@ class Tournaments : UITableViewController, UITableViewDelegate, UITableViewDataS
     
     
     /* Delegate Start */
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.eventList.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
         
         cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")!;
-        
         cell.textLabel?.text = self.eventList[indexPath.row];
         cell.detailTextLabel?.text = self.dateList[indexPath.row];
         return cell;
     }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!");
         var s : String = self.eventList[indexPath.row];
         println(self.idList[indexPath.row]);
