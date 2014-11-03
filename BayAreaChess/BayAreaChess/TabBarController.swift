@@ -18,11 +18,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.hidden = true
         
         sidebar = FrostedSidebar(itemImages: [
-            UIImage(named: "chevron-left.png")!,
-            UIImage(named: "chevron-right.png")!,
-            UIImage(named: "chevron-left.png")!,
-            UIImage(named: "chevron-right.png")!,
-            UIImage(named: "chevron-left.png")!],
+            UIImage(named: "home.png")!,
+            UIImage(named: "tournaments.png")!,
+            UIImage(named: "about.png")!,
+            UIImage(named: "settings.png")!,
+            UIImage(named: "other.png")!],
             colors: [
                 UIColor(red: 240/255, green: 159/255, blue: 254/255, alpha: 1),
                 UIColor(red: 255/255, green: 137/255, blue: 167/255, alpha: 1),
