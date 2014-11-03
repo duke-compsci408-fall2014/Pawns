@@ -9,7 +9,7 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
-var queryString = 
+var queryString =
 'SELECT tournament_events.date_play, \
     tournament_events.start_time, \
     tournament_events.end_time, \
@@ -40,7 +40,7 @@ router.get('/base', function(req,res){
 });
 
 function doStuff(res) {
-    console.log(res);
+    //console.log(res);
 }
 
 router.get('/base/:id', function(req, res) {
