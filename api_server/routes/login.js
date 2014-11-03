@@ -11,17 +11,19 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
-router.get('/:user/:pass', function (req, res) {
-    var query = 'SELECT * FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";
+router.get('/verify/:user/:pass', function (req, res) {
+    var query = 'SELECT username, password FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";
     utils.runQuery(connectionpool, query, req, res, validate);
 });
 
 
-function validate (res, req) {
-    if (validatePassword(req.params.pass, res.json[0].password)) {
+function validate (json, res, req) {
+    if (validatePassword(req.params.pass, json.json[0].password)) {
+        res.send({verification: 'success'});
         console.log('Success');
     }
     else {
+        res.send({verification: 'failure'});
         console.log('Failure');
     }
 }
