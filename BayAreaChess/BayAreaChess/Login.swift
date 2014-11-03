@@ -38,19 +38,9 @@ class Login: UIViewController {
     }
 
 	@IBAction func verifyLogin (sender : AnyObject) {
-        // Get JSON
         URL_STRING += username.text + "/" + password.text;
         self.connect("");
-
-		if (verification == "success") {
-			self.performSegueWithIdentifier("login", sender: sender as UIButton);
-		}
-		else {
-			label.textColor = UIColor.redColor();
-			label.text = "Rejected!";
-		}
 	}
-    ////////////////////////////////////////////////////////////////////////////////////////////
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
@@ -77,12 +67,16 @@ class Login: UIViewController {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         
-        
-        
         verification = getVerification(json, field: "verification");
         println(verification);
-        self.reloadInputViews();
-        
+
+        if (verification == "success") {
+            self.performSegueWithIdentifier("login", sender: self);
+        }
+        else {
+            label.textColor = UIColor.redColor();
+            label.text = "Rejected!";
+        }
     }
     
     deinit {
@@ -95,8 +89,6 @@ class Login: UIViewController {
         
         return tournamentData;
     }
-    //////////////////////////////////////////////////////////////////////////////////////////
-    
     
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
