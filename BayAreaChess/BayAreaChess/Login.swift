@@ -14,28 +14,83 @@ class Login: UIViewController {
     @IBOutlet var password : UITextField!;
     @IBOutlet var label : UILabel!;
 	
-	override func viewDidLoad() {
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/verify/";
+    let NAME : String = "name";
+    let DESCRIPTION : String = "description";
+    let DATE : String = "start_date";
+    let AMOUNT : String = "amount";
+    let NEWLINE : String = "\n";
+    let NAME_LABEL : String = "Name:";
+    let DESC_LABEL : String = "Description:";
+    let DID_RECEIVE : String = "didReceiveResponse";
+    var verification : String = "failure";
+    
+    @IBOutlet var name : UILabel?;
+    @IBOutlet var descriptions : UITextView?;
+    @IBOutlet var dates : UILabel?;
+    @IBOutlet var cost : UILabel?;
+    
+    
+    var myID : Int? = 0;
+    
+    override func viewDidLoad() {
         super.viewDidLoad();
-		// Do any additional setup after loading the view, typically from a nib.
-	}
-	
-	override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning();
-		// Dispose of any resources that can be recreated.
-	}
+    }
 
 	@IBAction func verifyLogin (sender : AnyObject) {
-		if (username.text == "Pawns" && password.text == "Pawns") {
-			self.performSegueWithIdentifier("login", sender: sender as UIButton);
-		}
-		else {
-			label.textColor = UIColor.redColor();
-			label.text = "Rejected!";
-		}
+        URL_STRING += username.text + "/" + password.text;
+        self.connect("");
 	}
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning();
+    }
+    
+    var data = NSMutableData();
+    
+    func connect(query:NSString) {
+        var url = NSURL(string: URL_STRING);
+        var request = NSURLRequest(URL: url!);
+        var conn = NSURLConnection(request: request, delegate: self, startImmediately: true);
+    }
+    
+    
+    func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
+        println(DID_RECEIVE);
+    }
+    
+    func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
+        self.data.appendData(conData);
+    }
+    
+    func connectionDidFinishLoading(connection: NSURLConnection!) {
+        let data: NSData = self.data;
+        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+        
+        verification = getVerification(json, field: "verification");
+        println(verification);
+
+        if (verification == "success") {
+            self.performSegueWithIdentifier("login", sender: self);
+        }
+        else {
+            label.textColor = UIColor.redColor();
+            label.text = "Rejected!";
+        }
+    }
+    
+    deinit {
+        println("deiniting");
+    }
+    
+    func getVerification (input : NSDictionary, field : String) -> String {
+        var tournamentData : String! = "";
+        tournamentData = input["verification"] as String;
+        
+        return tournamentData;
+    }
     
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
-    
 }
