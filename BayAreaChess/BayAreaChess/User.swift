@@ -64,6 +64,9 @@ class User: UIViewController {
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         
         firstName?.text = getTournamentData(json, field: "first_name");
+        lastName?.text = getTournamentData(json, field: "last_name");
+        email?.text = getTournamentData(json, field: "email");
+        dateJoined?.text = getTournamentData(json, field: "date_joined");
         
         self.reloadInputViews();
         
