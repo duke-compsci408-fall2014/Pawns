@@ -16,9 +16,7 @@ class User: UIViewController {
     @IBOutlet var username : UILabel!;
     @IBOutlet var dateJoined : UILabel!;
     
-    ///////////////////////////////
-    
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/tournaments/base/";
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -27,21 +25,14 @@ class User: UIViewController {
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
-    
-    @IBOutlet var name : UILabel?;
-    @IBOutlet var descriptions : UITextView?;
-    @IBOutlet var dates : UILabel?;
-    @IBOutlet var cost : UILabel?;
-    
-    
+
     var myID : Int? = 0;
+    var myUsername : String?;
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        var id : Int = myID!;
-        var s : String = toString(id);
-        URL_STRING += s + "/";
+        URL_STRING += myUsername! + "/";
         println(URL_STRING);
         self.connect("");
         
@@ -71,10 +62,21 @@ class User: UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        //        cost?.text = getTournamentData(json, field: AMOUNT); //REQUIRES TYPE COERSION
+        
+        firstName?.text = getTournamentData(json, field: "first_name");
         
         self.reloadInputViews();
         
+    }
+    
+    func getTournamentData (input : NSDictionary, field : String) -> String {
+        var tournamentData : String! = "";
+        let json : Array = input["json"] as [AnyObject];
+        for (index, element) in enumerate(json) {
+            var name : String = element[field] as String
+            tournamentData = name;
+        }
+        return tournamentData;
     }
     
 }
