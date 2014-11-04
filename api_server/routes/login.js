@@ -26,14 +26,6 @@ router.post('/update/:user/:field/:newvalue', function (req, res) {
     utils.runQuery(connectionpool, query, req, res, postInfo);
 });
 
-function loggedIn (json, res, req) {
-    res.send(json);
-}
-
-function postInfo (json, res, req) {
-    res.send(json);
-}
-
 function validate (json, res, req) {
     if (validatePassword(req.params.pass, json.json[0].password)) {
         res.send({verification: 'success'});
@@ -43,6 +35,14 @@ function validate (json, res, req) {
         res.send({verification: 'failure'});
         console.log('Failure');
     }
+}
+
+function loggedIn (json, res, req) {
+    res.send(json);
+}
+
+function postInfo (json, res, req) {
+    res.send(json);
 }
 
 var validatePassword = function (key, string) {
