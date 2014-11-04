@@ -27,6 +27,17 @@
 		81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7819F6D1120038C4B3 /* TabBarController.swift */; };
 		81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7C19F6EAD60038C4B3 /* About.swift */; };
 		81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7E19F6EBB40038C4B3 /* Calander.swift */; };
+		81D8D5051A072A6300671AFA /* cityscape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5041A072A6300671AFA /* cityscape.jpg */; };
+		81D8D5071A07319300671AFA /* streets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5061A07319300671AFA /* streets.jpg */; };
+		81D8D50A1A07369500671AFA /* bridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5081A07369500671AFA /* bridge.jpg */; };
+		81D8D50B1A07369600671AFA /* neighborhood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5091A07369500671AFA /* neighborhood.jpg */; };
+		81D8D50D1A07399400671AFA /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D50C1A07399400671AFA /* menu2.png */; };
+		81D8D5131A0747EC00671AFA /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D50E1A0747EC00671AFA /* about.png */; };
+		81D8D5141A0747EC00671AFA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D50F1A0747EC00671AFA /* home.png */; };
+		81D8D5151A0747EC00671AFA /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5101A0747EC00671AFA /* other.png */; };
+		81D8D5161A0747EC00671AFA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5111A0747EC00671AFA /* settings.png */; };
+		81D8D5171A0747EC00671AFA /* tournaments.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5121A0747EC00671AFA /* tournaments.png */; };
+		81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8D5181A0826D000671AFA /* AboutLeft.swift */; };
 		B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14F819CBAE9A0001BE7C /* Login.swift */; };
 		B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +77,17 @@
 		81C51B7819F6D1120038C4B3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		81C51B7C19F6EAD60038C4B3 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		81C51B7E19F6EBB40038C4B3 /* Calander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calander.swift; sourceTree = "<group>"; };
+		81D8D5041A072A6300671AFA /* cityscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cityscape.jpg; path = ../../resources/cityscape.jpg; sourceTree = "<group>"; };
+		81D8D5061A07319300671AFA /* streets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = streets.jpg; path = ../../resources/streets.jpg; sourceTree = "<group>"; };
+		81D8D5081A07369500671AFA /* bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bridge.jpg; path = ../../resources/bridge.jpg; sourceTree = "<group>"; };
+		81D8D5091A07369500671AFA /* neighborhood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = neighborhood.jpg; path = ../../resources/neighborhood.jpg; sourceTree = "<group>"; };
+		81D8D50C1A07399400671AFA /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu2.png; path = ../../resources/menu2.png; sourceTree = "<group>"; };
+		81D8D50E1A0747EC00671AFA /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = ../../resources/about.png; sourceTree = "<group>"; };
+		81D8D50F1A0747EC00671AFA /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../resources/home.png; sourceTree = "<group>"; };
+		81D8D5101A0747EC00671AFA /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = other.png; path = ../../resources/other.png; sourceTree = "<group>"; };
+		81D8D5111A0747EC00671AFA /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../../resources/settings.png; sourceTree = "<group>"; };
+		81D8D5121A0747EC00671AFA /* tournaments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tournaments.png; path = ../../resources/tournaments.png; sourceTree = "<group>"; };
+		81D8D5181A0826D000671AFA /* AboutLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutLeft.swift; sourceTree = "<group>"; };
 		B3BE14F819CBAE9A0001BE7C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +146,7 @@
 				81C51B7819F6D1120038C4B3 /* TabBarController.swift */,
 				81C51B7C19F6EAD60038C4B3 /* About.swift */,
 				81C51B7E19F6EBB40038C4B3 /* Calander.swift */,
+				81D8D5181A0826D000671AFA /* AboutLeft.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -131,6 +154,16 @@
 		2C7054CA19C7CBAE0049BE83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81D8D50E1A0747EC00671AFA /* about.png */,
+				81D8D50F1A0747EC00671AFA /* home.png */,
+				81D8D5101A0747EC00671AFA /* other.png */,
+				81D8D5111A0747EC00671AFA /* settings.png */,
+				81D8D5121A0747EC00671AFA /* tournaments.png */,
+				81D8D50C1A07399400671AFA /* menu2.png */,
+				81D8D5081A07369500671AFA /* bridge.jpg */,
+				81D8D5091A07369500671AFA /* neighborhood.jpg */,
+				81D8D5061A07319300671AFA /* streets.jpg */,
+				81D8D5041A072A6300671AFA /* cityscape.jpg */,
 				81C51B7419F60B570038C4B3 /* menu.png */,
 				81C51B7219F600B80038C4B3 /* bayarea.jpg */,
 				8193588E19EDF15A00B79AA0 /* chevron-left.png */,
@@ -240,14 +273,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D8D5071A07319300671AFA /* streets.jpg in Resources */,
 				8193588C19EDEE4800B79AA0 /* about2.png in Resources */,
 				2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */,
+				81D8D50D1A07399400671AFA /* menu2.png in Resources */,
+				81D8D5151A0747EC00671AFA /* other.png in Resources */,
+				81D8D5141A0747EC00671AFA /* home.png in Resources */,
+				81D8D5161A0747EC00671AFA /* settings.png in Resources */,
 				81C51B7519F60B570038C4B3 /* menu.png in Resources */,
+				81D8D5131A0747EC00671AFA /* about.png in Resources */,
 				8193589019EDF15A00B79AA0 /* chevron-left.png in Resources */,
 				8193589119EDF15A00B79AA0 /* chevron-right.png in Resources */,
+				81D8D50A1A07369500671AFA /* bridge.jpg in Resources */,
+				81D8D5051A072A6300671AFA /* cityscape.jpg in Resources */,
 				2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */,
 				8193588D19EDEE4800B79AA0 /* BayAreaChessLogo.png in Resources */,
+				81D8D50B1A07369600671AFA /* neighborhood.jpg in Resources */,
 				8193588B19EDEE4800B79AA0 /* about.jpg in Resources */,
+				81D8D5171A0747EC00671AFA /* tournaments.png in Resources */,
 				81C51B7319F600B80038C4B3 /* bayarea.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +313,7 @@
 				81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */,
 				B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */,
 				81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */,
+				81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */,
 				81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */,
 				B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */,
 				81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */,
