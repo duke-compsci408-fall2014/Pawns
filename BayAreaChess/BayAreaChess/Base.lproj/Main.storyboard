@@ -385,7 +385,7 @@ Executive Director</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="fDm-CN-7aP" kind="show" id="vm4-RV-whO"/>
+                                            <segue destination="fDm-CN-7aP" kind="show" identifier="selectEvent" id="vm4-RV-whO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -706,49 +706,6 @@ Executive Director</string>
             </objects>
             <point key="canvasLocation" x="471" y="842"/>
         </scene>
-        <!--Tournaments-->
-        <scene sceneID="ZI9-HW-tmH">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vi1-AM-qnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="Tournaments" id="iJe-eQ-IiQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="UGE-M0-r8H">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.16862745100000001" green="0.4549019608" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aMz-Ek-oyf">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Menu">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="onMenu" destination="iJe-eQ-IiQ" eventType="touchUpInside" id="jiq-D8-0JE"/>
-                            </connections>
-                        </button>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="61" id="OXF-aG-yRR">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXF-aG-yRR" id="dmL-RZ-vBf">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="fDm-CN-7aP" kind="show" identifier="selectEvent" id="X3v-eM-Pxl"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="iJe-eQ-IiQ" id="crP-ZC-ojc"/>
-                            <outlet property="delegate" destination="iJe-eQ-IiQ" id="YIY-OQ-SJi"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="h1w-rP-hTN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="1307" y="1713"/>
-        </scene>
         <!--Specific Tournaments-->
         <scene sceneID="uup-2d-do7">
             <objects>
@@ -832,7 +789,7 @@ Executive Director</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iJe-eQ-IiQ" kind="show" id="iuP-Jy-XI9"/>
+                                    <segue destination="CMq-Fl-J2c" kind="show" id="XdQ-EP-ieV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tournament Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-mR-bWH">
@@ -945,5 +902,6 @@ Executive Director</string>
         <segue reference="tuA-zX-daY"/>
         <segue reference="kuB-Z8-ujj"/>
         <segue reference="vm4-RV-whO"/>
+        <segue reference="XdQ-EP-ieV"/>
     </inferredMetricsTieBreakers>
 </document>

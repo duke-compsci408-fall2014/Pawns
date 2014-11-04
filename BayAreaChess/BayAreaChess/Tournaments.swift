@@ -29,6 +29,8 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     let ID : String = "id";
     
     var selectedID : Int? = 0;
+
+    var list : [String] = ["cell", "money"];
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -41,6 +43,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         self.connect("");
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell");
         self.tableView.dataSource = self;
+        self.tableView.delegate = self;
         
     }
     
@@ -98,8 +101,8 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
-        
         cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")!;
+
         cell.textLabel?.text = self.eventList[indexPath.row];
         cell.detailTextLabel?.text = self.dateList[indexPath.row];
         return cell;
