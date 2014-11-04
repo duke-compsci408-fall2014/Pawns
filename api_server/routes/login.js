@@ -21,7 +21,16 @@ router.get('/:user', function (req, res) {
     utils.runQuery(connectionpool, query, req, res, loggedIn);
 });
 
+router.post('/update/:user/:field/:newvalue', function (req, res) {
+    var query = 'UPDATE auth_user SET ' + req.params.field + '=' + '\"' + req.params.newvalue + '\"' + ' WHERE username='+'\"' + req.params.user + '\"';
+    utils.runQuery(connectionpool, query, req, res, postInfo);
+});
+
 function loggedIn (json, res, req) {
+    res.send(json);
+}
+
+function postInfo (json, res, req) {
     res.send(json);
 }
 

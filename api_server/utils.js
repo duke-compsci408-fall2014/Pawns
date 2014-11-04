@@ -8,7 +8,7 @@ var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
                 err:    err.code
             });
         } else {
-            var query = sqlQuery; //'SELECT name,description,start_date FROM tournament_tournaments WHERE start_date > now()';
+            var query = sqlQuery;
             console.log(query);
             connection.query(query, req.params.id, function(err, rows, fields) {
 
