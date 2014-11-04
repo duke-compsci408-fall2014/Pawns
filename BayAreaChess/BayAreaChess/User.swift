@@ -83,4 +83,10 @@ class User: UIViewController {
         return tournamentData;
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "update") {
+            let vc = segue.destinationViewController as UserUpdate;
+            vc.myUsername = self.username?.text;
+        }
+    }
 }

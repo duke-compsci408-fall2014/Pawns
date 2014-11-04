@@ -12,6 +12,8 @@ class UserUpdate : UIViewController {
     
     let URL_STRING : String = "http://bac.colab.duke.edu:3000/login/update/";
     
+    var myUsername : String?;
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -24,7 +26,7 @@ class UserUpdate : UIViewController {
     
     @IBAction func buttonPressed(sender: AnyObject) {
         
-        var urlString : String = URL_STRING + "duke" + "/" + "email" + "/" + "money@duke.edu";
+        var urlString : String = URL_STRING + self.myUsername! + "/" + "email" + "/" + "money@duke.edu";
         
         var url = NSURL(string: urlString);
         var request = NSMutableURLRequest(URL: url!);
