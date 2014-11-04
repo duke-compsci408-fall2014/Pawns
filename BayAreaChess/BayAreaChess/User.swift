@@ -15,6 +15,8 @@ class User: UIViewController {
     @IBOutlet var username : UILabel!;
     @IBOutlet var dateJoined : UILabel!;
     
+    
+    
     var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
