@@ -18,9 +18,12 @@ router.get('/verify/:user/:pass', function (req, res) {
 
 router.get('/:user', function (req, res) {
     var query = 'SELECT * FROM auth_user WHERE username=' + '\"' + req.params.user + '\"';
-    utils.runQuery(connectionpool, query, req, res, validate);
+    utils.runQuery(connectionpool, query, req, res, loggedIn);
 });
 
+function loggedIn (json, res, req) {
+    res.send(json);
+}
 
 function validate (json, res, req) {
     if (validatePassword(req.params.pass, json.json[0].password)) {
