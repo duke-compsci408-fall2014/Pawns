@@ -93,4 +93,11 @@ class Login: UIViewController {
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "login") {
+            let vc = segue.destinationViewController as User;
+            vc.myUsername = self.username.text as String;
+        }
+    }
 }
