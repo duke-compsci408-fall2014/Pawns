@@ -18,9 +18,13 @@ router.get('/verify/:user/:pass', function (req, res) {
 
 router.get('/:user', function (req, res) {
     var query = 'SELECT * FROM auth_user WHERE username=' + '\"' + req.params.user + '\"';
-    utils.runQuery(connectionpool, query, req, res, validate);
+    utils.runQuery(connectionpool, query, req, res, loggedIn);
 });
 
+router.post('/update/:user/:field/:newvalue', function (req, res) {
+    var query = 'UPDATE auth_user SET ' + req.params.field + '=' + '\"' + req.params.newvalue + '\"' + ' WHERE username='+'\"' + req.params.user + '\"';
+    utils.runQuery(connectionpool, query, req, res, postInfo);
+});
 
 function validate (json, res, req) {
     if (validatePassword(req.params.pass, json.json[0].password)) {
@@ -31,6 +35,14 @@ function validate (json, res, req) {
         res.send({verification: 'failure'});
         console.log('Failure');
     }
+}
+
+function loggedIn (json, res, req) {
+    res.send(json);
+}
+
+function postInfo (json, res, req) {
+    res.send(json);
 }
 
 var validatePassword = function (key, string) {
