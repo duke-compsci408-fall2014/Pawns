@@ -10,8 +10,7 @@ import UIKit
 
 class User: UIViewController {
     
-    @IBOutlet var firstName : UILabel!;
-    @IBOutlet var lastName : UILabel!;
+    @IBOutlet var name : UILabel!;
     @IBOutlet var email : UILabel!;
     @IBOutlet var username : UILabel!;
     @IBOutlet var dateJoined : UILabel!;
@@ -63,9 +62,9 @@ class User: UIViewController {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         
-        firstName?.text = getTournamentData(json, field: "first_name");
-        lastName?.text = getTournamentData(json, field: "last_name");
+        name?.text = getTournamentData(json, field: "first_name") + " " + getTournamentData(json, field: "last_name");
         email?.text = getTournamentData(json, field: "email");
+        username?.text = getTournamentData(json, field: "username");
         dateJoined?.text = getTournamentData(json, field: "date_joined");
         
         self.reloadInputViews();
