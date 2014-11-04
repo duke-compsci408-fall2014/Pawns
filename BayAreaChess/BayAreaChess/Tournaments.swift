@@ -106,6 +106,9 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
 
         cell.textLabel?.text = self.eventList[indexPath.row];
         cell.detailTextLabel?.text = self.dateList[indexPath.row];
+        cell.backgroundColor = UIColor.clearColor();
+        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.detailTextLabel?.textColor = UIColor.whiteColor();
         return cell;
     }
     
