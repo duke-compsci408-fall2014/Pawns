@@ -29,6 +29,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     let ID : String = "id";
     
     var selectedID : Int? = 0;
+    var myName : String?;
 
     var list : [String] = ["cell", "money"];
     
@@ -74,12 +75,12 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         
-        var events = getTournamentData(json, field: NAME);
+        var name = getTournamentData(json, field: NAME);
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);
         var ids = getTournamentInt(json, field: ID);
         
-        loadEventList(events);
+        loadEventList(name);
         loadDescriptionList(descriptions);
         loadDateList(dates);
         loadIDList(ids);
@@ -112,6 +113,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         println("You selected cell #\(indexPath.row)!");
         var s : String = self.eventList[indexPath.row];
         println(self.idList[indexPath.row]);
+        myName = s;
         selectedID = self.idList[indexPath.row];
         self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
     }
@@ -159,7 +161,8 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "selectEvent") {
             let vc = segue.destinationViewController as SpecificTournaments;
-            vc.myID = selectedID;
+            vc.myID = self.selectedID;
+            vc.myName = self.myName;
         }
     }
     

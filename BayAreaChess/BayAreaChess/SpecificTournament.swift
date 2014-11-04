@@ -13,20 +13,24 @@ class SpecificTournaments : UIViewController {
     var URL_STRING : String = "http://bac.colab.duke.edu:3000/tournaments/base/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
-    let DATE : String = "start_date";
-    let AMOUNT : String = "amount";
+    let DATE : String = "date_play";
+    let ROUND_TIMES : String = "round_times";
     let NEWLINE : String = "\n";
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
+    let CITY : String = "city";
+    let ADDRESS : String = "address";
     
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
-    @IBOutlet var cost : UILabel?;
-
+    @IBOutlet var roundTimes : UILabel?;
+    @IBOutlet var city : UILabel?;
+    @IBOutlet var address : UILabel?;
     
     var myID : Int? = 0;
+    var myName : String?;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -63,10 +67,12 @@ class SpecificTournaments : UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        //name?.text = getTournamentData(json, field: NAME);
-        //descriptions?.text = getTournamentData(json, field: DESCRIPTION);
-        //dates?.text = getTournamentData(json, field: DATE);
-//        cost?.text = getTournamentData(json, field: AMOUNT); //REQUIRES TYPE COERSION
+        name?.text = self.myName;
+        descriptions?.text = getTournamentData(json, field: DESCRIPTION);
+        dates?.text = getTournamentData(json, field: DATE);
+        city?.text = getTournamentData(json, field: CITY);
+        address?.text = getTournamentData(json, field: ADDRESS);
+        roundTimes?.text = getTournamentData(json, field: ROUND_TIMES);
         
         self.reloadInputViews();
         
