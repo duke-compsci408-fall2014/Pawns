@@ -36,7 +36,6 @@ class User: UIViewController {
         URL_STRING += myUsername! + "/";
         println(URL_STRING);
         self.connect("");
-        
     }
     
     override func didReceiveMemoryWarning() {
