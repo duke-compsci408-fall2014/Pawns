@@ -3,6 +3,7 @@ var router = express.Router();
 var mysql = require('mysql');
 var utils = require('../utils');
 var pbkdf2 = require('pbkdf2-sha256');
+var querystring = require('querystring');
 
 var connectionpool = mysql.createPool({
         host     : 'localhost',
@@ -21,9 +22,31 @@ router.get('/:user', function (req, res) {
     utils.runQuery(connectionpool, query, req, res, loggedIn);
 });
 
-router.post('/update/:user/:field/:newvalue', function (req, res) {
-    var query = 'UPDATE auth_user SET ' + req.params.field + '=' + '\"' + req.params.newvalue + '\"' + ' WHERE username='+'\"' + req.params.user + '\"';
-    utils.runQuery(connectionpool, query, req, res, postInfo);
+router.post('/update/:user/:fields', function (req, res) {
+    var fields = req.params.fields;
+
+    var result = fields.split("&");
+
+    var uri = "";
+
+    for (var i=0; i<result.length; i++) {
+        var value = (result[i]).split("=");
+        var str = (value[1]).replace(/"/g,'');
+        if (str) {
+            uri += value[0] + '=' + value[1] + ',';
+        }
+    }
+    if (uri) {
+        uri = uri.slice(0, -1);
+    }
+    console.log(uri.length);
+    if (uri) {
+        var query = 'UPDATE auth_user SET ' + uri + ' WHERE username=' + '\"' + req.params.user + '\"';
+        utils.runQuery(connectionpool, query, req, res, postInfo);
+    }
+    else {
+        res.send({result:"failure"});
+    }
 });
 
 function validate (json, res, req) {
