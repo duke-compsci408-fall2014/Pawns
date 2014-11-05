@@ -14,6 +14,7 @@
 		2C7054E019C7CBAE0049BE83 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */; };
 		811809C819E0879000252A70 /* SpecificTournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811809C719E0879000252A70 /* SpecificTournament.swift */; };
 		814E28DE19E1EE1300D2B4FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814E28DD19E1EE1300D2B4FB /* User.swift */; };
+		818393251A097A5600AAE892 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818393241A097A5600AAE892 /* UserUpdate.swift */; };
 		8193588319EC774D00B79AA0 /* TournamentRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193588219EC774D00B79AA0 /* TournamentRegistration.swift */; };
 		8193588B19EDEE4800B79AA0 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8193588819EDEE4800B79AA0 /* about.jpg */; };
 		8193588C19EDEE4800B79AA0 /* about2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588919EDEE4800B79AA0 /* about2.png */; };
@@ -64,6 +65,7 @@
 		2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
 		811809C719E0879000252A70 /* SpecificTournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTournament.swift; sourceTree = "<group>"; };
 		814E28DD19E1EE1300D2B4FB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		818393241A097A5600AAE892 /* UserUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 		8193588219EC774D00B79AA0 /* TournamentRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentRegistration.swift; sourceTree = "<group>"; };
 		8193588819EDEE4800B79AA0 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = about.jpg; path = ../../resources/about.jpg; sourceTree = "<group>"; };
 		8193588919EDEE4800B79AA0 /* about2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about2.png; path = ../../resources/about2.png; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				81C51B7C19F6EAD60038C4B3 /* About.swift */,
 				81C51B7E19F6EBB40038C4B3 /* Calander.swift */,
 				81D8D5181A0826D000671AFA /* AboutLeft.swift */,
+				818393241A097A5600AAE892 /* UserUpdate.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */,
 				81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */,
 				B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */,
+				818393251A097A5600AAE892 /* UserUpdate.swift in Sources */,
 				81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */,
 				2C7054CF19C7CBAE0049BE83 /* ViewController.swift in Sources */,
 				811809C819E0879000252A70 /* SpecificTournament.swift in Sources */,

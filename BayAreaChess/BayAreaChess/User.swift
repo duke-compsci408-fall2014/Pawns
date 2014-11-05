@@ -15,6 +15,8 @@ class User: UIViewController {
     @IBOutlet var username : UILabel!;
     @IBOutlet var dateJoined : UILabel!;
     
+    
+    
     var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
@@ -34,7 +36,6 @@ class User: UIViewController {
         URL_STRING += myUsername! + "/";
         println(URL_STRING);
         self.connect("");
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,4 +82,10 @@ class User: UIViewController {
         return tournamentData;
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "update") {
+            let vc = segue.destinationViewController as UserUpdate;
+            vc.myUsername = self.myUsername;
+        }
+    }
 }
