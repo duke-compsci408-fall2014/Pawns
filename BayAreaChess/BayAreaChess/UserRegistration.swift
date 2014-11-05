@@ -8,39 +8,57 @@
 
 import UIKit
 
-class UserRegistration: UIViewController {
-	@IBOutlet var firstName : UITextField!
-	@IBOutlet var lastName : UITextField!
-	@IBOutlet var password : UITextField!
-	@IBOutlet var confirmedPassword : UITextField!
-	@IBOutlet var email : UITextField!
-	
+import UIKit
+
+class UserRegistration : UIViewController {
+    
+    @IBOutlet var first_name : UITextField!;
+    @IBOutlet var last_name : UITextField!;
+    @IBOutlet var email : UITextField!;
+    @IBOutlet var username : UITextField!;
+    @IBOutlet var password : UITextField!;
+    @IBOutlet var confirm_password : UITextField!;
+    
+    let URL_STRING : String = "http://bac.colab.duke.edu:3000/login/register/";
+    let AMP : String = "&";
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad();        
+        super.viewDidLoad();
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
     }
     
-	func verifyData () -> Bool{
-        if (password != confirmedPassword) {
-            return false;
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        if(self.password.text != self.confirm_password.text) {
+            return;
         }
-        if (firstName == nil) {
-            return false;
-        }
-        if (lastName == nil) {
-            return false;
-        }
-        if (email == nil) {
-            return false;
-        }
-		return true;
-	}
-	
-	@IBAction func sendRegistrationRequest () {
-        verifyData();
-		// 2. API POST, hashes, salts and inputs the info
-	}
+        
+        var prelim : String = "email=" + "%22" + self.email.text + "%22" + AMP +
+            "first_name=" + "%22" + self.first_name.text + "%22" + AMP +
+            "last_name=" + "%22" + self.last_name.text + "%22" + AMP +
+            "username=" + "%22" + self.username.text + "%22" + AMP +
+            "password=" + "%22" + self.password.text + "%22";
+        
+        var urlString : String = URL_STRING + prelim;
+        var url = NSURL(string: urlString);
+        println(url);
+        var request = NSMutableURLRequest(URL: url!);
+        request.HTTPMethod = "POST";
+        
+        var dataString = "some data";
+        let data = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding);
+        
+        request.HTTPBody = data;
+        
+        var connection = NSURLConnection(request: request, delegate: self, startImmediately: false);
+        
+        println("sending request...");
+        
+        connection?.start();
+    }
 }

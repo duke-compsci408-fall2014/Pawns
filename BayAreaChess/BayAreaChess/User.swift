@@ -14,6 +14,8 @@ class User: UIViewController {
     @IBOutlet var email : UILabel!;
     @IBOutlet var username : UILabel!;
     @IBOutlet var dateJoined : UILabel!;
+    @IBOutlet var phone : UILabel!;
+    @IBOutlet var address : UILabel!;
     
     
     
@@ -67,7 +69,10 @@ class User: UIViewController {
         email?.text = getTournamentData(json, field: "email");
         username?.text = getTournamentData(json, field: "username");
         dateJoined?.text = getTournamentData(json, field: "date_joined");
-        
+        phone?.text = getTournamentData(json, field: "main_phone");
+        address?.text = getTournamentData(json, field: "address") +
+                        getTournamentData(json, field: "city");
+
         self.reloadInputViews();
         
     }
