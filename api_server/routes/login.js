@@ -29,6 +29,9 @@ var insertQuery = 'INSERT INTO auth_user (username, first_name, \
                     VALUES (%s, %s, %s, %s, \
                     %s, %d, %d, %d, NOW(), NOW())';
 
+var insertQueryTwo = 'INSERT INTO player_accounts_playerprofile \
+                    (username, user_id) VALUES (%s, %d);'
+
 router.get('/verify/:user/:pass', function (req, res) {
     var query = 'SELECT username, password FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";
     utils.runQuery(connectionpool, query, req, res, validate);
@@ -73,7 +76,18 @@ router.post('/register/:fields', function (req, res) {
     var salt = crypto.randomBytes(8).toString('base64');
     var hashedPass = '\"'+ 'pbkdf2_sha256$10000$' + salt + '$' + pbkdf2(rawPass, new Buffer(salt), 10000, 32).toString('base64') + '\"';
     var query = util.format(insertQuery, parsed.username, parsed.first_name, parsed.last_name, parsed.email, hashedPass, 0, 1, 0);
-    utils.runQuery(connectionpool, query, req, res, registerUser);
+    utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
+        var getID = 'SELECT id from auth_user WHERE username=' + parsed.username;
+        utils.runQuery(connectionpool, getID, req, res, function(json, res, req) {
+            var uid = (json.json)[0].id;
+            var secondInsert = util.format(insertQueryTwo, parsed.username, uid);
+            utils.runQuery(connectionpool, secondInsert, req, res, function(json, res, req) {
+
+            });
+        });
+        res.send(json);
+
+    });
 });
 
 function validate (json, res, req) {
