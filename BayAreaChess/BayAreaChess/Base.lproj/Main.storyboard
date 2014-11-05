@@ -74,7 +74,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="htj-aN-TQy" eventType="touchUpInside" id="8IT-oz-1Xb"/>
-                                    <segue destination="Aw3-mt-f2d" kind="show" id="oxx-2P-I3E"/>
+                                    <segue destination="Aw3-mt-f2d" kind="show" id="ugI-Po-Wic"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEj-ud-pNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="1040"/>
+            <point key="canvasLocation" x="-36" y="1177"/>
         </scene>
         <!--About Left-->
         <scene sceneID="5YQ-2U-vnW">

@@ -20,7 +20,6 @@ class User: UIViewController {
     
     
     var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
-    let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
     let AMOUNT : String = "amount";
@@ -64,14 +63,13 @@ class User: UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        
         name?.text = getTournamentData(json, field: "first_name") + " " + getTournamentData(json, field: "last_name");
         email?.text = getTournamentData(json, field: "email");
         username?.text = getTournamentData(json, field: "username");
         dateJoined?.text = getTournamentData(json, field: "date_joined");
-        phone?.text = getTournamentData(json, field: "main_phone");
-        address?.text = getTournamentData(json, field: "address") +
-                        getTournamentData(json, field: "city");
+        //phone?.text = getTournamentData(json, field: "main_phone");
+        //address?.text = getTournamentData(json, field: "address") +
+        //                getTournamentData(json, field: "city");
 
         self.reloadInputViews();
         
