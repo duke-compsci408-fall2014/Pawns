@@ -5,6 +5,7 @@ var utils = require('../utils');
 var pbkdf2 = require('pbkdf2-sha256');
 var querystring = require('querystring');
 var crypto = require('crypto');
+var util = require('util');
 
 var connectionpool = mysql.createPool({
         host     : 'localhost',
@@ -25,8 +26,8 @@ var userViewQuery = 'SELECT auth_user.username, auth_user.first_name, auth_user.
 var insertQuery = 'INSERT INTO auth_user (username, first_name, \
                     last_name, email, password, is_staff, is_active, \
                     is_superuser, last_login, date_joined) \
-                    VALUES ("czarlos", "Carlos", "Reyes", "cer26@duke.edu", \
-                    "money", 1, 1, 1, NOW(), NOW());'
+                    VALUES (%s, %s, %s, %s, \
+                    %s, %d, %d, %d, NOW(), NOW())';
 
 router.get('/verify/:user/:pass', function (req, res) {
     var query = 'SELECT username, password FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";
@@ -70,8 +71,9 @@ router.post('/register/:fields', function (req, res) {
     var parsed = querystring.parse(fields);
     var rawPass = parsed.password.replace(/"/g, '');
     var salt = crypto.randomBytes(8).toString('base64');
-    var hashedPass = 'pbkdf2_sha256$10000$' + salt + '$' + pbkdf2(rawPass, new Buffer(salt), 10000, 32).toString('base64');
-    console.log(hashedPass);
+    var hashedPass = '\"'+ 'pbkdf2_sha256$10000$' + salt + '$' + pbkdf2(rawPass, new Buffer(salt), 10000, 32).toString('base64') + '\"';
+    var query = util.format(insertQuery, parsed.username, parsed.first_name, parsed.last_name, parsed.email, hashedPass, 0, 1, 0);
+    utils.runQuery(connectionpool, query, req, res, registerUser);
 });
 
 function validate (json, res, req) {
@@ -90,6 +92,10 @@ function loggedIn (json, res, req) {
 }
 
 function postInfo (json, res, req) {
+    res.send(json);
+}
+
+function registerUser (json, res, req) {
     res.send(json);
 }
 
