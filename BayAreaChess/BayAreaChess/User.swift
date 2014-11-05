@@ -86,7 +86,7 @@ class User: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "update") {
             let vc = segue.destinationViewController as UserUpdate;
-            vc.myUsername = self.username?.text;
+            vc.myUsername = self.myUsername;
         }
     }
 }
