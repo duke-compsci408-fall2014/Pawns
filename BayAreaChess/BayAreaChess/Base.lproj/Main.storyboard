@@ -20,42 +20,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-8L-p4r">
-                                <rect key="frame" x="80" y="119" width="160" height="30"/>
+                                <rect key="frame" x="80" y="112" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i86-WG-5qi">
-                                <rect key="frame" x="80" y="178" width="160" height="30"/>
+                                <rect key="frame" x="80" y="171" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld7-45-2ss">
+                                <rect key="frame" x="80" y="225" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Hs-CY-r3v">
-                                <rect key="frame" x="80" y="234" width="160" height="30"/>
+                                <rect key="frame" x="80" y="283" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHJ-6R-cR3">
-                                <rect key="frame" x="80" y="293" width="160" height="30"/>
+                                <rect key="frame" x="80" y="342" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-vV-NBA">
-                                <rect key="frame" x="80" y="354" width="160" height="30"/>
+                                <rect key="frame" x="80" y="403" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imd-Ke-wp6">
-                                <rect key="frame" x="96" y="441" width="129" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendRegistrationRequest" destination="htj-aN-TQy" eventType="touchUpInside" id="3fV-EA-goT"/>
-                                    <segue destination="Aw3-mt-f2d" kind="show" id="Krl-Tu-gRX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-Dz-dqw">
                                 <rect key="frame" x="11" y="19" width="46" height="30"/>
                                 <state key="normal" title="Back">
@@ -72,6 +65,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHP-Sr-7Cx">
+                                <rect key="frame" x="113" y="453" width="95" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="htj-aN-TQy" eventType="touchUpInside" id="8IT-oz-1Xb"/>
+                                    <segue destination="Aw3-mt-f2d" kind="show" id="oxx-2P-I3E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -79,16 +84,17 @@
                     <navigationItem key="navigationItem" id="XoT-B5-QAb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="confirmedPassword" destination="4nd-vV-NBA" id="lg0-iU-52p"/>
-                        <outlet property="email" destination="8Hs-CY-r3v" id="gAb-b8-1zK"/>
-                        <outlet property="firstName" destination="aRK-8L-p4r" id="Vzf-tf-ycO"/>
-                        <outlet property="lastName" destination="i86-WG-5qi" id="WLk-fi-KL9"/>
-                        <outlet property="password" destination="lHJ-6R-cR3" id="Umf-Nj-k6S"/>
+                        <outlet property="confirm_password" destination="4nd-vV-NBA" id="FRk-u5-WqE"/>
+                        <outlet property="email" destination="8Hs-CY-r3v" id="QKP-zZ-kmz"/>
+                        <outlet property="first_name" destination="aRK-8L-p4r" id="tTG-gM-NNw"/>
+                        <outlet property="last_name" destination="i86-WG-5qi" id="csg-JJ-qyo"/>
+                        <outlet property="password" destination="lHJ-6R-cR3" id="OUj-t7-6Q7"/>
+                        <outlet property="username" destination="Ld7-45-2ss" id="RwE-TS-px8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEj-ud-pNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36" y="1040"/>
+            <point key="canvasLocation" x="-394" y="1040"/>
         </scene>
         <!--About Left-->
         <scene sceneID="5YQ-2U-vnW">
@@ -408,7 +414,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nen-ja-ZlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1307" y="1040"/>
+            <point key="canvasLocation" x="1008" y="1040"/>
         </scene>
         <!--User Update-->
         <scene sceneID="IUC-9T-Qbd">
@@ -490,7 +496,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekh-18-8zK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884" y="295"/>
+            <point key="canvasLocation" x="-1156" y="295"/>
         </scene>
         <!--Item-->
         <scene sceneID="6ca-L6-neE">
@@ -563,21 +569,29 @@ Executive Director</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-DQ-snt">
+                                <rect key="frame" x="16" y="385" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cB5-7U-Kye"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="address" destination="oka-DQ-snt" id="Jj6-YV-RAf"/>
                         <outlet property="dateJoined" destination="rp1-uP-3Qn" id="oAd-wS-auC"/>
                         <outlet property="email" destination="JHr-hW-IsD" id="6we-0a-HM0"/>
                         <outlet property="name" destination="r2r-yf-O6L" id="ETb-4j-d4N"/>
+                        <outlet property="phone" destination="JiK-E4-n2C" id="2YT-ur-pnz"/>
                         <outlet property="username" destination="ABd-Cb-XNw" id="dbb-o3-uVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0h-Q5-94p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466" y="295"/>
+            <point key="canvasLocation" x="-722" y="295"/>
         </scene>
         <!--Item-->
         <scene sceneID="XbV-nd-yI0">
@@ -743,11 +757,12 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdL-T4-8kJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="-427"/>
+            <point key="canvasLocation" x="465" y="202"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xVj-SM-fsW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EqH-Wk-thM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="pfa-Sn-gE3" customClass="TabBarController" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -764,9 +779,8 @@ Executive Director</string>
                         <segue destination="xYa-4T-8tK" kind="relationship" relationship="viewControllers" id="YYp-18-WFX"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EqH-Wk-thM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="842"/>
+            <point key="canvasLocation" x="465" y="842"/>
         </scene>
         <!--Specific Tournaments-->
         <scene sceneID="uup-2d-do7">
@@ -881,7 +895,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbO-81-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="1040"/>
+            <point key="canvasLocation" x="1401" y="1040"/>
         </scene>
         <!--Tournament Registration-->
         <scene sceneID="Xsy-A5-Z8o">
@@ -955,7 +969,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1En-U0-N2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="1040"/>
+            <point key="canvasLocation" x="1819" y="1040"/>
         </scene>
     </scenes>
     <resources>
@@ -970,10 +984,10 @@ Executive Director</string>
         <image name="streets.jpg" width="744" height="1392"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BXt-uO-gUI"/>
-        <segue reference="XdQ-EP-ieV"/>
         <segue reference="IAU-Ys-L3o"/>
-        <segue reference="jCp-8Y-Rat"/>
+        <segue reference="Yfr-Fh-WHe"/>
+        <segue reference="emN-3A-E4V"/>
+        <segue reference="b3B-hV-w88"/>
         <segue reference="LGM-FF-Fg3"/>
     </inferredMetricsTieBreakers>
 </document>
