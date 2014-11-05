@@ -12,13 +12,23 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
+
+var userViewQuery = 'SELECT auth_user.username, auth_user.first_name, auth_user.last_name, \
+                        auth_user.email, auth_user.password, auth_user.date_joined, \
+                        player_accounts_playerprofile.uscf_id, player_accounts_playerprofile.main_phone, \
+                        player_accounts_playerprofile.address, player_accounts_playerprofile.city, player_accounts_playerprofile.state \
+                    FROM auth_user \
+                    INNER JOIN player_accounts_playerprofile ON auth_user.id=player_accounts_playerprofile .user_id \
+                    WHERE auth_user.username=';
+
+
 router.get('/verify/:user/:pass', function (req, res) {
     var query = 'SELECT username, password FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";
     utils.runQuery(connectionpool, query, req, res, validate);
 });
 
 router.get('/:user', function (req, res) {
-    var query = 'SELECT * FROM auth_user WHERE username=' + '\"' + req.params.user + '\"';
+    var query = userViewQuery + '\"' + req.params.user + '\"';
     utils.runQuery(connectionpool, query, req, res, loggedIn);
 });
 
