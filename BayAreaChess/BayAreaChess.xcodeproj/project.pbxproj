@@ -12,6 +12,8 @@
 		2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D019C7CBAE0049BE83 /* Main.storyboard */; };
 		2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D319C7CBAE0049BE83 /* Images.xcassets */; };
 		2C7054E019C7CBAE0049BE83 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */; };
+		810F5B901A0DE0D200140332 /* darkgray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810F5B8F1A0DE0D200140332 /* darkgray.jpg */; };
+		810F5B921A0DE9D400140332 /* Oregon LDO Extended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */; };
 		811809C819E0879000252A70 /* SpecificTournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811809C719E0879000252A70 /* SpecificTournament.swift */; };
 		814E28DE19E1EE1300D2B4FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814E28DD19E1EE1300D2B4FB /* User.swift */; };
 		818393251A097A5600AAE892 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818393241A097A5600AAE892 /* UserUpdate.swift */; };
@@ -63,6 +65,8 @@
 		2C7054D919C7CBAE0049BE83 /* BayAreaChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayAreaChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7054DE19C7CBAE0049BE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
+		810F5B8F1A0DE0D200140332 /* darkgray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = darkgray.jpg; path = ../../resources/darkgray.jpg; sourceTree = "<group>"; };
+		810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oregon LDO Extended.ttf"; path = "../../resources/Oregon LDO Extended.ttf"; sourceTree = "<group>"; };
 		811809C719E0879000252A70 /* SpecificTournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTournament.swift; sourceTree = "<group>"; };
 		814E28DD19E1EE1300D2B4FB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		818393241A097A5600AAE892 /* UserUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		2C7054CA19C7CBAE0049BE83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */,
+				810F5B8F1A0DE0D200140332 /* darkgray.jpg */,
 				81D8D50E1A0747EC00671AFA /* about.png */,
 				81D8D50F1A0747EC00671AFA /* home.png */,
 				81D8D5101A0747EC00671AFA /* other.png */,
@@ -292,6 +298,8 @@
 				2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */,
 				8193588D19EDEE4800B79AA0 /* BayAreaChessLogo.png in Resources */,
 				81D8D50B1A07369600671AFA /* neighborhood.jpg in Resources */,
+				810F5B921A0DE9D400140332 /* Oregon LDO Extended.ttf in Resources */,
+				810F5B901A0DE0D200140332 /* darkgray.jpg in Resources */,
 				8193588B19EDEE4800B79AA0 /* about.jpg in Resources */,
 				81D8D5171A0747EC00671AFA /* tournaments.png in Resources */,
 				81C51B7319F600B80038C4B3 /* bayarea.jpg in Resources */,
