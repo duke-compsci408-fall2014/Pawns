@@ -30,11 +30,14 @@ class Login: UIViewController {
     @IBOutlet var dates : UILabel?;
     @IBOutlet var cost : UILabel?;
     
-    
     var myID : Int? = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        username.attributedPlaceholder = NSAttributedString(string:"Username",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        password.attributedPlaceholder = NSAttributedString(string:"Password",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
     }
 
 	@IBAction func verifyLogin (sender : AnyObject) {

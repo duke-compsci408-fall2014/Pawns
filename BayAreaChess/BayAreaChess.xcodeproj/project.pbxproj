@@ -529,6 +529,7 @@
 		81EAE8AD1A0F59A6000F6484 /* appbar.weather.station.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EAE3C11A0F59A5000F6484 /* appbar.weather.station.png */; };
 		81EAE8AE1A0F59A6000F6484 /* appbar.weather.sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EAE3C21A0F59A5000F6484 /* appbar.weather.sun.png */; };
 		81EAE8AF1A0F59A6000F6484 /* appbar.weather.sun.rise.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EAE3C31A0F59A5000F6484 /* appbar.weather.sun.rise.png */; };
+		81EAE8C21A102CD1000F6484 /* horizontal-break-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EAE8C11A102CD1000F6484 /* horizontal-break-line.png */; };
 		B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14F819CBAE9A0001BE7C /* Login.swift */; };
 		B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */; };
 /* End PBXBuildFile section */
@@ -1071,6 +1072,7 @@
 		81EAE3C11A0F59A5000F6484 /* appbar.weather.station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.weather.station.png; sourceTree = "<group>"; };
 		81EAE3C21A0F59A5000F6484 /* appbar.weather.sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.weather.sun.png; sourceTree = "<group>"; };
 		81EAE3C31A0F59A5000F6484 /* appbar.weather.sun.rise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.weather.sun.rise.png; sourceTree = "<group>"; };
+		81EAE8C11A102CD1000F6484 /* horizontal-break-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-break-line.png"; sourceTree = "<group>"; };
 		B3BE14F819CBAE9A0001BE7C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1139,6 +1141,7 @@
 		2C7054CA19C7CBAE0049BE83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81EAE8C11A102CD1000F6484 /* horizontal-break-line.png */,
 				81EADEE81A0F5992000F6484 /* dark */,
 				810F5BC31A0F4B8900140332 /* profile_background.jpg */,
 				810F5B931A0E8B5000140332 /* TitilliumWeb-Regular.ttf */,
@@ -1885,6 +1888,7 @@
 				81EAE5D21A0F59A6000F6484 /* appbar.interface.button.png in Resources */,
 				81EAE5021A0F59A6000F6484 /* appbar.deeplink.round.png in Resources */,
 				81EAE4561A0F59A6000F6484 /* appbar.camera.flash.auto.png in Resources */,
+				81EAE8C21A102CD1000F6484 /* horizontal-break-line.png in Resources */,
 				81EAE5CC1A0F59A6000F6484 /* appbar.input.keyboard.down.png in Resources */,
 				81EAE5EA1A0F59A6000F6484 /* appbar.layer.arrange.sendbackward.png in Resources */,
 				81EAE5A11A0F59A6000F6484 /* appbar.home.garage.png in Resources */,
