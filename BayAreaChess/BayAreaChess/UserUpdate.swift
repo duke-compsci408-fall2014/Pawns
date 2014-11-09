@@ -58,14 +58,6 @@ class UserUpdate : UIViewController {
         connection?.start();
     }
     
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "updateToUser") {
-            let vc = segue.destinationViewController as User;
-            vc.myUsername = self.myUsername;
-        }
-    }
-    
     @IBAction func back() {
         dismissViewControllerAnimated(true, completion: nil)
     }

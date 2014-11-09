@@ -258,29 +258,11 @@ Board of Advisors Member</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anR-rK-5f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="Kej-CA-CzD">
                     <connections>
-                        <action selector="cancel" destination="Xek-WL-w40" id="K91-cb-NqS"/>
+                        <action selector="back" destination="Xek-WL-w40" id="6Se-Bd-Hol"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-463" y="1985"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aK8-xl-f07">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="fqm-g8-A7b" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6ax-JT-Iki"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b7W-iP-hIl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Xek-WL-w40" kind="relationship" relationship="rootViewController" id="L5x-cX-d41"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hD9-Xl-Xeq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="15" y="1985"/>
+            <point key="canvasLocation" x="-95" y="1985"/>
         </scene>
         <!--Item-->
         <scene sceneID="2Om-Mz-Igp">
@@ -357,34 +339,16 @@ Executive Director</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBe-1p-svy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="enH-qD-lMX">
                     <connections>
-                        <segue destination="0tU-tt-Zr6" kind="show" id="DOB-1s-jiA"/>
+                        <segue destination="AWW-AN-TUc" kind="show" id="ebg-4J-2MZ"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="Snh-qZ-rw6">
                     <connections>
-                        <segue destination="fqm-g8-A7b" kind="show" id="Rmn-KC-Sbv"/>
+                        <segue destination="Xek-WL-w40" kind="show" id="kgq-K0-SrO"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="400" y="1985"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="O1g-H9-CLM">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="0tU-tt-Zr6" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="NsI-Oa-x1g"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BJG-pK-YHy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="AWW-AN-TUc" kind="relationship" relationship="rootViewController" id="vUL-Xs-ebc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mtx-Xy-ae3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="941" y="1985"/>
         </scene>
         <!--About Right-->
         <scene sceneID="dz3-eo-JM6">
@@ -430,11 +394,11 @@ Executive Director</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20W-im-yej" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="t6D-iW-KSb">
                     <connections>
-                        <action selector="cancel" destination="AWW-AN-TUc" id="qWi-0d-ke5"/>
+                        <action selector="back" destination="AWW-AN-TUc" id="0RM-9B-dgH"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1415" y="1985"/>
+            <point key="canvasLocation" x="897" y="1985"/>
         </scene>
         <!--Item-->
         <scene sceneID="Qm7-au-fFr">
@@ -658,9 +622,6 @@ Executive Director</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="streets.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-yS-Pcg">
-                                <rect key="frame" x="26" y="99" width="268" height="153"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1080,6 +1041,5 @@ Executive Director</string>
         <image name="darkgray.jpg" width="640" height="1136"/>
         <image name="menu.png" width="512" height="512"/>
         <image name="menu2.png" width="60" height="60"/>
-        <image name="streets.jpg" width="744" height="1392"/>
     </resources>
 </document>

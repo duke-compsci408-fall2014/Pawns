@@ -20,7 +20,7 @@ class AboutRight : UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancel() {
+    @IBAction func back() {
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
