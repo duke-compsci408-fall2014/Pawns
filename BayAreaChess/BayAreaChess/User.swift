@@ -17,7 +17,8 @@ class User: UIViewController {
     @IBOutlet var phone : UILabel!;
     @IBOutlet var address : UILabel!;
     
-    
+    var imagename : String!;
+    @IBOutlet var imageURL : UIImageView?;
     
     var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
     let DESCRIPTION : String = "description";
@@ -33,7 +34,6 @@ class User: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
         URL_STRING += myUsername! + "/";
         println(URL_STRING);
         self.connect("");
@@ -70,7 +70,14 @@ class User: UIViewController {
         //phone?.text = getTournamentData(json, field: "main_phone");
         //address?.text = getTournamentData(json, field: "address") +
         //                getTournamentData(json, field: "city");
+        
+        imagename = "http://www.gravatar.com/avatar/0a553560c3f8184f194d2366a664553b";
+        
+        var url : NSURL = NSURL(string: imagename)!;
+        var imgData : NSData = NSData(contentsOfURL: url, options: nil, error: nil)!
+        imageURL?.image = UIImage(data: imgData);
 
+        
         self.reloadInputViews();
         
     }

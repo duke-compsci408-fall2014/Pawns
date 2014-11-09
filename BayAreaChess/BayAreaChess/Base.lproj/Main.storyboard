@@ -571,7 +571,7 @@ Executive Director</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-E4-n2C">
-                                <rect key="frame" x="16" y="298" width="288" height="21"/>
+                                <rect key="frame" x="16" y="409" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -622,6 +622,9 @@ Executive Director</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUD-4r-PYC">
+                                <rect key="frame" x="80" y="194" width="160" height="125"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -631,6 +634,7 @@ Executive Director</string>
                         <outlet property="address" destination="oka-DQ-snt" id="Jj6-YV-RAf"/>
                         <outlet property="dateJoined" destination="rp1-uP-3Qn" id="oAd-wS-auC"/>
                         <outlet property="email" destination="JHr-hW-IsD" id="6we-0a-HM0"/>
+                        <outlet property="imageURL" destination="rUD-4r-PYC" id="5MZ-JH-BxF"/>
                         <outlet property="name" destination="r2r-yf-O6L" id="ETb-4j-d4N"/>
                         <outlet property="phone" destination="JiK-E4-n2C" id="2YT-ur-pnz"/>
                         <outlet property="username" destination="ABd-Cb-XNw" id="dbb-o3-uVW"/>
