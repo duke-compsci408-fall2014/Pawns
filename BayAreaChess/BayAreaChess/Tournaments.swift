@@ -169,5 +169,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

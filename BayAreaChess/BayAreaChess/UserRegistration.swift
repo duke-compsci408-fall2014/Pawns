@@ -61,4 +61,12 @@ class UserRegistration : UIViewController {
         
         connection?.start();
     }
+    
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func register() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

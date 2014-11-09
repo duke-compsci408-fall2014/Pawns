@@ -26,4 +26,8 @@ class TournamentRegistration: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

@@ -65,4 +65,8 @@ class UserUpdate : UIViewController {
             vc.myUsername = self.myUsername;
         }
     }
+    
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
