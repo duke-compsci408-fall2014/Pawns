@@ -28,6 +28,8 @@ class User: UIViewController {
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
+    let GRAVATAR_URL : String = "http://www.gravatar.com/avatar/";
+    let IMG_SIZE : String = "?s=120";
 
     var myID : Int? = 0;
     var myUsername : String?;
@@ -66,17 +68,18 @@ class User: UIViewController {
         name?.text = getTournamentData(json, field: "first_name") + " " + getTournamentData(json, field: "last_name");
         email?.text = getTournamentData(json, field: "email");
         username?.text = getTournamentData(json, field: "username");
-        dateJoined?.text = getTournamentData(json, field: "date_joined");
         //phone?.text = getTournamentData(json, field: "main_phone");
         //address?.text = getTournamentData(json, field: "address") +
         //                getTournamentData(json, field: "city");
         
-        imagename = "http://www.gravatar.com/avatar/0a553560c3f8184f194d2366a664553b";
+        var userHash : String = "0a553560c3f8184f194d2366a664553b";
         
+        imagename = GRAVATAR_URL + userHash + IMG_SIZE;
         var url : NSURL = NSURL(string: imagename)!;
         var imgData : NSData = NSData(contentsOfURL: url, options: nil, error: nil)!
         imageURL?.image = UIImage(data: imgData);
-
+        imageURL?.layer.borderWidth = 2.0;
+        imageURL?.layer.borderColor = UIColor.blackColor().CGColor;
         
         self.reloadInputViews();
         
