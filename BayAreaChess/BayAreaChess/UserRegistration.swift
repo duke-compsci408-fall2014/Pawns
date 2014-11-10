@@ -26,6 +26,19 @@ class UserRegistration : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        first_name.attributedPlaceholder = NSAttributedString(string:"First Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        last_name.attributedPlaceholder = NSAttributedString(string:"Last Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        email.attributedPlaceholder = NSAttributedString(string:"Email",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        username.attributedPlaceholder = NSAttributedString(string:"Username",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        password.attributedPlaceholder = NSAttributedString(string:"Password",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        confirm_password.attributedPlaceholder = NSAttributedString(string:"Confirm Password",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        
     }
     
     override func didReceiveMemoryWarning() {
