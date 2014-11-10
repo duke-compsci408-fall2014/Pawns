@@ -18,12 +18,19 @@ class TournamentRegistration: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        firstName.attributedPlaceholder = NSAttributedString(string:"First Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        lastName.attributedPlaceholder = NSAttributedString(string:"Last Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        email.attributedPlaceholder = NSAttributedString(string:"Email",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        phoneNumber.attributedPlaceholder = NSAttributedString(string:"Phone",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func back() {

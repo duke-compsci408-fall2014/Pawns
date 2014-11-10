@@ -68,9 +68,9 @@ class User: UIViewController {
         name?.text = getTournamentData(json, field: "first_name") + " " + getTournamentData(json, field: "last_name");
         email?.text = getTournamentData(json, field: "email");
         username?.text = getTournamentData(json, field: "username");
-        //phone?.text = getTournamentData(json, field: "main_phone");
-        //address?.text = getTournamentData(json, field: "address") +
-        //                getTournamentData(json, field: "city");
+        phone?.text = getTournamentData(json, field: "main_phone");
+        address?.text = getTournamentData(json, field: "address") + " " +
+                        getTournamentData(json, field: "city");
         
         var userHash : String = "0a553560c3f8184f194d2366a664553b";
         
