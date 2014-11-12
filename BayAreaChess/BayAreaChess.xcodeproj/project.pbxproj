@@ -12,6 +12,8 @@
 		2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D019C7CBAE0049BE83 /* Main.storyboard */; };
 		2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D319C7CBAE0049BE83 /* Images.xcassets */; };
 		2C7054E019C7CBAE0049BE83 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */; };
+		81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE51A12DA7D008E302C /* light_grey.jpg */; };
+		81007AE81A12DB54008E302C /* vertical-break-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE71A12DB53008E302C /* vertical-break-line.png */; };
 		810F5B901A0DE0D200140332 /* darkgray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810F5B8F1A0DE0D200140332 /* darkgray.jpg */; };
 		810F5B921A0DE9D400140332 /* Oregon LDO Extended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */; };
 		810F5BC21A0EEBB000140332 /* AboutRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810F5BC11A0EEBB000140332 /* AboutRight.swift */; };
@@ -104,6 +106,8 @@
 		2C7054D919C7CBAE0049BE83 /* BayAreaChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayAreaChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7054DE19C7CBAE0049BE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
+		81007AE51A12DA7D008E302C /* light_grey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_grey.jpg; sourceTree = "<group>"; };
+		81007AE71A12DB53008E302C /* vertical-break-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical-break-line.png"; sourceTree = "<group>"; };
 		810F5B8F1A0DE0D200140332 /* darkgray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = darkgray.jpg; path = ../../resources/darkgray.jpg; sourceTree = "<group>"; };
 		810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oregon LDO Extended.ttf"; path = "../../resources/Oregon LDO Extended.ttf"; sourceTree = "<group>"; };
 		810F5B931A0E8B5000140332 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 		81EADEE81A0F5992000F6484 /* dark */ = {
 			isa = PBXGroup;
 			children = (
+				81007AE71A12DB53008E302C /* vertical-break-line.png */,
+				81007AE51A12DA7D008E302C /* light_grey.jpg */,
 				818C68851A12B585002F5785 /* location.png */,
 				818C68831A12B51E002F5785 /* clock.png */,
 				81EADF101A0F5993000F6484 /* downarrow.png */,
@@ -432,6 +438,7 @@
 				81EAE8C21A102CD1000F6484 /* horizontal-break-line.png in Resources */,
 				81EAE5D71A0F59A6000F6484 /* iphone.png in Resources */,
 				81D8D5131A0747EC00671AFA /* about.png in Resources */,
+				81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */,
 				810F5BC41A0F4B8900140332 /* profile_background.jpg in Resources */,
 				81EAE4901A0F59A6000F6484 /* up.png in Resources */,
 				8193589019EDF15A00B79AA0 /* chevron-left.png in Resources */,
@@ -465,6 +472,7 @@
 				81EAE6621A0F59A6000F6484 /* money.png in Resources */,
 				8193588B19EDEE4800B79AA0 /* about.jpg in Resources */,
 				81EAE4871A0F59A6000F6484 /* bishop.png in Resources */,
+				81007AE81A12DB54008E302C /* vertical-break-line.png in Resources */,
 				81D8D5171A0747EC00671AFA /* tournaments.png in Resources */,
 				81EAE5A71A0F59A6000F6484 /* homewhite.png in Resources */,
 				81C51B7319F600B80038C4B3 /* bayarea.jpg in Resources */,
