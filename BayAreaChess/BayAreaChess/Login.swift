@@ -14,7 +14,7 @@ class Login: UIViewController {
     @IBOutlet var password : UITextField!;
     @IBOutlet var label : UILabel!;
 	
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify/";
+    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -24,6 +24,8 @@ class Login: UIViewController {
     let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
     var verification : String = "failure";
+    
+    var currentURL : String = "";
     
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
@@ -41,7 +43,7 @@ class Login: UIViewController {
     }
 
 	@IBAction func verifyLogin (sender : AnyObject) {
-        URL_STRING += username.text + "/" + password.text;
+        currentURL = URL_STRING + username.text + "/" + password.text;
         self.connect("");
 	}
     
@@ -52,7 +54,7 @@ class Login: UIViewController {
     var data = NSMutableData();
     
     func connect(query:NSString) {
-        var url = NSURL(string: URL_STRING);
+        var url = NSURL(string: currentURL);
         var request = NSURLRequest(URL: url!);
         var conn = NSURLConnection(request: request, delegate: self, startImmediately: true);
     }
@@ -63,13 +65,15 @@ class Login: UIViewController {
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
+        self.data = NSMutableData(); // Flush data pipe
         self.data.appendData(conData);
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
-        let data: NSData = self.data;
+        var data : NSData = NSData();
+        data = self.data;
+        println(data);
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        
         verification = getVerification(json, field: "verification");
         println(verification);
 

@@ -37,7 +37,6 @@ class User: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         URL_STRING += myUsername! + "/";
-        println(URL_STRING);
         self.connect("");
     }
     
