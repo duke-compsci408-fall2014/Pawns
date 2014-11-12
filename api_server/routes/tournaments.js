@@ -9,6 +9,15 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
+var baseQuery =
+'SELECT * FROM `tournament_events` te \
+    INNER JOIN tournament_tournaments tt \
+ON te.`tournaments_id` = tt.id \
+INNER JOIN membership_categorytype \
+WHERE tt.category_type_id = 2 \
+AND te.date_play > NOW() ORDER BY `te`.`date_play`  ASC \
+limit 0, 100';
+
 var queryString =
 'SELECT tournament_events.date_play, \
     tournament_events.start_time, \
@@ -34,26 +43,20 @@ INNER JOIN tournament_events ON tournament_events.sites_id=tournament_sites.id \
 INNER JOIN tournament_sections ON tournament_sections.id=tournament_events.sections_id \
 WHERE tournament_events.id=';
 
-router.get('/base', function(req,res){
-    var query = 'SELECT name,description,start_date,id FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
+router.get('/all', function(req,res){
+    //var query = 'SELECT name,description,start_date,id FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
+    var query = baseQuery;
     utils.runQuery(connectionpool, query, req, res, doStuff);
 });
 
-function doStuff(json, res, req) {
-    res.send(json);
-    /*res.send({
-        result: 'success',
-        err:    '',
-        fields: fields,
-        json:   rows,
-        length: rows.length
-    });*/
-}
-
-router.get('/base/:id', function(req, res) {
+router.get('/all/:id', function(req, res) {
     // var query = 'SELECT name, description, amount, cash_prize, discount, status, start_date, end_date FROM tournament_tournaments WHERE id=' + req.params.id;
     var query = queryString + req.params.id;
     utils.runQuery(connectionpool, query, req, res, doStuff);
 });
+
+function doStuff(json, res, req) {
+    res.send(json.json);
+}
 
 module.exports = router;

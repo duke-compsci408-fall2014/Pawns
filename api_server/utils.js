@@ -22,15 +22,13 @@ var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
                 }
                 else {
                     callback({json: rows}, res, req);
-                    /*
-                    res.send({
+                    /*res.send({
                         result: 'success',
                         err:    '',
                         fields: fields,
                         json:   rows,
                         length: rows.length
-                    });
-                    */
+                    });*/
                 }
                 connection.release();
             });

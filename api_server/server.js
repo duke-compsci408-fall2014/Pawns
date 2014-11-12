@@ -1,7 +1,6 @@
 var express = require('express'),
     tournaments = require('./routes/tournaments'),
     login = require('./routes/login'),
-    users = require('./routes/users'),
     app     = express(),
     mysql   = require('mysql'),
     connectionpool = mysql.createPool({
@@ -11,9 +10,8 @@ var express = require('express'),
         database : 'backup'
     });
 
-app.use('/tournaments', tournaments);
-app.use('/login', login);
-app.use('/users', users);
+app.use('/api/v1/tournaments', tournaments);
+app.use('/api/v1/login', login);
 
 /*
 app.get('/:table/:id', function(req,res){});
@@ -23,5 +21,5 @@ app.delete('/:table/:id', function(req,res){});
 */
 
 app.listen(3000);
-console.log('Rest Server Listening on port 3000');
+console.log('REST Server Listening on port 3000');
 module.exports = app;
