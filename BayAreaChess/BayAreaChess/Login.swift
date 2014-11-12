@@ -78,6 +78,7 @@ class Login: UIViewController {
         println(verification);
 
         if (verification == "success") {
+            label.text = "";
             self.performSegueWithIdentifier("login", sender: self);
         }
         else {

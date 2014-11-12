@@ -51,6 +51,7 @@
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -743,6 +744,12 @@ Executive Director</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horizontal-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-z9-YNH">
                                 <rect key="frame" x="60" y="233" width="200" height="30"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-1h-3df">
+                                <rect key="frame" x="110" y="414" width="100" height="25"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -750,6 +757,7 @@ Executive Director</string>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="label" destination="Khv-1h-3df" id="fde-8B-CmY"/>
                         <outlet property="password" destination="cqU-SL-u8s" id="IKU-ql-9uH"/>
                         <outlet property="username" destination="9w9-Wx-gII" id="Ejj-cR-6IJ"/>
                         <segue destination="hXa-LD-oke" kind="show" identifier="login" id="ebd-Bv-d4k"/>
