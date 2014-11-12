@@ -9,11 +9,9 @@
 import UIKit
 
 class About: UIViewController {
-    
-    var myTBC : UITabBarController?;
-    
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -25,5 +23,6 @@ class About: UIViewController {
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true);
     }
+    
 }
 

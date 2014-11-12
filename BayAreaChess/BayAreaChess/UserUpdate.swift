@@ -23,7 +23,17 @@ class UserUpdate : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        println(self.myUsername);
+        
+        first_name.attributedPlaceholder = NSAttributedString(string:"First Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        last_name.attributedPlaceholder = NSAttributedString(string:"Last Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        email.attributedPlaceholder = NSAttributedString(string:"Email",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        username.attributedPlaceholder = NSAttributedString(string:"Username",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
+        phone.attributedPlaceholder = NSAttributedString(string:"Phone Number",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
         
     }
     
@@ -58,11 +68,7 @@ class UserUpdate : UIViewController {
         connection?.start();
     }
     
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "updateToUser") {
-            let vc = segue.destinationViewController as User;
-            vc.myUsername = self.myUsername;
-        }
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

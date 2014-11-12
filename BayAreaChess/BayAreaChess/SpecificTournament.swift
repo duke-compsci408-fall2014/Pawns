@@ -99,4 +99,9 @@ class SpecificTournaments : UIViewController {
         var s : String = formatter.stringFromDate(date!);
         return s;
     }
+    
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
