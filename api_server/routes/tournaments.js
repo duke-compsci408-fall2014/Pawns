@@ -9,6 +9,15 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
+var baseQuery =
+'SELECT * FROM `tournament_events` te \
+    INNER JOIN tournament_tournaments tt \
+ON te.`tournaments_id` = tt.id \
+INNER JOIN membership_categorytype \
+WHERE tt.category_type_id = 2 \
+AND te.date_play > NOW() ORDER BY `te`.`date_play`  ASC \
+limit 0, 100';
+
 var queryString =
 'SELECT tournament_events.date_play, \
     tournament_events.start_time, \
@@ -36,6 +45,7 @@ WHERE tournament_events.id=';
 
 router.get('/base', function(req,res){
     var query = 'SELECT name,description,start_date,id FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
+    //var query = baseQuery;
     utils.runQuery(connectionpool, query, req, res, doStuff);
 });
 
