@@ -43,9 +43,15 @@ INNER JOIN tournament_events ON tournament_events.sites_id=tournament_sites.id \
 INNER JOIN tournament_sections ON tournament_sections.id=tournament_events.sections_id \
 WHERE tournament_events.id=';
 
-router.get('/base', function(req,res){
-    var query = 'SELECT name,description,start_date,id FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
-    //var query = baseQuery;
+router.get('/all', function(req,res){
+    //var query = 'SELECT name,description,start_date,id FROM tournament_tournaments WHERE start_date > now() ORDER BY start_date ASC';
+    var query = baseQuery;
+    utils.runQuery(connectionpool, query, req, res, doStuff);
+});
+
+router.get('/all/:id', function(req, res) {
+    // var query = 'SELECT name, description, amount, cash_prize, discount, status, start_date, end_date FROM tournament_tournaments WHERE id=' + req.params.id;
+    var query = queryString + req.params.id;
     utils.runQuery(connectionpool, query, req, res, doStuff);
 });
 
@@ -59,11 +65,5 @@ function doStuff(json, res, req) {
         length: rows.length
     });*/
 }
-
-router.get('/base/:id', function(req, res) {
-    // var query = 'SELECT name, description, amount, cash_prize, discount, status, start_date, end_date FROM tournament_tournaments WHERE id=' + req.params.id;
-    var query = queryString + req.params.id;
-    utils.runQuery(connectionpool, query, req, res, doStuff);
-});
 
 module.exports = router;

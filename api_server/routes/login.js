@@ -14,7 +14,6 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
-
 var userViewQuery = 'SELECT auth_user.username, auth_user.first_name, auth_user.last_name, \
                         auth_user.email, auth_user.password, auth_user.date_joined, \
                         player_accounts_playerprofile.uscf_id, player_accounts_playerprofile.main_phone, \
@@ -60,6 +59,7 @@ router.post('/update/:user/:fields', function (req, res) {
         uri = uri.slice(0, -1);
     }
     console.log(uri.length);
+
     if (uri) {
         var query = 'UPDATE auth_user SET ' + uri + ' WHERE username=' + '\"' + req.params.user + '\"';
         utils.runQuery(connectionpool, query, req, res, postInfo);
@@ -102,6 +102,9 @@ function validate (json, res, req) {
 }
 
 function loggedIn (json, res, req) {
+    var email = (json.json)[0].email;
+    var gravatar = crypto.createHash('md5').update(email).digest('hex');
+    (json.json)[0].gravatar_hash = gravatar;
     res.send(json);
 }
 

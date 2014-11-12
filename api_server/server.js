@@ -11,9 +11,9 @@ var express = require('express'),
         database : 'backup'
     });
 
-app.use('/tournaments', tournaments);
-app.use('/login', login);
-app.use('/users', users);
+app.use('/api/v1/tournaments', tournaments);
+app.use('/api/v1/login', login);
+app.use('/api/v1/users', users);
 
 /*
 app.get('/:table/:id', function(req,res){});
@@ -23,5 +23,5 @@ app.delete('/:table/:id', function(req,res){});
 */
 
 app.listen(3000);
-console.log('Rest Server Listening on port 3000');
+console.log('REST Server Listening on port 3000');
 module.exports = app;
