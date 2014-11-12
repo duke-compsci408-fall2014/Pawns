@@ -56,14 +56,7 @@ router.get('/all/:id', function(req, res) {
 });
 
 function doStuff(json, res, req) {
-    res.send(json);
-    /*res.send({
-        result: 'success',
-        err:    '',
-        fields: fields,
-        json:   rows,
-        length: rows.length
-    });*/
+    res.send(json.json);
 }
 
 module.exports = router;

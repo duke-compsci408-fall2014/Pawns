@@ -81,9 +81,7 @@ router.post('/register/:fields', function (req, res) {
         utils.runQuery(connectionpool, getID, req, res, function(json, res, req) {
             var uid = (json.json)[0].id;
             var secondInsert = util.format(insertQueryTwo, parsed.username, uid);
-            utils.runQuery(connectionpool, secondInsert, req, res, function(json, res, req) {
-
-            });
+            utils.runQuery(connectionpool, secondInsert, req, res, function(json, res, req) {});
         });
         res.send(json);
 
@@ -102,18 +100,19 @@ function validate (json, res, req) {
 }
 
 function loggedIn (json, res, req) {
-    var email = (json.json)[0].email;
+    var json = (json.json)[0];
+    var email = json.email;
     var gravatar = crypto.createHash('md5').update(email).digest('hex');
-    (json.json)[0].gravatar_hash = gravatar;
+    json.gravatar_hash = gravatar;
     res.send(json);
 }
 
 function postInfo (json, res, req) {
-    res.send(json);
+    res.send((json.json)[0]);
 }
 
 function registerUser (json, res, req) {
-    res.send(json);
+    res.send((json.json)[0]);
 }
 
 var validatePassword = function (key, string) {
