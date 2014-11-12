@@ -14,7 +14,7 @@ class Login: UIViewController {
     @IBOutlet var password : UITextField!;
     @IBOutlet var label : UILabel!;
 	
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/verify/";
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -89,7 +89,6 @@ class Login: UIViewController {
     func getVerification (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
         tournamentData = input["verification"] as String;
-        
         return tournamentData;
     }
     

@@ -16,7 +16,7 @@ class UserUpdate : UIViewController {
     @IBOutlet var username : UITextField!;
     @IBOutlet var phone : UITextField!;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/login/update/";
+    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/update/";
     let AMP : String = "&";
     
     var myUsername : String?;

@@ -18,7 +18,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     var id_dict: [String:Int]?;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/tournaments/base/";
+    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
@@ -73,7 +73,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
-        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
         
         var name = getTournamentData(json, field: NAME);
         var descriptions = getTournamentData(json, field: DESCRIPTION);
@@ -141,9 +141,9 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         idList = l;
     }
     
-    func getTournamentData (input : NSDictionary, field : String) -> [String] {
+    func getTournamentData (input : NSArray, field : String) -> [String] {
         var tournamentData = [String]();
-        let json : Array = input["json"] as [AnyObject];
+        let json : Array = input as [AnyObject];
         for (index, element) in enumerate(json) {
             var name : String = element[field] as String;
             tournamentData.append(name);
@@ -151,9 +151,9 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         return tournamentData;
     }
     
-    func getTournamentInt (input : NSDictionary, field : String) -> [Int] {
+    func getTournamentInt (input : NSArray, field : String) -> [Int] {
         var tournamentData = [Int]();
-        let json : Array = input["json"] as [AnyObject];
+        let json : Array = input as [AnyObject];
         for (index, element) in enumerate(json) {
             var num : Int = element[field] as Int;
             tournamentData.append(num);

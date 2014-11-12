@@ -1061,6 +1061,9 @@ Executive Director</string>
                                     <action selector="back" destination="gLv-Oa-69P" eventType="touchUpInside" id="Auo-uA-bRu"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vertical-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="ClB-01-Onh">
+                                <rect key="frame" x="42" y="120" width="30" height="210"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

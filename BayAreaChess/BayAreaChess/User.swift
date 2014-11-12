@@ -20,7 +20,7 @@ class User: UIViewController {
     var imagename : String!;
     @IBOutlet var imageURL : UIImageView?;
     
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
     let AMOUNT : String = "amount";
@@ -65,14 +65,14 @@ class User: UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        name?.text = getTournamentData(json, field: "first_name") + " " + getTournamentData(json, field: "last_name");
-        email?.text = getTournamentData(json, field: "email");
-        username?.text = getTournamentData(json, field: "username");
-        phone?.text = getTournamentData(json, field: "main_phone");
-        address?.text = getTournamentData(json, field: "address") + " " +
-                        getTournamentData(json, field: "city");
+        name?.text = getUserData(json, field: "first_name") + " " + getUserData(json, field: "last_name");
+        email?.text = getUserData(json, field: "email");
+        username?.text = getUserData(json, field: "username");
+        phone?.text = getUserData(json, field: "main_phone");
+        address?.text = getUserData(json, field: "address") + " " +
+                        getUserData(json, field: "city");
         
-        var userHash : String = "0a553560c3f8184f194d2366a664553b";
+        var userHash : String = getUserData(json, field: "gravatar_hash");
         
         imagename = GRAVATAR_URL + userHash + IMG_SIZE;
         var url : NSURL = NSURL(string: imagename)!;
@@ -85,14 +85,8 @@ class User: UIViewController {
         
     }
     
-    func getTournamentData (input : NSDictionary, field : String) -> String {
-        var tournamentData : String! = "";
-        let json : Array = input["json"] as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var name : String = element[field] as String
-            tournamentData = name;
-        }
-        return tournamentData;
+    func getUserData (input : NSDictionary, field : String) -> String {
+        return input[field] as String;
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

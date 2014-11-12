@@ -19,7 +19,7 @@ class UserRegistration : UIViewController {
     @IBOutlet var password : UITextField!;
     @IBOutlet var confirm_password : UITextField!;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/login/register/";
+    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/register/";
     let AMP : String = "&";
     
     
