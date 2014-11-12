@@ -1,7 +1,6 @@
 var express = require('express'),
     tournaments = require('./routes/tournaments'),
     login = require('./routes/login'),
-    users = require('./routes/users'),
     app     = express(),
     mysql   = require('mysql'),
     connectionpool = mysql.createPool({
@@ -13,7 +12,6 @@ var express = require('express'),
 
 app.use('/api/v1/tournaments', tournaments);
 app.use('/api/v1/login', login);
-app.use('/api/v1/users', users);
 
 /*
 app.get('/:table/:id', function(req,res){});
