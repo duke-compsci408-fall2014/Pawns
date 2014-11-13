@@ -62,7 +62,13 @@ router.post('/update/:user/:fields', function (req, res) {
 
     if (uri) {
         var query = 'UPDATE auth_user SET ' + uri + ' WHERE username=' + '\"' + req.params.user + '\"';
-        utils.runQuery(connectionpool, query, req, res, postInfo);
+        var innerQuery = userViewQuery + '\"' + req.params.user + '\"';
+        utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
+            utils.runQuery(connectionpool, innerQuery, req, res, function(json, res, req) {
+                var json = (json.json)[0];
+                res.send(json);
+            });
+        });
     }
     else {
         res.send({result:"failure"});
@@ -108,7 +114,9 @@ function loggedIn (json, res, req) {
 }
 
 function postInfo (json, res, req) {
-    res.send((json.json)[0]);
+    var json = (json.json)[0];
+    console.log(json);
+    res.send(json);
 }
 
 function registerUser (json, res, req) {
