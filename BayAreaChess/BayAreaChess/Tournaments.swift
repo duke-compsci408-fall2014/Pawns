@@ -21,7 +21,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
-    let DATE : String = "start_date";
+    let DATE : String = "date_play";
     let NEWLINE : String = "\n";
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
@@ -74,7 +74,6 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
-        
         var name = getTournamentData(json, field: NAME);
         var descriptions = getTournamentData(json, field: DESCRIPTION);
         var dates = getTournamentData(json, field: DATE);

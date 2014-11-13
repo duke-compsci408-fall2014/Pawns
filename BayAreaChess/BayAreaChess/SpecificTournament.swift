@@ -21,13 +21,15 @@ class SpecificTournaments : UIViewController {
     let DID_RECEIVE : String = "didReceiveResponse";
     let CITY : String = "city";
     let ADDRESS : String = "address";
+    let STATE : String = "state";
+    let PRIZES : String = "prizes";
     
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
     @IBOutlet var roundTimes : UILabel?;
-    @IBOutlet var city : UILabel?;
     @IBOutlet var address : UILabel?;
+    @IBOutlet var prizes : UILabel?;
     
     var myID : Int? = 0;
     var myName : String?;
@@ -70,9 +72,9 @@ class SpecificTournaments : UIViewController {
         name?.text = self.myName;
         descriptions?.text = getTournamentData(json, field: DESCRIPTION);
         dates?.text = getTournamentData(json, field: DATE);
-        city?.text = getTournamentData(json, field: CITY);
-        address?.text = getTournamentData(json, field: ADDRESS);
+        address?.text = getTournamentData(json, field: ADDRESS) + ", " + getTournamentData(json, field: CITY) + ", " + getTournamentData(json, field: STATE);
         roundTimes?.text = getTournamentData(json, field: ROUND_TIMES);
+        prizes?.text = getTournamentData(json, field: PRIZES);
         
         self.reloadInputViews();
         
