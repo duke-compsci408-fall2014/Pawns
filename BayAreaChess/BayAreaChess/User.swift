@@ -71,7 +71,7 @@ class User: UIViewController {
         
         populateFields(json);
         
-        var userHash : String = getUserData(json, field: "gravatar_hash");
+        var userHash : String = Utils.getFieldFromJSON(json, field: "gravatar_hash");
         
         imagename = GRAVATAR_URL + userHash + IMG_SIZE;
         var url : NSURL = NSURL(string: imagename)!;
@@ -87,24 +87,17 @@ class User: UIViewController {
         //initializeVariables();
         // Dispatch UI updates to main thread
         dispatch_async(dispatch_get_main_queue(), {
-            self.name?.text = self.getUserData(json, field: "first_name") + " " + self.getUserData(json, field: "last_name");
-            self.email?.text = self.getUserData(json, field: "email");
-            self.username?.text = self.getUserData(json, field: "username");
+            self.name?.text = Utils.getFieldFromJSON(json, field: "first_name") + " " + Utils.getFieldFromJSON(json, field: "last_name");
+            self.email?.text = Utils.getFieldFromJSON(json, field: "email");
+            self.username?.text = Utils.getFieldFromJSON(json, field: "username");
             
-            self.phone?.text = self.getUserData(json, field: "main_phone");
-            self.address?.text = self.getUserData(json, field: "address") + " " +
-                self.getUserData(json, field: "city") + ", " + self.getUserData(json, field: "state");
+            self.phone?.text = Utils.getFieldFromJSON(json, field: "main_phone");
+            self.address?.text = Utils.getFieldFromJSON(json, field: "address") + " " +
+                Utils.getFieldFromJSON(json, field: "city") + ", " + Utils.getFieldFromJSON(json, field: "state");
             self.reloadInputViews();
         });
     }
 
-    func getUserData (input : NSDictionary, field : String) -> String {
-        if ((input[field] as? String) != nil) {
-            return input[field] as String;
-        }
-        return "";
-    }
-    
     func viewLoaded () {
         customURL = URL_STRING + myUsername! + "/";
         self.connect("");

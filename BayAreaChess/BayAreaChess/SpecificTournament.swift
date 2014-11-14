@@ -70,11 +70,13 @@ class SpecificTournaments : UIViewController {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
         name?.text = self.myName;
-        descriptions?.text = getTournamentData(json, field: DESCRIPTION);
-        dates?.text = getTournamentData(json, field: DATE);
-        address?.text = getTournamentData(json, field: ADDRESS) + ", " + getTournamentData(json, field: CITY) + ", " + getTournamentData(json, field: STATE);
-        roundTimes?.text = getTournamentData(json, field: ROUND_TIMES);
-        prizes?.text = getTournamentData(json, field: PRIZES);
+        descriptions?.text = Utils.getFieldFromList(json, field: DESCRIPTION);
+        dates?.text = Utils.getFieldFromList(json, field: DATE);
+        address?.text = Utils.getFieldFromList(json, field: ADDRESS) + ", " +
+                        Utils.getFieldFromList(json, field: CITY) + ", " +
+                        Utils.getFieldFromList(json, field: STATE);
+        roundTimes?.text = Utils.getFieldFromList(json, field: ROUND_TIMES);
+        prizes?.text = Utils.getFieldFromList(json, field: PRIZES);
         
         self.reloadInputViews();
         
@@ -82,16 +84,6 @@ class SpecificTournaments : UIViewController {
     
     deinit {
         println("deiniting");
-    }
-    
-    func getTournamentData (input : NSArray, field : String) -> String {
-        var tournamentData : String! = "";
-        let json : Array = input as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var name : String = element[field] as String
-            tournamentData = name;
-        }
-        return tournamentData;
     }
     
     func formatDate (str : String) -> String {

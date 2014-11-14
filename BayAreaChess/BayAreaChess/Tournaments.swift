@@ -74,10 +74,10 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
-        var name = getTournamentData(json, field: NAME);
-        var descriptions = getTournamentData(json, field: DESCRIPTION);
-        var dates = getTournamentData(json, field: DATE);
-        var ids = getTournamentInt(json, field: ID);
+        var name = Utils.getListFromJSON(json, field: NAME);
+        var descriptions = Utils.getListFromJSON(json, field: DESCRIPTION);
+        var dates = Utils.getListFromJSON(json, field: DATE);
+        var ids = Utils.getIntArray(json, field: ID);
         
         loadEventList(name);
         loadDescriptionList(descriptions);
@@ -138,26 +138,6 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     func loadIDList (l : [Int]) {
         idList = l;
-    }
-    
-    func getTournamentData (input : NSArray, field : String) -> [String] {
-        var tournamentData = [String]();
-        let json : Array = input as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var name : String = element[field] as String;
-            tournamentData.append(name);
-        }
-        return tournamentData;
-    }
-    
-    func getTournamentInt (input : NSArray, field : String) -> [Int] {
-        var tournamentData = [Int]();
-        let json : Array = input as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var num : Int = element[field] as Int;
-            tournamentData.append(num);
-        }
-        return tournamentData;
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

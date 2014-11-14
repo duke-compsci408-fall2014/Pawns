@@ -74,7 +74,7 @@ class Login: UIViewController {
         data = self.data;
         println(data);
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        verification = getVerification(json, field: "verification");
+        verification = getFromJSON (json, field: "verification");
         println(verification);
 
         if (verification == "success") {
@@ -91,9 +91,11 @@ class Login: UIViewController {
         println("deiniting");
     }
     
-    func getVerification (input : NSDictionary, field : String) -> String {
+    func getFromJSON (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
-        tournamentData = input["verification"] as String;
+        if ((input[field] as? String) != nil) {
+            tournamentData = input["verification"] as String;
+        }
         return tournamentData;
     }
     
