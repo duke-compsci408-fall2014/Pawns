@@ -51,11 +51,13 @@ class UserRegistration : UIViewController {
             return;
         }
         
-        var prelim : String = "email=" + "%22" + self.email.text + "%22" + AMP +
-            "first_name=" + "%22" + self.first_name.text + "%22" + AMP +
-            "last_name=" + "%22" + self.last_name.text + "%22" + AMP +
-            "username=" + "%22" + self.username.text + "%22" + AMP +
-            "password=" + "%22" + self.password.text + "%22";
+        var prelim : String = "email=\"" + self.email.text + "\"" + AMP +
+                            "first_name=\"" + self.first_name.text + "\"" + AMP +
+                            "last_name=\"" + self.last_name.text + "\"" + AMP +
+                            "username=\"" + self.username.text + "\"" + AMP +
+                            "password=\"" + self.password.text + "\"";
+        
+        prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
         
         var urlString : String = URL_STRING + prelim;
         var url = NSURL(string: urlString);
