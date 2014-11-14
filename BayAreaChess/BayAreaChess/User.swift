@@ -83,14 +83,14 @@ class User: UIViewController {
     }
     
     func populateFields (json : NSDictionary) {
-        name?.text = getUserData(json, field: "first_name") + " " + getUserData(json, field: "last_name");
-        println(name?.text);
-        email?.text = getUserData(json, field: "email");
-        username?.text = getUserData(json, field: "username");
-        phone?.text = getUserData(json, field: "main_phone");
-        address?.text = getUserData(json, field: "address") + " " +
-            getUserData(json, field: "city");
+        // Dispatch UI updates to main thread
         dispatch_async(dispatch_get_main_queue(), {
+            self.name?.text = self.getUserData(json, field: "first_name") + " " + self.getUserData(json, field: "last_name");
+            self.email?.text = self.getUserData(json, field: "email");
+            self.username?.text = self.getUserData(json, field: "username");
+            self.phone?.text = self.getUserData(json, field: "main_phone");
+            self.address?.text = self.getUserData(json, field: "address") + " " +
+                self.getUserData(json, field: "city") + ", " + self.getUserData(json, field: "state");
             self.reloadInputViews();
         });
     }
