@@ -41,7 +41,7 @@ router.get('/:user', function (req, res) {
     utils.runQuery(connectionpool, query, req, res, loggedIn);
 });
 
-router.post('/update/:user/:fields', function (req, res) {
+router.put('/update/:user/:fields', function (req, res) {
     var fields = req.params.fields;
 
     var result = fields.split("&");
@@ -90,7 +90,6 @@ router.post('/register/:fields', function (req, res) {
             utils.runQuery(connectionpool, secondInsert, req, res, function(json, res, req) {});
         });
         res.send(json);
-
     });
 });
 
