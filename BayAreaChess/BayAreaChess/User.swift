@@ -10,15 +10,16 @@ import UIKit
 
 class User: UIViewController {
     
-    @IBOutlet var name : UILabel!;
-    @IBOutlet var email : UILabel!;
-    @IBOutlet var username : UILabel!;
-    @IBOutlet var dateJoined : UILabel!;
-    @IBOutlet var phone : UILabel!;
-    @IBOutlet var address : UILabel!;
+    @IBOutlet var name : UILabel?;
+    @IBOutlet var email : UILabel?;
+    @IBOutlet var username : UILabel?;
+    @IBOutlet var dateJoined : UILabel?;
+    @IBOutlet var phone : UILabel?;
+    @IBOutlet var address : UILabel?;
     
     var imagename : String!;
     var customURL : String!;
+
     @IBOutlet var imageURL : UIImageView?;
     
     var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/";
@@ -83,11 +84,13 @@ class User: UIViewController {
     }
     
     func populateFields (json : NSDictionary) {
+        //initializeVariables();
         // Dispatch UI updates to main thread
         dispatch_async(dispatch_get_main_queue(), {
             self.name?.text = self.getUserData(json, field: "first_name") + " " + self.getUserData(json, field: "last_name");
             self.email?.text = self.getUserData(json, field: "email");
             self.username?.text = self.getUserData(json, field: "username");
+            
             self.phone?.text = self.getUserData(json, field: "main_phone");
             self.address?.text = self.getUserData(json, field: "address") + " " +
                 self.getUserData(json, field: "city") + ", " + self.getUserData(json, field: "state");
@@ -96,7 +99,10 @@ class User: UIViewController {
     }
 
     func getUserData (input : NSDictionary, field : String) -> String {
-        return input[field] as String;
+        if ((input[field] as? String) != nil) {
+            return input[field] as String;
+        }
+        return "";
     }
     
     func viewLoaded () {
