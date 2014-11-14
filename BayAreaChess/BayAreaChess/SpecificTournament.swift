@@ -10,7 +10,7 @@ import UIKit
 
 class SpecificTournaments : UIViewController {
     
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/tournaments/base/";
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "date_play";
@@ -21,13 +21,15 @@ class SpecificTournaments : UIViewController {
     let DID_RECEIVE : String = "didReceiveResponse";
     let CITY : String = "city";
     let ADDRESS : String = "address";
+    let STATE : String = "state";
+    let PRIZES : String = "prizes";
     
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
     @IBOutlet var roundTimes : UILabel?;
-    @IBOutlet var city : UILabel?;
     @IBOutlet var address : UILabel?;
+    @IBOutlet var prizes : UILabel?;
     
     var myID : Int? = 0;
     var myName : String?;
@@ -66,13 +68,13 @@ class SpecificTournaments : UIViewController {
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
-        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
         name?.text = self.myName;
         descriptions?.text = getTournamentData(json, field: DESCRIPTION);
         dates?.text = getTournamentData(json, field: DATE);
-        city?.text = getTournamentData(json, field: CITY);
-        address?.text = getTournamentData(json, field: ADDRESS);
+        address?.text = getTournamentData(json, field: ADDRESS) + ", " + getTournamentData(json, field: CITY) + ", " + getTournamentData(json, field: STATE);
         roundTimes?.text = getTournamentData(json, field: ROUND_TIMES);
+        prizes?.text = getTournamentData(json, field: PRIZES);
         
         self.reloadInputViews();
         
@@ -82,9 +84,9 @@ class SpecificTournaments : UIViewController {
         println("deiniting");
     }
     
-    func getTournamentData (input : NSDictionary, field : String) -> String {
+    func getTournamentData (input : NSArray, field : String) -> String {
         var tournamentData : String! = "";
-        let json : Array = input["json"] as [AnyObject];
+        let json : Array = input as [AnyObject];
         for (index, element) in enumerate(json) {
             var name : String = element[field] as String
             tournamentData = name;

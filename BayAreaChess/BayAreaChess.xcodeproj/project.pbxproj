@@ -47,6 +47,10 @@
 		81D8D5161A0747EC00671AFA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5111A0747EC00671AFA /* settings.png */; };
 		81D8D5171A0747EC00671AFA /* tournaments.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5121A0747EC00671AFA /* tournaments.png */; };
 		81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8D5181A0826D000671AFA /* AboutLeft.swift */; };
+		81D98AB61A15575000B03886 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D98AB21A15575000B03886 /* HTTPRequestSerializer.swift */; };
+		81D98AB71A15575000B03886 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D98AB31A15575000B03886 /* HTTPResponseSerializer.swift */; };
+		81D98AB81A15575000B03886 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D98AB41A15575000B03886 /* HTTPTask.swift */; };
+		81D98AB91A15575000B03886 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D98AB51A15575000B03886 /* HTTPUpload.swift */; };
 		81EAE3FC1A0F59A6000F6484 /* downarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EADF101A0F5993000F6484 /* downarrow.png */; };
 		81EAE4041A0F59A6000F6484 /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EADF181A0F5993000F6484 /* uparrow.png */; };
 		81EAE4051A0F59A6000F6484 /* appbar.at.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EADF191A0F5993000F6484 /* appbar.at.png */; };
@@ -142,6 +146,10 @@
 		81D8D5111A0747EC00671AFA /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../../resources/settings.png; sourceTree = "<group>"; };
 		81D8D5121A0747EC00671AFA /* tournaments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tournaments.png; path = ../../resources/tournaments.png; sourceTree = "<group>"; };
 		81D8D5181A0826D000671AFA /* AboutLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutLeft.swift; sourceTree = "<group>"; };
+		81D98AB21A15575000B03886 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		81D98AB31A15575000B03886 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
+		81D98AB41A15575000B03886 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		81D98AB51A15575000B03886 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
 		81EADF101A0F5993000F6484 /* downarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downarrow.png; sourceTree = "<group>"; };
 		81EADF181A0F5993000F6484 /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrow.png; sourceTree = "<group>"; };
 		81EADF191A0F5993000F6484 /* appbar.at.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.at.png; sourceTree = "<group>"; };
@@ -220,6 +228,7 @@
 		2C7054C919C7CBAE0049BE83 /* BayAreaChess */ = {
 			isa = PBXGroup;
 			children = (
+				81D98AB11A15575000B03886 /* HTTP */,
 				2C7054CC19C7CBAE0049BE83 /* AppDelegate.swift */,
 				2C7054CE19C7CBAE0049BE83 /* ViewController.swift */,
 				2C7054D019C7CBAE0049BE83 /* Main.storyboard */,
@@ -288,6 +297,17 @@
 				2C7054DE19C7CBAE0049BE83 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81D98AB11A15575000B03886 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				81D98AB21A15575000B03886 /* HTTPRequestSerializer.swift */,
+				81D98AB31A15575000B03886 /* HTTPResponseSerializer.swift */,
+				81D98AB41A15575000B03886 /* HTTPTask.swift */,
+				81D98AB51A15575000B03886 /* HTTPUpload.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 		81EADEE81A0F5992000F6484 /* dark */ = {
@@ -497,17 +517,21 @@
 				81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */,
 				B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */,
 				81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */,
+				81D98AB91A15575000B03886 /* HTTPUpload.swift in Sources */,
 				810F5BC21A0EEBB000140332 /* AboutRight.swift in Sources */,
 				81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */,
 				81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */,
 				B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */,
 				818393251A097A5600AAE892 /* UserUpdate.swift in Sources */,
+				81D98AB61A15575000B03886 /* HTTPRequestSerializer.swift in Sources */,
 				81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */,
 				2C7054CF19C7CBAE0049BE83 /* ViewController.swift in Sources */,
+				81D98AB81A15575000B03886 /* HTTPTask.swift in Sources */,
 				811809C819E0879000252A70 /* SpecificTournament.swift in Sources */,
 				2C7054CD19C7CBAE0049BE83 /* AppDelegate.swift in Sources */,
 				814E28DE19E1EE1300D2B4FB /* User.swift in Sources */,
 				8193588319EC774D00B79AA0 /* TournamentRegistration.swift in Sources */,
+				81D98AB71A15575000B03886 /* HTTPResponseSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

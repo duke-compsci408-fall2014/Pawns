@@ -18,9 +18,10 @@ class User: UIViewController {
     @IBOutlet var address : UILabel!;
     
     var imagename : String!;
+    var customURL : String!;
     @IBOutlet var imageURL : UIImageView?;
     
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/login/";
+    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/";
     let DESCRIPTION : String = "description";
     let DATE : String = "start_date";
     let AMOUNT : String = "amount";
@@ -36,9 +37,7 @@ class User: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        URL_STRING += myUsername! + "/";
-        println(URL_STRING);
-        self.connect("");
+        self.viewLoaded();
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +47,8 @@ class User: UIViewController {
     var data = NSMutableData();
     
     func connect(query:NSString) {
-        var url = NSURL(string: URL_STRING);
+        var url = NSURL(string: customURL);
+        println(url);
         var request = NSURLRequest(URL: url!);
         var conn = NSURLConnection(request: request, delegate: self, startImmediately: true);
     }
@@ -59,20 +59,18 @@ class User: UIViewController {
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
+        self.data = NSMutableData(); // Flush data pipe
         self.data.appendData(conData);
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
-        let data: NSData = self.data;
+        var data : NSData = NSData();
+        data = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        name?.text = getTournamentData(json, field: "first_name") + " " + getTournamentData(json, field: "last_name");
-        email?.text = getTournamentData(json, field: "email");
-        username?.text = getTournamentData(json, field: "username");
-        phone?.text = getTournamentData(json, field: "main_phone");
-        address?.text = getTournamentData(json, field: "address") + " " +
-                        getTournamentData(json, field: "city");
         
-        var userHash : String = "0a553560c3f8184f194d2366a664553b";
+        populateFields(json);
+        
+        var userHash : String = getUserData(json, field: "gravatar_hash");
         
         imagename = GRAVATAR_URL + userHash + IMG_SIZE;
         var url : NSURL = NSURL(string: imagename)!;
@@ -80,19 +78,30 @@ class User: UIViewController {
         imageURL?.image = UIImage(data: imgData);
         imageURL?.layer.borderWidth = 2.0;
         imageURL?.layer.borderColor = UIColor.blackColor().CGColor;
-        
         self.reloadInputViews();
         
     }
     
-    func getTournamentData (input : NSDictionary, field : String) -> String {
-        var tournamentData : String! = "";
-        let json : Array = input["json"] as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var name : String = element[field] as String
-            tournamentData = name;
-        }
-        return tournamentData;
+    func populateFields (json : NSDictionary) {
+        // Dispatch UI updates to main thread
+        dispatch_async(dispatch_get_main_queue(), {
+            self.name?.text = self.getUserData(json, field: "first_name") + " " + self.getUserData(json, field: "last_name");
+            self.email?.text = self.getUserData(json, field: "email");
+            self.username?.text = self.getUserData(json, field: "username");
+            self.phone?.text = self.getUserData(json, field: "main_phone");
+            self.address?.text = self.getUserData(json, field: "address") + " " +
+                self.getUserData(json, field: "city") + ", " + self.getUserData(json, field: "state");
+            self.reloadInputViews();
+        });
+    }
+
+    func getUserData (input : NSDictionary, field : String) -> String {
+        return input[field] as String;
+    }
+    
+    func viewLoaded () {
+        customURL = URL_STRING + myUsername! + "/";
+        self.connect("");
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
