@@ -90,7 +90,9 @@ class User: UIViewController {
         phone?.text = getUserData(json, field: "main_phone");
         address?.text = getUserData(json, field: "address") + " " +
             getUserData(json, field: "city");
-        self.reloadInputViews();
+        dispatch_async(dispatch_get_main_queue(), {
+            self.reloadInputViews();
+        });
     }
 
     func getUserData (input : NSDictionary, field : String) -> String {
