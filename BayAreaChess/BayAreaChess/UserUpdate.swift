@@ -21,6 +21,8 @@ class UserUpdate : UIViewController {
     
     var myUsername : String?;
     
+    var request = HTTPTask();
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -42,32 +44,49 @@ class UserUpdate : UIViewController {
     }
     
     
+//    @IBAction func buttonPressed(sender: AnyObject) {
+//        
+//        var prelim : String = "email=\"" + self.email.text + "\"" + AMP + "first_name=\"" +
+//                            self.first_name.text + "\"" + AMP + "last_name=\"" + self.last_name.text +
+//                            "\"" + AMP + "username=\"" + self.username.text + "\"";
+//        
+//        prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
+//        var urlString : String = URL_STRING + self.myUsername! + "/" + prelim;
+//        var url = NSURL(string: urlString);
+//        var request = NSMutableURLRequest(URL: url!);
+//        request.HTTPMethod = "POST";
+//        
+//        var dataString = "some data";
+//        let data = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding);
+//
+//        request.HTTPBody = data;
+//        
+//        var connection = NSURLConnection(request: request, delegate: self, startImmediately: true);
+//        
+//        println("sending request...");
+//        
+//        connection?.start();
+//    }
+    
     @IBAction func buttonPressed(sender: AnyObject) {
-        
         var prelim : String = "email=\"" + self.email.text + "\"" + AMP + "first_name=\"" +
-                            self.first_name.text + "\"" + AMP + "last_name=\"" + self.last_name.text +
-                            "\"" + AMP + "username=\"" + self.username.text + "\"";
+            self.first_name.text + "\"" + AMP + "last_name=\"" + self.last_name.text +
+            "\"" + AMP + "username=\"" + self.username.text + "\"";
         
         prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
         var urlString : String = URL_STRING + self.myUsername! + "/" + prelim;
-        println(urlString);
-        var url = NSURL(string: urlString);
-        var request = NSMutableURLRequest(URL: url!);
-        request.HTTPMethod = "POST";
         
-        var dataString = "some data";
-        let data = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding);
-
-        request.HTTPBody = data;
-        
-        var connection = NSURLConnection(request: request, delegate: self, startImmediately: false);
-        
-        println("sending request...");
-        
-        connection?.start();
+        request.POST(urlString, parameters: nil, success: {(response: HTTPResponse) in
+                let data : NSData = response.responseObject as NSData;
+                let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+                (self.presentingViewController? as User).populateFields(json);
+                self.dismissViewControllerAnimated(true, completion: nil);
+            },failure: {(error: NSError, response: HTTPResponse?) in
+                println("There was an error, LOL");
+        });
     }
     
     @IBAction func back() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil);
     }
 }
