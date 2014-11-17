@@ -13,13 +13,13 @@ var connectionpool = mysql.createPool({
 exports.allTournaments = function (req, res) {
 	var query = queries.baseQuery;
     utils.runQuery(connectionpool, query, req, res, doStuff);
-}
+};
 
 exports.getTournament = function (req, res) {
 	var query = queries.queryString + req.params.id;
     utils.runQuery(connectionpool, query, req, res, doStuff);
-}
+};
 
 function doStuff(json, res, req) {
     res.send(json.json);
-}
+};
