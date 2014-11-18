@@ -34,6 +34,8 @@ exports.register = function (req, res) {
 
         utils.runQuery(connectionpool, userData, req, res, function (json, res, req) {
 
+            // Call get transaction data
+
             json = (json.json)[0];
             var user_id = json.id;
             var total_fee = json.amount;
@@ -53,3 +55,7 @@ exports.register = function (req, res) {
         });
     });
 };
+
+function getTransactionData() {
+    //Get data from paypal transaction
+}
