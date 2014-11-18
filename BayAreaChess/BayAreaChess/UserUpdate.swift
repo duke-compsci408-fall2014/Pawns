@@ -51,7 +51,7 @@ class UserUpdate : UIViewController {
         prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
         var urlString : String = URL_STRING + self.myUsername! + "/" + prelim;
         
-        request.POST(urlString, parameters: nil, success: {(response: HTTPResponse) in
+        request.PUT(urlString, parameters: nil, success: {(response: HTTPResponse) in
                 let data : NSData = response.responseObject as NSData;
                 let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
                 (self.presentingViewController? as User).populateFields(json);

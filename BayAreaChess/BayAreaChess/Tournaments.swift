@@ -101,12 +101,12 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
-        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")!;
+        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell");
 
-        cell.textLabel?.text = self.eventList[indexPath.row];
+        cell.textLabel.text = self.eventList[indexPath.row];
         cell.detailTextLabel?.text = self.dateList[indexPath.row];
         cell.backgroundColor = UIColor.clearColor();
-        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel.textColor = UIColor.whiteColor();
         cell.detailTextLabel?.textColor = UIColor.whiteColor();
         return cell;
     }
