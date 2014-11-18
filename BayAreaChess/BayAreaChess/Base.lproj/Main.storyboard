@@ -1002,6 +1002,36 @@ Executive Director</string>
             </objects>
             <point key="canvasLocation" x="2074" y="1029"/>
         </scene>
+        <!--Pal Pal Portal-->
+        <scene sceneID="31r-mH-80W">
+            <objects>
+                <viewController id="Mf8-eC-PVj" customClass="PalPalPortal" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cbi-jE-xve"/>
+                        <viewControllerLayoutGuide type="bottom" id="ci4-8B-EFa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l9Z-Yq-y5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FV-zT-Tlx">
+                                <rect key="frame" x="88" y="269" width="144" height="30"/>
+                                <state key="normal" title="Proceed With Paypal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyClicked:" destination="Mf8-eC-PVj" eventType="touchUpInside" id="tli-jO-f6x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfD-Mf-nSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189" y="1029"/>
+        </scene>
         <!--Tournament Registration-->
         <scene sceneID="Xsy-A5-Z8o">
             <objects>
@@ -1034,6 +1064,9 @@ Executive Director</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Mf8-eC-PVj" kind="show" id="cxc-vN-w7k"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVi-W1-iut">
                                 <rect key="frame" x="80" y="120" width="160" height="30"/>
