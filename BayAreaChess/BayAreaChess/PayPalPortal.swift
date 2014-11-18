@@ -38,7 +38,7 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
         } else {
             println("Success")
             var paymentViewController = PayPalPaymentViewController(payment: payment, configuration: config, delegate: self)
-            self.presentViewController(paymentViewController, animated: false, completion: nil)
+            self.presentViewController(paymentViewController, animated: true, completion: nil)
         }
     }
     
@@ -48,5 +48,9 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     
     func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
