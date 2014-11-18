@@ -13,4 +13,4 @@ exports.insertQuery = 'INSERT INTO auth_user (username, first_name, \
                     %s, %d, %d, %d, NOW(), NOW())';
 
 exports.insertQueryTwo = 'INSERT INTO player_accounts_playerprofile \
-                    (username, user_id) VALUES (%s, %d);'
+                    (username, user_id) VALUES (%s, %d)';

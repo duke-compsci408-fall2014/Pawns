@@ -1,4 +1,4 @@
-var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
+exports.runQuery = function (connectionPool, sqlQuery, req, res, callback) {
     connectionPool.getConnection(function(err, connection) {
         if (err) {
             console.error('CONNECTION error: ',err);
@@ -10,7 +10,7 @@ var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
         } else {
             var query = sqlQuery;
             console.log(query);
-            connection.query(query, req.params.id, function(err, rows, fields) {
+            connection.query(query, function(err, rows, fields) {
 
                 if (err) {
                     console.error(err);
@@ -35,5 +35,3 @@ var runQuery = function (connectionPool, sqlQuery, req, res, callback) {
         }
     });
 }
-
-exports.runQuery = runQuery;

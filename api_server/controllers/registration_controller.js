@@ -29,25 +29,27 @@ exports.register = function (req, res) {
         object['tournament_id'] = post.tournament_id;
         object = JSON.stringify(object);
 
-        var user_id = 0;
-        var total_fee = 0;
-        var discount = 0;
-        var net_pay = 0;
-        var invoice_id = 0;
-        var notes = "None";
-        var payment_status = "completed";
 
-        var query = util.format(queries.register, user_id, total_fee, discount,
-                            net_pay, invoice_id, notes, payment_status);
+        var userData = util.format(queries.getUserData, post.tournament_id, '\"'+post.username+'\"');
 
-        console.log(query);
-        /*
-        utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
-            json = json.json;
-            console.log(json);
-            console.log(object);
-            res.send(object);
+        utils.runQuery(connectionpool, userData, req, res, function (json, res, req) {
+
+            json = (json.json)[0];
+            var user_id = json.id;
+            var total_fee = json.amount;
+            var discount = json.discount;
+            var net_pay = 0;
+            var invoice_id = 0;
+            var notes = '\"'+"None"+'\"';
+            var payment_status = '\"'+"completed"+'\"';
+
+            var query = util.format(queries.register, user_id, total_fee, discount,
+                                net_pay, invoice_id, notes, payment_status);
+
+            utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
+                json = json.json;
+                res.send(object);
+            });
         });
-        */
     });
 };
