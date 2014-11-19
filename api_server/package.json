@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "czarlos",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "querystring": "^0.2.0"
+  }
 }
