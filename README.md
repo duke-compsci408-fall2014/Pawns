@@ -15,6 +15,7 @@ them as soon as we can.
 * [Swift] - Apple’s New Programming Language.
 * [Node.js] - Evented I/O for the Backend.
 * [Express.js] - A Node.js Web Framework.
+* [PayPal iOS SDK] - PayPal SDK for iOS.
 
 ### Development
 
