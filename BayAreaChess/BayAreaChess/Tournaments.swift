@@ -77,8 +77,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         var name = Utils.getListFromJSON(json, field: NAME);
         var descriptions = Utils.getListFromJSON(json, field: DESCRIPTION);
         var dates = Utils.getListFromJSON(json, field: DATE);
-        var ids = Utils.getIntArray(json, field: ID);
-        
+        var ids = Utils.getIntArrayFromJSON(json, field: ID);
         loadEventList(name);
         loadDescriptionList(descriptions);
         loadDateList(dates);

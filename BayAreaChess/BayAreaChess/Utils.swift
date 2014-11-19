@@ -10,16 +10,6 @@ import Foundation
 
 class Utils {
     
-    class func getIntArray (input : NSArray, field : String) -> [Int] {
-        var tournamentData = [Int]();
-        let json : Array = input as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var num : Int = element[field] as Int;
-            tournamentData.append(num);
-        }
-        return tournamentData;
-    }
-    
     class func getFieldFromJSON (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
         if ((input[field] as? String) != nil) {
@@ -51,10 +41,11 @@ class Utils {
     }
     
     class func getIntArrayFromJSON (input : NSArray, field : String) -> [Int] {
+
         var tournamentData = [Int]();
         let json : Array = input as [AnyObject];
         for (index, element) in enumerate(json) {
-            if ((element[field] as? String) != nil) {
+            if ((element[field] as? Int) != nil) {
                 var num : Int = element[field] as Int;
                 tournamentData.append(num);
             }

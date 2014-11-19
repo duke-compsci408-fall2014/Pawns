@@ -24,7 +24,7 @@ public class FrostedSidebar: UIViewController {
     
     //MARK: Public Properties
     
-    public var width:                   CGFloat                     = 130.0
+    public var width:                   CGFloat                     = 110.0
     public var showFromRight:           Bool                        = false
     public var animationDuration:       CGFloat                     = 0.25
     public var itemSize:                CGSize                      = CGSize(width: 70.0, height: 70.0)
@@ -371,7 +371,7 @@ public class FrostedSidebar: UIViewController {
     
     private func layoutItems(){
         let leftPadding: CGFloat = (width - itemSize.width) / 2
-        let topPadding: CGFloat = leftPadding
+        let topPadding: CGFloat = leftPadding+20
         for (index, item) in enumerate(itemViews){
             let idx: CGFloat = CGFloat(index)
             let frame = CGRect(x: leftPadding, y: topPadding*idx + itemSize.height*idx + topPadding, width:itemSize.width, height: itemSize.height)

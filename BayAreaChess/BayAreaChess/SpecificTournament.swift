@@ -14,7 +14,6 @@ class SpecificTournaments : UIViewController {
     let NAME : String = "name";
     let DESCRIPTION : String = "description";
     let DATE : String = "date_play";
-    let ROUND_TIMES : String = "round_times";
     let NEWLINE : String = "\n";
     let NAME_LABEL : String = "Name:";
     let DESC_LABEL : String = "Description:";
@@ -22,14 +21,15 @@ class SpecificTournaments : UIViewController {
     let CITY : String = "city";
     let ADDRESS : String = "address";
     let STATE : String = "state";
-    let PRIZES : String = "prizes";
+    let AMOUNT : String = "amount";
+    let START_TIME : String = "start_time";
     
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
-    @IBOutlet var roundTimes : UILabel?;
+    @IBOutlet var start_time : UILabel?;
     @IBOutlet var address : UILabel?;
-    @IBOutlet var prizes : UILabel?;
+    @IBOutlet var amount : UILabel?;
     
     var myID : Int? = 0;
     var myName : String?;
@@ -68,15 +68,15 @@ class SpecificTournaments : UIViewController {
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
-        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
+        let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         name?.text = self.myName;
-        descriptions?.text = Utils.getFieldFromList(json, field: DESCRIPTION);
-        dates?.text = Utils.getFieldFromList(json, field: DATE);
-        address?.text = Utils.getFieldFromList(json, field: ADDRESS) + ", " +
-                        Utils.getFieldFromList(json, field: CITY) + ", " +
-                        Utils.getFieldFromList(json, field: STATE);
-        roundTimes?.text = Utils.getFieldFromList(json, field: ROUND_TIMES);
-        prizes?.text = Utils.getFieldFromList(json, field: PRIZES);
+        descriptions?.text = Utils.getFieldFromJSON(json, field: DESCRIPTION);
+        dates?.text = Utils.getFieldFromJSON(json, field: DATE);
+        address?.text = Utils.getFieldFromJSON(json, field: ADDRESS) + ", " +
+                        Utils.getFieldFromJSON(json, field: CITY) + ", " +
+                        Utils.getFieldFromJSON(json, field: STATE);
+        start_time?.text = Utils.getFieldFromJSON(json, field: START_TIME);
+        amount?.text = Utils.getFieldFromJSON(json, field: AMOUNT);
         
         self.reloadInputViews();
         
@@ -92,6 +92,13 @@ class SpecificTournaments : UIViewController {
         var date = formatter.dateFromString(str);
         var s : String = formatter.stringFromDate(date!);
         return s;
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "checkout") {
+            let vc = segue.destinationViewController as PalPalPortal;
+            vc.myTournamentID = self.myID;
+        }
     }
     
     @IBAction func back() {
