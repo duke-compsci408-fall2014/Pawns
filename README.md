@@ -37,3 +37,4 @@ Have questions? Contact [Carlos Reyes].
 [Node.js]:http://nodejs.org
 [Express.js]:http://expressjs.com
 [Swift]:https://www.apple.com/swift/
+[PayPal iOS SDK]:https://github.com/paypal/PayPal-iOS-SDK
