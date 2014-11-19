@@ -17,7 +17,9 @@ exports.allTournaments = function (req, res) {
 
 exports.getTournament = function (req, res) {
 	var query = queries.queryString + req.params.id;
-    utils.runQuery(connectionpool, query, req, res, doStuff);
+    utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
+        res.send((json.json)[0])
+    });
 };
 
 function doStuff(json, res, req) {
