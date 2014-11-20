@@ -24,34 +24,30 @@ exports.register = function (req, res) {
     req.on('end', function () {
         var object = {};
         var post = JSON.parse(body);
-
+        console.log(post);
         object['username'] = post.username;
         object['tournament_id'] = post.tournament_id;
         object = JSON.stringify(object);
 
-
         var userData = util.format(queries.getUserData, post.tournament_id, '\"'+post.username+'\"');
 
         utils.runQuery(connectionpool, userData, req, res, function (json, res, req) {
-
-            // Call get transaction data
-
             json = (json.json)[0];
-            var user_id = json.id;
-            var total_fee = json.amount;
-            var discount = json.discount;
-            var net_pay = 0;
-            var invoice_id = 0;
+            console.log(json);
+            var time = (post.create_time).replace(/[-A-Z:!y]/g, "");
+            var invoice_id = post.id + time + json.uid;
             var notes = '\"'+"None"+'\"';
             var payment_status = '\"'+"completed"+'\"';
 
-            var query = util.format(queries.register, user_id, total_fee, discount,
-                                net_pay, invoice_id, notes, payment_status);
-
+            var query = util.format(queries.register, json.uid, json.amount, json.discount,
+                                post.net_pay, invoice_id, notes, payment_status);
+            console.log(query);
+/*
             utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
                 json = json.json;
                 res.send(object);
             });
+            */
         });
     });
 };
