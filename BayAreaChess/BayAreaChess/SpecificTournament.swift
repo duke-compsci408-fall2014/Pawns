@@ -33,6 +33,7 @@ class SpecificTournaments : UIViewController {
     
     var myID : Int? = 0;
     var myName : String?;
+    var myAmount : Int? = 1;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -98,6 +99,7 @@ class SpecificTournaments : UIViewController {
         if (segue.identifier == "checkout") {
             let vc = segue.destinationViewController as PalPalPortal;
             vc.myTournamentID = self.myID;
+            vc.myAmount = self.myAmount;
         }
     }
     

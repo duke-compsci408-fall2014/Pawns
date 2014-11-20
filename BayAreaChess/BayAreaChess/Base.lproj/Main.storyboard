@@ -52,6 +52,8 @@
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -996,8 +998,23 @@ Executive Director</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkgray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G54-nD-NWd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKd-a7-yZX">
+                                <rect key="frame" x="60" y="261" width="200" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELv-TH-jJv">
+                                <rect key="frame" x="60" y="208" width="200" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horizontal-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="YIe-qv-pQO">
+                                <rect key="frame" x="60" y="233" width="200" height="30"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FV-zT-Tlx">
-                                <rect key="frame" x="80" y="250" width="160" height="30"/>
+                                <rect key="frame" x="80" y="316" width="160" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Proceed With PayPal">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -1008,7 +1025,7 @@ Executive Director</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESq-Z0-eTh">
-                                <rect key="frame" x="80" y="288" width="160" height="30"/>
+                                <rect key="frame" x="80" y="354" width="160" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
