@@ -13,8 +13,9 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     var request = HTTPTask();
     var myTournamentID : Int? = -1;
     var myAmount : Int? = 0;
-    let URL : String = "http://bac.colab.duke.edu:3000/api/v1/registration/register/"
+    let URL : String = "http://bac.colab.duke.edu:3000/api/v1/registration/register/";
     var base_url : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
+    let login_url : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify";
 
     @IBOutlet var username : UITextField!;
     @IBOutlet var password : UITextField!;
@@ -39,30 +40,46 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
             return;
         }
         
-        request.GET(url, parameters: nil, success: {(response: HTTPResponse) in
-            if let data = response.responseObject as? NSData {
-
-                let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+        var verify_login_url = login_url + "/" + username.text + "/" + password.text;
+        request.GET(verify_login_url, parameters: nil, success: {(response: HTTPResponse) in
+            if let loginData = response.responseObject as? NSData {
+                let loginJSON = NSJSONSerialization.JSONObjectWithData(loginData, options: nil, error: nil) as NSDictionary;
                 
-                let amount = NSDecimalNumber(integer: self.myAmount!);
-                var payment = PayPalPayment();
-                payment.amount = amount;
-                payment.currencyCode = "USD";
-                payment.shortDescription = "Registration Payment";
-        
-                if (!payment.processable) {
-                    println("Failed to Enter PayPal");
-                } else {
-                    println("Success");
-                    var paymentViewController = PayPalPaymentViewController(payment: payment, configuration: self.config, delegate: self);
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.presentViewController(paymentViewController, animated: true, completion: nil);
-                    });
+                if (loginJSON["verification"] as? String == "success") {
+                
+                    self.request.GET(url, parameters: nil, success: {(response: HTTPResponse) in
+                        if let data = response.responseObject as? NSData {
+
+                            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
+                            
+                            let amount = NSDecimalNumber(integer: self.myAmount!);
+                            var payment = PayPalPayment();
+                            payment.amount = amount;
+                            payment.currencyCode = "USD";
+                            payment.shortDescription = "Registration Payment";
+                    
+                            if (!payment.processable) {
+                                println("Failed to Enter PayPal");
+                            } else {
+                                println("Success");
+                                var paymentViewController = PayPalPaymentViewController(payment: payment, configuration: self.config, delegate: self);
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    self.presentViewController(paymentViewController, animated: true, completion: nil);
+                                });
+                            }
+                        }
+                        },failure: {(error: NSError, response: HTTPResponse?) in
+                            println("error: \(error)");
+                        });
                 }
+                else {
+                    return;
+                }
+                
             }
             },failure: {(error: NSError, response: HTTPResponse?) in
                 println("error: \(error)");
-            });
+        });
     }
     
     func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
