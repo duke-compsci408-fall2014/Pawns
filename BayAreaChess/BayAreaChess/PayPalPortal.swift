@@ -16,6 +16,9 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     let URL : String = "http://bac.colab.duke.edu:3000/api/v1/registration/register/"
     var base_url : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
 
+    @IBOutlet var username : UITextField!;
+    @IBOutlet var password : UITextField!;
+    
     override func viewDidLoad() {
         super.viewDidLoad();
     }
@@ -52,7 +55,9 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
                 } else {
                     println("Success");
                     var paymentViewController = PayPalPaymentViewController(payment: payment, configuration: self.config, delegate: self);
-                    self.presentViewController(paymentViewController, animated: true, completion: nil);
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.presentViewController(paymentViewController, animated: true, completion: nil);
+                    });
                 }
             }
             },failure: {(error: NSError, response: HTTPResponse?) in
@@ -62,11 +67,15 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     
     func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
         self.verifyCompletedPayment(completedPayment);
-        self.dismissViewControllerAnimated(true, completion: nil);
+        dispatch_async(dispatch_get_main_queue(), {
+            self.dismissViewControllerAnimated(true, completion: nil);
+        });
     }
     
     func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
-        self.dismissViewControllerAnimated(true, completion: nil);
+        dispatch_async(dispatch_get_main_queue(), {
+            self.dismissViewControllerAnimated(true, completion: nil);
+        });
     }
     
     func verifyCompletedPayment(completedPayment: PayPalPayment) {
@@ -75,7 +84,7 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
         var data : NSData = NSJSONSerialization.dataWithJSONObject(completedPayment.confirmation, options: nil, error: nil)!;
         
         var paypalData : Dictionary<String, AnyObject> = confirmation["response"] as Dictionary<String, AnyObject>;
-        paypalData["username"] = "czarlos";
+        paypalData["username"] = username.text;
         paypalData["tournament_id"] = myTournamentID;
         paypalData["net_pay"] = myAmount!;
         
@@ -91,6 +100,8 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     }
     
     @IBAction func back() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.dismissViewControllerAnimated(true, completion: nil);
+        });
     }
 }

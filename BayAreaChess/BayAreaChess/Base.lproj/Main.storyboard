@@ -1039,6 +1039,10 @@ Executive Director</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="password" destination="VKd-a7-yZX" id="OmG-qX-K5G"/>
+                        <outlet property="username" destination="ELv-TH-jJv" id="OxI-ii-GpA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfD-Mf-nSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
