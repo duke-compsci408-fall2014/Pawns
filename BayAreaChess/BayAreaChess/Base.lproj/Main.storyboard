@@ -49,11 +49,6 @@
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
-            <string>TitilliumWeb-Regular</string>
-            <string>TitilliumWeb-Regular</string>
-            <string>TitilliumWeb-Regular</string>
-            <string>TitilliumWeb-Regular</string>
-            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1047,91 +1042,6 @@ Executive Director</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfD-Mf-nSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2483" y="1029"/>
-        </scene>
-        <!--Tournament Registration-->
-        <scene sceneID="Xsy-A5-Z8o">
-            <objects>
-                <viewController id="gLv-Oa-69P" customClass="TournamentRegistration" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aQT-ky-Eu8"/>
-                        <viewControllerLayoutGuide type="bottom" id="JA6-4Y-B26"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rRN-Ik-Gga">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkgray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HaR-Op-8tt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horizontal-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="87c-HP-qCs">
-                                <rect key="frame" x="80" y="150" width="160" height="30"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horizontal-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-jt-YCR">
-                                <rect key="frame" x="80" y="210" width="160" height="30"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horizontal-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ssi-EK-A3L">
-                                <rect key="frame" x="80" y="270" width="160" height="30"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZ8-2A-LCo">
-                                <rect key="frame" x="120" y="470" width="80" height="30"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="15"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVi-W1-iut">
-                                <rect key="frame" x="80" y="120" width="160" height="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpd-VD-ZS1">
-                                <rect key="frame" x="80" y="180" width="160" height="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7Q-Ih-WtV">
-                                <rect key="frame" x="80" y="240" width="160" height="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifN-OW-O6e">
-                                <rect key="frame" x="80" y="300" width="160" height="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="in6-hk-YsD">
-                                <rect key="frame" x="15" y="15" width="35" height="35"/>
-                                <state key="normal" image="prev.png">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back" destination="gLv-Oa-69P" eventType="touchUpInside" id="Auo-uA-bRu"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vertical-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="ClB-01-Onh">
-                                <rect key="frame" x="42" y="120" width="30" height="210"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="email" destination="j7Q-Ih-WtV" id="ZYn-jK-OPf"/>
-                        <outlet property="firstName" destination="PVi-W1-iut" id="mtd-is-zly"/>
-                        <outlet property="lastName" destination="lpd-VD-ZS1" id="TRa-Rx-hil"/>
-                        <outlet property="phoneNumber" destination="ifN-OW-O6e" id="skC-6T-dO9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1En-U0-N2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2902" y="1029"/>
         </scene>
     </scenes>
     <resources>

@@ -15,13 +15,6 @@ class Login: UIViewController {
     @IBOutlet var label : UILabel!;
 	
     let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify/";
-    let NAME : String = "name";
-    let DESCRIPTION : String = "description";
-    let DATE : String = "start_date";
-    let AMOUNT : String = "amount";
-    let NEWLINE : String = "\n";
-    let NAME_LABEL : String = "Name:";
-    let DESC_LABEL : String = "Description:";
     let DID_RECEIVE : String = "didReceiveResponse";
     var verification : String = "failure";
     

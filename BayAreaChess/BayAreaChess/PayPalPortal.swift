@@ -110,7 +110,7 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
 
         request.POST(URL, parameters: paypalData, success: {(response: HTTPResponse) in
             },failure: {(error: NSError, response: HTTPResponse?) in
-                println("There was an error in POSTing the stuff :(");
+                println("There was an error in POSTing the JSON :(");
         });
         
         
