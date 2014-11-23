@@ -11,6 +11,7 @@ import Foundation
 class Constants {
     struct Base {
         static let baseURL = "http://bac.colab.duke.edu:3000/api/v1/";
+        static let loginURL = baseURL+login+"/";
         static let login = "login";
         static let update = "update";
         static let verify = "verify";
@@ -31,13 +32,20 @@ class Constants {
         static let success = "success";
         static let dateFormat = "dd-MM-yyyy";
         static let tid = "tournament_id";
+        static let firstName = "first_name";
+        static let lastName = "last_name";
+        static let phone = "main_phone";
+        static let email = "email";
+        static let address = "address";
+        static let city = "city";
+        static let state = "state";
     }
     struct Response {
         static let recieved = "didReceiveResponse";
         static let login = "login";
     }
     struct Gravatar {
-        static let gravitarURL = "http://www.gravatar.com/avatar/";
+        static let URL = "http://www.gravatar.com/avatar/";
         static let size = "?s=120";
         static let hash = "gravatar_hash";
     }
