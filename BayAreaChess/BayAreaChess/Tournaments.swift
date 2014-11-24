@@ -64,7 +64,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
         var name = Utils.getListFromJSON(json, field: Constants.JSON.name);
         var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.description);
-        var dates = Utils.getListFromJSON(json, field: DATE);
+        var dates = Utils.getListFromJSON(json, field: Constants.JSON.date);
         var ids = Utils.getIntArrayFromJSON(json, field: Constants.JSON.id);
         loadEventList(name);
         loadDescriptionList(descriptions);

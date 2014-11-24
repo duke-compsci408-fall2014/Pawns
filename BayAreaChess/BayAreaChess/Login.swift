@@ -63,7 +63,7 @@ class Login: UIViewController {
         data = self.data;
         println(data);
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        verification = getFromJSON (json, field: Constants.JSON.verification);
+        var verification = getFromJSON (json, field: Constants.JSON.verification);
         println(Constants.JSON.failure);
 
         if (verification == Constants.JSON.success) {

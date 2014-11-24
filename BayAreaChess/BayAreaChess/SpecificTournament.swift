@@ -21,12 +21,14 @@ class SpecificTournaments : UIViewController {
     var myName : String?;
     var myAmount : Int? = 1;
     
+    var changedURL : String = "";
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
         var id : Int = myID!;
         var s : String = toString(id);
-        var changedURL = Constants.Base.allTournamentsURL + s + "/"
+        changedURL = Constants.Base.allTournamentsURL + s + "/"
         self.connect("");
         
     }
@@ -58,11 +60,11 @@ class SpecificTournaments : UIViewController {
         name?.text = self.myName;
         descriptions?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.description);
         dates?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.date);
-        address?.text = Utils.getFieldFromJSON(json, field: Constant.JSON.address) + ", " +
-                        Utils.getFieldFromJSON(json, field: Constant.JSON.city) + ", " +
-                        Utils.getFieldFromJSON(json, field: Constant.JSON.state);
+        address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + ", " +
+                        Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " +
+                        Utils.getFieldFromJSON(json, field: Constants.JSON.state);
         start_time?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.startTime);
-        amount?.text = Utils.getFieldFromJSON(json, field: Constant.JSON.amount);
+        amount?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.amount);
         
         self.reloadInputViews();
         

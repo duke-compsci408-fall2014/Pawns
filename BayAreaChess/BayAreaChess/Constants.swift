@@ -18,7 +18,7 @@ class Constants {
         static let tournamentsURL = baseURL+tournaments+"/";
         static let allTournamentsURL = tournamentsURL+all+"/";
         static let registrationURL = baseURL+registration+"/";
-        static let registrationRegisterURL = registrationURL+ register+"/";
+        static let registrationRegisterURL = registrationURL+register+"/";
         static let login = "login";
         static let update = "update";
         static let verify = "verify";
@@ -48,7 +48,6 @@ class Constants {
         static let state = "state";
         static let id = "id";
         static let startTime = "start_time";
-        static let tid = "tournament_id";
         static let netPay = "net_pay";
     }
     struct Response {

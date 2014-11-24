@@ -37,7 +37,8 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
             return;
         }
         
-        var verify_login_url = Constants.Base.verifyURL + "/" + username.text + "/" + password.text;
+        var verify_login_url = Constants.Base.verifyURL + username.text + "/" + password.text;
+        println(verify_login_url);
         request.GET(verify_login_url, parameters: nil, success: {(response: HTTPResponse) in
             if let loginData = response.responseObject as? NSData {
                 let loginJSON = NSJSONSerialization.JSONObjectWithData(loginData, options: nil, error: nil) as NSDictionary;

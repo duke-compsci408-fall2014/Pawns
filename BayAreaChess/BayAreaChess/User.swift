@@ -80,7 +80,7 @@ class User: UIViewController {
             
             self.phone?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.phone);
             self.address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + " " +
-                Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " + Utils.getFieldFromJSON(json, field: constants.JSON.state);
+                Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " + Utils.getFieldFromJSON(json, field: Constants.JSON.state);
             self.reloadInputViews();
         });
     }
