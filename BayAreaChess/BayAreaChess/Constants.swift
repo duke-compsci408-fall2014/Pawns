@@ -12,13 +12,20 @@ class Constants {
     struct Base {
         static let baseURL = "http://bac.colab.duke.edu:3000/api/v1/";
         static let loginURL = baseURL+login+"/";
+        static let verifyURL = loginURL+verify+"/";
+        static let registerURL = loginURL+register+"/";
+        static let updateURL = loginURL+update+"/";
+        static let tournamentsURL = baseURL+tournaments+"/";
+        static let allTournamentsURL = tournamentsURL+all+"/";
+        static let registrationURL = baseURL+registration+"/";
+        static let registrationRegisterURL = registrationURL+ register+"/";
         static let login = "login";
         static let update = "update";
         static let verify = "verify";
+        static let register = "register";
         static let tournaments = "tournaments";
         static let all = "all";
         static let registration = "registration";
-        static let register = "registration";
     }
     struct JSON {
         static let user = "username";
@@ -39,14 +46,39 @@ class Constants {
         static let address = "address";
         static let city = "city";
         static let state = "state";
+        static let id = "id";
+        static let startTime = "start_time";
+        static let tid = "tournament_id";
+        static let netPay = "net_pay";
     }
     struct Response {
         static let recieved = "didReceiveResponse";
-        static let login = "login";
+        static let deiniting = "deiniting";
+        static let response = "response";
     }
     struct Gravatar {
         static let URL = "http://www.gravatar.com/avatar/";
         static let size = "?s=120";
         static let hash = "gravatar_hash";
     }
+    struct Images {
+        static let home = "home.png";
+        static let tournaments = "tournaments.png";
+        static let about = "about.png";
+        static let settings = "settings.png";
+    }
+    struct Label {
+        static let user = "Username";
+        static let pass = "Password";
+        static let rejected = "Rejected!";
+        static let firstNmae  = "First Name";
+        static let lastName = "Last Name";
+        static let email = "Email";
+        static let phone = "Phone Number";
+    }
+    struct Identifier {
+        static let cell = "cell";
+        static let selectEvent = "selectEvent";
+        static let checkout = "checkout";
+    };
 }

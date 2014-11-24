@@ -10,20 +10,6 @@ import UIKit
 
 class SpecificTournaments : UIViewController {
     
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
-    let NAME : String = "name";
-    let DESCRIPTION : String = "description";
-    let DATE : String = "date_play";
-    let NEWLINE : String = "\n";
-    let NAME_LABEL : String = "Name:";
-    let DESC_LABEL : String = "Description:";
-    let DID_RECEIVE : String = "didReceiveResponse";
-    let CITY : String = "city";
-    let ADDRESS : String = "address";
-    let STATE : String = "state";
-    let AMOUNT : String = "amount";
-    let START_TIME : String = "start_time";
-    
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
@@ -40,8 +26,7 @@ class SpecificTournaments : UIViewController {
         
         var id : Int = myID!;
         var s : String = toString(id);
-        URL_STRING += s + "/";
-        println(URL_STRING);
+        var changedURL = Constants.Base.allTournamentsURL + s + "/"
         self.connect("");
         
     }
@@ -53,14 +38,14 @@ class SpecificTournaments : UIViewController {
     var data = NSMutableData();
     
     func connect(query:NSString) {
-        var url = NSURL(string: URL_STRING);
+        var url = NSURL(string: changedURL);
         var request = NSURLRequest(URL: url!);
         var conn = NSURLConnection(request: request, delegate: self, startImmediately: true);
     }
     
     
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        println(DID_RECEIVE);
+        println(Constants.Response.recieved);
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
@@ -71,13 +56,13 @@ class SpecificTournaments : UIViewController {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
         name?.text = self.myName;
-        descriptions?.text = Utils.getFieldFromJSON(json, field: DESCRIPTION);
-        dates?.text = Utils.getFieldFromJSON(json, field: DATE);
-        address?.text = Utils.getFieldFromJSON(json, field: ADDRESS) + ", " +
-                        Utils.getFieldFromJSON(json, field: CITY) + ", " +
-                        Utils.getFieldFromJSON(json, field: STATE);
-        start_time?.text = Utils.getFieldFromJSON(json, field: START_TIME);
-        amount?.text = Utils.getFieldFromJSON(json, field: AMOUNT);
+        descriptions?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.description);
+        dates?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.date);
+        address?.text = Utils.getFieldFromJSON(json, field: Constant.JSON.address) + ", " +
+                        Utils.getFieldFromJSON(json, field: Constant.JSON.city) + ", " +
+                        Utils.getFieldFromJSON(json, field: Constant.JSON.state);
+        start_time?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.startTime);
+        amount?.text = Utils.getFieldFromJSON(json, field: Constant.JSON.amount);
         
         self.reloadInputViews();
         
@@ -96,7 +81,7 @@ class SpecificTournaments : UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "checkout") {
+        if (segue.identifier == Constants.Identifier.checkout) {
             let vc = segue.destinationViewController as PalPalPortal;
             vc.myTournamentID = self.myID;
             vc.myAmount = self.myAmount;

@@ -16,7 +16,6 @@ class UserUpdate : UIViewController {
     @IBOutlet var username : UITextField!;
     @IBOutlet var phone : UITextField!;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/update/";
     let AMP : String = "&";
     
     var myUsername : String?;
@@ -26,15 +25,15 @@ class UserUpdate : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        first_name.attributedPlaceholder = NSAttributedString(string:"First Name",
+        first_name.attributedPlaceholder = NSAttributedString(string:Constants.Label.lastName,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
-        last_name.attributedPlaceholder = NSAttributedString(string:"Last Name",
+        last_name.attributedPlaceholder = NSAttributedString(string:Constants.Label.lastName,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
-        email.attributedPlaceholder = NSAttributedString(string:"Email",
+        email.attributedPlaceholder = NSAttributedString(string:Constants.Label.email,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
-        username.attributedPlaceholder = NSAttributedString(string:"Username",
+        username.attributedPlaceholder = NSAttributedString(string:Constants.Label.user,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
-        phone.attributedPlaceholder = NSAttributedString(string:"Phone Number",
+        phone.attributedPlaceholder = NSAttributedString(string:Constants.Label.phone,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
         
     }
@@ -49,7 +48,7 @@ class UserUpdate : UIViewController {
             "\"" + AMP + "username=\"" + self.username.text + "\"";
         
         prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
-        var urlString : String = URL_STRING + self.myUsername! + "/" + prelim;
+        var urlString : String = Constants.Base.updateURL + self.myUsername! + "/" + prelim;
         
         request.PUT(urlString, parameters: nil, success: {(response: HTTPResponse) in
                 let data : NSData = response.responseObject as NSData;

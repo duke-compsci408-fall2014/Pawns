@@ -13,10 +13,6 @@ class Login: UIViewController {
     @IBOutlet var username : UITextField!;
     @IBOutlet var password : UITextField!;
     @IBOutlet var label : UILabel!;
-	
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify/";
-    let DID_RECEIVE : String = "didReceiveResponse";
-    var verification : String = "failure";
     
     var currentURL : String = "";
     
@@ -29,14 +25,14 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        username.attributedPlaceholder = NSAttributedString(string:"Username",
+        username.attributedPlaceholder = NSAttributedString(string:Constants.Label.user,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
-        password.attributedPlaceholder = NSAttributedString(string:"Password",
+        password.attributedPlaceholder = NSAttributedString(string:Constants.Label.pass,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
     }
 
 	@IBAction func verifyLogin (sender : AnyObject) {
-        currentURL = URL_STRING + username.text + "/" + password.text;
+        currentURL = Constants.Base.verifyURL + username.text + "/" + password.text;
         self.connect("");
 	}
     
@@ -54,7 +50,7 @@ class Login: UIViewController {
     
     
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        println(DID_RECEIVE);
+        println(Constants.Response.recieved);
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
@@ -67,27 +63,27 @@ class Login: UIViewController {
         data = self.data;
         println(data);
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        verification = getFromJSON (json, field: "verification");
-        println(verification);
+        verification = getFromJSON (json, field: Constants.JSON.verification);
+        println(Constants.JSON.failure);
 
-        if (verification == "success") {
+        if (verification == Constants.JSON.success) {
             label.text = "";
-            self.performSegueWithIdentifier("login", sender: self);
+            self.performSegueWithIdentifier(Constants.Base.login, sender: self);
         }
         else {
             label.textColor = UIColor.redColor();
-            label.text = "Rejected!";
+            label.text = Constants.Label.rejected;
         }
     }
     
     deinit {
-        println("deiniting");
+        println(Constants.Response.deiniting);
     }
     
     func getFromJSON (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
         if ((input[field] as? String) != nil) {
-            tournamentData = input["verification"] as String;
+            tournamentData = input[Constants.JSON.verification] as String;
         }
         return tournamentData;
     }
@@ -97,7 +93,7 @@ class Login: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "login") {
+        if (segue.identifier == Constants.Base.login) {
             let vc = segue.destinationViewController as User;
             vc.myUsername = self.username.text as String;
         }

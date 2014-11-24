@@ -19,7 +19,6 @@ class UserRegistration : UIViewController {
     @IBOutlet var password : UITextField!;
     @IBOutlet var confirm_password : UITextField!;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/register/";
     let AMP : String = "&";
     
     
@@ -59,7 +58,7 @@ class UserRegistration : UIViewController {
         
         prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
         
-        var urlString : String = URL_STRING + prelim;
+        var urlString : String = Constants.Base.registerURL + prelim;
         var url = NSURL(string: urlString);
         println(url);
         var request = NSMutableURLRequest(URL: url!);

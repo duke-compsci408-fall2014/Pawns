@@ -13,9 +13,6 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     var request = HTTPTask();
     var myTournamentID : Int? = -1;
     var myAmount : Int? = 0;
-    let URL : String = "http://bac.colab.duke.edu:3000/api/v1/registration/register/";
-    var base_url : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
-    let login_url : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify";
 
     @IBOutlet var username : UITextField!;
     @IBOutlet var password : UITextField!;
@@ -34,18 +31,18 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     }
     @IBAction func buyClicked(sender : AnyObject) {
         var tournament_id : String = String(myTournamentID!);
-        var url = base_url+tournament_id;
+        var url = Constants.Base.allTournamentsURL+tournament_id;
         
         if (self.myTournamentID == -1) {
             return;
         }
         
-        var verify_login_url = login_url + "/" + username.text + "/" + password.text;
+        var verify_login_url = Constants.Base.verifyURL + "/" + username.text + "/" + password.text;
         request.GET(verify_login_url, parameters: nil, success: {(response: HTTPResponse) in
             if let loginData = response.responseObject as? NSData {
                 let loginJSON = NSJSONSerialization.JSONObjectWithData(loginData, options: nil, error: nil) as NSDictionary;
                 
-                if (loginJSON["verification"] as? String == "success") {
+                if (loginJSON[Constants.JSON.verification] as? String == "success") {
                 
                     self.request.GET(url, parameters: nil, success: {(response: HTTPResponse) in
                         if let data = response.responseObject as? NSData {
@@ -100,15 +97,15 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
         println(confirmation);
         var data : NSData = NSJSONSerialization.dataWithJSONObject(completedPayment.confirmation, options: nil, error: nil)!;
         
-        var paypalData : Dictionary<String, AnyObject> = confirmation["response"] as Dictionary<String, AnyObject>;
-        paypalData["username"] = username.text;
-        paypalData["tournament_id"] = myTournamentID;
-        paypalData["net_pay"] = myAmount!;
+        var paypalData : Dictionary<String, AnyObject> = confirmation[Constants.Response.response] as Dictionary<String, AnyObject>;
+        paypalData[Constants.JSON.user] = username.text;
+        paypalData[Constants.JSON.tid] = myTournamentID;
+        paypalData[Constants.JSON.netPay] = myAmount!;
         
         println(paypalData);
         request.requestSerializer = JSONRequestSerializer();
 
-        request.POST(URL, parameters: paypalData, success: {(response: HTTPResponse) in
+        request.POST(Constants.Base.registrationRegisterURL, parameters: paypalData, success: {(response: HTTPResponse) in
             },failure: {(error: NSError, response: HTTPResponse?) in
                 println("There was an error in POSTing the JSON :(");
         });
