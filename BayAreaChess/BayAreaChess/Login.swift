@@ -32,8 +32,10 @@ class Login: UIViewController {
     }
 
 	@IBAction func verifyLogin (sender : AnyObject) {
-        currentURL = Constants.Base.verifyURL + username.text + "/" + password.text;
-        self.connect("");
+        if (username.text != "" && password.text != "") {
+            currentURL = Constants.Base.verifyURL + username.text + "/" + password.text;
+            self.connect("");
+        }
 	}
     
     override func didReceiveMemoryWarning() {
