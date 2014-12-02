@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  BayAreaChess
-//
-//  Created by Oren Bukspan on 9/15/14.
-//  Copyright (c) 2014 Bay Area Chess. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

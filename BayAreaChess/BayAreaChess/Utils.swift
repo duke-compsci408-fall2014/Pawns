@@ -10,6 +10,13 @@ import Foundation
 
 class Utils {
     
+    /**
+     *  Safely returns field value from JSON object.
+     *
+     *  @param input The JSON to be parsed, of type NSDictionary
+     *  @param field The key to be used to retrieve a field
+     *  @return The value associated with the key, returns "" if not found
+    */
     class func getFieldFromJSON (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
         if ((input[field] as? String) != nil) {
@@ -18,6 +25,13 @@ class Utils {
         return tournamentData;
     }
     
+    /**
+    *  Safely returns field value from list
+    *
+    *  @param input The list to be searched through, of type NSArray
+    *  @param field The key to be used to retrieve a field
+    *  @return The value associated with the key, returns "" if not found
+    */
     class func getFieldFromList (input : NSArray, field : String) -> String {
         var tournamentData : String! = "";
         let json : Array = input as [AnyObject];
@@ -28,6 +42,13 @@ class Utils {
         return tournamentData;
     }
     
+    /**
+    *  Safely returns String array from NSArray
+    *
+    *  @param input The array, of type NSArray
+    *  @param field The key to be used to retrieve a field
+    *  @return The value associated with the key, returns empty array if not found
+    */
     class func getListFromJSON (input : NSArray, field : String) -> [String] {
         var tournamentData = [String]();
         let json : Array = input as [AnyObject];
@@ -40,6 +61,13 @@ class Utils {
         return tournamentData;
     }
     
+    /**
+    *  Safely returns Int array from NSArray
+    *
+    *  @param input The array, of type NSArray
+    *  @param field The key to be used to retrieve a field
+    *  @return The value associated with the key, returns empty array if not found
+    */
     class func getIntArrayFromJSON (input : NSArray, field : String) -> [Int] {
 
         var tournamentData = [Int]();
