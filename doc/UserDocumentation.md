@@ -58,16 +58,17 @@ A copy is available at http://www.bayareachess.com/about/calchess.php. However, 
 #### What is the discount structure? Do members get additional discounts?
 
 The current discount structure is as follows... 
-Number of tournaments | Regular Discount
-----------------------|------------------
-2 | $5
-3 | $10
-4 | $20
-5 | $30
-6 | $40
-7 | $50
-8 | $60
-9 | $70
+
+| Number of Tournaments | Regular Discount |
+|-----------------------|------------------|
+| 2                     | $5               |
+| 3                     | $10              |
+| 4                     | $20              |
+| 5                     | $30              |
+| 6                     | $40              |
+| 7                     | $50              |
+| 8                     | $60              |
+| 9                     | $70              |
 
 ### Awards:
 
