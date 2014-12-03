@@ -52,6 +52,11 @@ class User: UIViewController {
         self.data.appendData(conData);
     }
     
+    /**
+     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     *
+     * @param connection The connection being passed through
+    */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var data : NSData = NSData();
         data = self.data;
@@ -71,6 +76,11 @@ class User: UIViewController {
         
     }
     
+    /**
+     * Populates text fields on view with information from JSON object
+     *
+     * @param json The JSON dictionary from which the fields will get data
+    */
     func populateFields (json : NSDictionary) {
         // Dispatch UI updates to main thread
         dispatch_async(dispatch_get_main_queue(), {
@@ -90,6 +100,11 @@ class User: UIViewController {
         self.connect("");
     }
     
+    /**
+     * Sends username to next segue
+     *
+     * @param connection The connection being passed through
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == Constants.Base.update) {
             let vc = segue.destinationViewController as UserUpdate;

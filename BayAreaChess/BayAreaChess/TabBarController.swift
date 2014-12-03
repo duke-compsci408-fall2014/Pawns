@@ -2,8 +2,8 @@
 //  TabBarController.swift
 //  FrostedSidebar
 //
-//  Created by Evan Dekhayser on 8/28/14.
-//  Copyright (c) 2014 Evan Dekhayser. All rights reserved.
+//  Created by Carlos Reyes on 9/28/14.
+//  Copyright (c) 2014 Carlos Reyes. All rights reserved.
 //
 
 import UIKit

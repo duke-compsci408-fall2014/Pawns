@@ -13,14 +13,12 @@ class Login: UIViewController {
     @IBOutlet var username : UITextField!;
     @IBOutlet var password : UITextField!;
     @IBOutlet var label : UILabel!;
-    
-    var currentURL : String = "";
-    
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
     @IBOutlet var cost : UILabel?;
     
+    var currentURL : String = "";
     var myID : Int? = 0;
     
     override func viewDidLoad() {
@@ -60,6 +58,11 @@ class Login: UIViewController {
         self.data.appendData(conData);
     }
     
+    /**
+     * Performance login on successful server response
+     *
+     * @param connection The connection from which the class recieves the response
+    */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var data : NSData = NSData();
         data = self.data;
@@ -82,6 +85,13 @@ class Login: UIViewController {
         println(Constants.Response.deiniting);
     }
     
+    /**
+     *  Safely returns field value from JSON
+     *
+     *  @param input The JSON object, of type NSDictionary
+     *  @param field The key to be used to retrieve a field
+     *  @return The value associated with the key, returns empty string if not found
+    */
     func getFromJSON (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
         if ((input[field] as? String) != nil) {
@@ -90,10 +100,19 @@ class Login: UIViewController {
         return tournamentData;
     }
     
+    /**
+    * Pulls up side bar on event
+    */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
     
+    /**
+     * Prepares passes the username from the login page to the user's dashboard
+     *
+     * @param segue The UIStoryboardSegue
+     * @param sender The sending class
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == Constants.Base.login) {
             let vc = segue.destinationViewController as User;

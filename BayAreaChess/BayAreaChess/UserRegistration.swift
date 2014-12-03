@@ -45,6 +45,11 @@ class UserRegistration : UIViewController {
     }
     
     
+    /**
+     * Sends post request with user login credentials upon registration button press
+     *
+     * @param sender The object that is firing the event
+    */
     @IBAction func buttonPressed(sender: AnyObject) {
         if(self.password.text != self.confirm_password.text) {
             return;

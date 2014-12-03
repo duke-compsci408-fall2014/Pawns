@@ -42,6 +42,11 @@ class UserUpdate : UIViewController {
         super.didReceiveMemoryWarning();
     }
     
+    /**
+     * Sends PUT request to API server to update user information.
+     * 
+     * @param sender Sending object
+    */
     @IBAction func buttonPressed(sender: AnyObject) {
         var prelim : String = "email=\"" + self.email.text + "\"" + AMP + "first_name=\"" +
             self.first_name.text + "\"" + AMP + "last_name=\"" + self.last_name.text +
