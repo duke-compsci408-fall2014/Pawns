@@ -54,6 +54,11 @@ class SpecificTournaments : UIViewController {
         self.data.appendData(conData);
     }
     
+    /**
+     * Loads data into view controller from JSON from connection
+     *
+     * @param connection The connection from which data comes
+    */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
@@ -74,14 +79,12 @@ class SpecificTournaments : UIViewController {
         println("deiniting");
     }
     
-    func formatDate (str : String) -> String {
-        var formatter: NSDateFormatter = NSDateFormatter();
-        formatter.dateFormat = "dd-MM-yyyy";
-        var date = formatter.dateFromString(str);
-        var s : String = formatter.stringFromDate(date!);
-        return s;
-    }
-    
+    /**
+     * Passes tournament ID and cost of tournament to next view controller
+     *
+     * @param segue The UIStoryboardSegue
+     * @param sender The sending class
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == Constants.Identifier.checkout) {
             let vc = segue.destinationViewController as PalPalPortal;

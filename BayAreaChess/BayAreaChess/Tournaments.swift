@@ -24,7 +24,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     
     /**
-    * Pulls up side bar on event
+     * Pulls up side bar on event
     */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
@@ -63,9 +63,9 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     /**
-    * Deserializes JSON coming in through the connection passed in, populates fields from this object
-    *
-    * @param connection The connection being passed through
+     * Deserializes JSON coming in through the connection passed in, populates fields from this object
+     *
+     * @param connection The connection being passed through
     */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
@@ -95,11 +95,11 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     /**
-    * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
-    *
-    * @param tableView The targeted table view
-    * @param indexPath The current index path
-    * @return UITableViewCell The resulting cell
+     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     *
+     * @param tableView The targeted table view
+     * @param indexPath The current index path
+     * @return UITableViewCell The resulting cell
     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.cell) as UITableViewCell;
@@ -125,26 +125,26 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     /* Delegate End */
     
     /**
-    * Loads String array into String array used by tableview
-    *
-    * @param l The String array to be read from
+     * Loads String array into String array used by tableview
+     *
+     * @param l The String array to be read from
     */
     func loadEventList (l : [String]) {
         eventList = l;
     }
     /**
-    * Loads String array into String array used by tableview
-    *
-    * @param l The String array to be read from
+     * Loads String array into String array used by tableview
+     *
+     * @param l The String array to be read from
     */
     func loadDescriptionList (l : [String]) {
         descriptionList = l;
     }
     
     /**
-    * Loads String array into String array used by tableview
-    *
-    * @param l The String array to be read from
+     * Loads String array into String array used by tableview
+     *
+     * @param l The String array to be read from
     */
     func loadDateList (l : [String]) {
         for item in l {
@@ -156,19 +156,19 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     /**
-    * Loads Int array into Int array used by tableview
-    *
-    * @param l The Int array to be read from
+     * Loads Int array into Int array used by tableview
+     *
+     * @param l The Int array to be read from
     */
     func loadIDList (l : [Int]) {
         idList = l;
     }
     
     /**
-    * Sends the id and the name of the selected tournament to the destination view controller.
-    *
-    * @param segue The UIStoryboardSegue
-    * @param sender The sending class
+     * Sends the id and the name of the selected tournament to the destination view controller.
+     *
+     * @param segue The UIStoryboardSegue
+     * @param sender The sending class
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == Constants.Identifier.selectEvent) {

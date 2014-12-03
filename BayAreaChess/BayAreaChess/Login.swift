@@ -101,14 +101,14 @@ class Login: UIViewController {
     }
     
     /**
-    * Pulls up side bar on event
+     * Pulls up side bar on event
     */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
     
     /**
-     * Prepares passes the username from the login page to the user's dashboard
+     * Passes the username from the login page to the user's dashboard
      *
      * @param segue The UIStoryboardSegue
      * @param sender The sending class

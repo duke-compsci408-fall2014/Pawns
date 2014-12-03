@@ -29,6 +29,15 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
     }
+    
+    
+    /**
+     * Sends GET request verify login credentials and another
+     * GET request to retrieve payment information about the
+     * tournaments specific costs.
+     *
+     * @param sender The sending class
+    */
     @IBAction func buyClicked(sender : AnyObject) {
         var tournament_id : String = String(myTournamentID!);
         var url = Constants.Base.allTournamentsURL+tournament_id;
@@ -80,6 +89,11 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
         });
     }
     
+    /**
+     * PayPal payment view controller.
+     *
+     * @param completedPayment A PayPal payment
+    */
     func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
         self.verifyCompletedPayment(completedPayment);
         dispatch_async(dispatch_get_main_queue(), {
@@ -87,12 +101,23 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
         });
     }
     
+    /**
+     * On cancellation of a payment, the view controller is dismissed
+     *
+     * @param completedPayment A PayPal Payment View Controller
+    */
     func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
         dispatch_async(dispatch_get_main_queue(), {
             self.dismissViewControllerAnimated(true, completion: nil);
         });
     }
     
+    /**
+     * On confirmation of payment, sends details about payment back to the server
+     * to be processed.
+     *
+     * @param completedPayment A PayPal payment
+    */
     func verifyCompletedPayment(completedPayment: PayPalPayment) {
         var confirmation: NSDictionary = completedPayment.confirmation as NSDictionary;
         println(confirmation);
@@ -110,8 +135,6 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
             },failure: {(error: NSError, response: HTTPResponse?) in
                 println("There was an error in POSTing the JSON :(");
         });
-        
-        
     }
     
     @IBAction func back() {
