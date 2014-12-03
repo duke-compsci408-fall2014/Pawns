@@ -17,6 +17,13 @@ them as soon as we can.
 * [Express.js] - A Node.js Web Framework.
 * [PayPal iOS SDK] - PayPal SDK for iOS.
 
+### Building
+
+Please make sure that you have the latest version of XCode (6.1), as 
+it will be required to build the application. Open the directory 
+in XCode and it will be recognized as an XCode project. Select one of 
+the iPhone emulators (or plug in a real iPhone) and click Build.
+
 ### Development
 
 We welcome contributors to make Bay Area Chess better!
