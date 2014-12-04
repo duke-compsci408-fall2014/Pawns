@@ -5,12 +5,8 @@ var querystring = require('querystring');
 var crypto = require('crypto');
 var util = require('util');
 var queries = require('../queries/login_queries');
-var connectionpool = mysql.createPool({
-        host     : 'localhost',
-        user     : 'root',
-        password : process.env.BACKUP,
-        database : 'backup'
-    });
+var config = require('../config/configuration');
+var connectionpool = config.connectionpool;
 
 exports.verifyLogin = function (req, res) {
     var query = 'SELECT username, password FROM auth_user WHERE username=' + '\"' + req.params.user + "\"";

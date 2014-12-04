@@ -5,12 +5,8 @@ var util = require('util');
 var utils = require('../utils');
 var qs = require('querystring')
 var queries = require('../queries/registration_queries');
-var connectionpool = mysql.createPool({
-        host     : 'localhost',
-        user     : 'root',
-        password : process.env.BACKUP,
-        database : 'backup'
-    });
+var config = require('../config/configuration');
+var connectionpool = config.connectionpool;
 
 exports.register = function (req, res) {
 
@@ -20,7 +16,7 @@ exports.register = function (req, res) {
         if(body.length > 1e6) {
             request.connection.destroy();
         }
-    })
+    });
     req.on('end', function () {
         var object = {};
         var post = JSON.parse(body);

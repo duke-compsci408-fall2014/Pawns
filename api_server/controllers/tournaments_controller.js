@@ -4,12 +4,8 @@ var mysql = require('mysql');
 var utils = require('../utils');
 var util = require('util');
 var queries = require('../queries/tournament_queries');
-var connectionpool = mysql.createPool({
-        host     : 'localhost',
-        user     : 'root',
-        password : process.env.BACKUP,
-        database : 'backup'
-    });
+var config = require('../config/configuration');
+var connectionpool = config.connectionpool;
 
 exports.allTournaments = function (req, res) {
 	var query = queries.baseQuery;
