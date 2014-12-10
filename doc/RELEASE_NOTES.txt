@@ -1,0 +1,7 @@
+- As it stands this project is close to full basic functionality. 
+- It implements a login portal, about page, tournaments page, and 
+payment portal via PayPal. However within the scope of this project 
+the tournaments page does not pull all of the tournaments that it 
+must from the database. This bug is currently being worked out however 
+as it stands this is still a problem in the app. 
+- As for the actual functionality of the app, its been tested on several emulated devices such as the iPhone 5, 5s, 6, and 6+.
