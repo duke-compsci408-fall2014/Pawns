@@ -7,6 +7,10 @@ a Node.js API server.
 Please feel free to post issues and we’ll fix
 them as soon as we can.
 
+Team: Carlos Reyes, Oren Bukspan, Tze Kang Ng, Daniel Zhang
+Client: Judit Sztaray
+Last Updated: 12/11/14
+
 ### Version
 1.0.0 Beta
 
