@@ -65,13 +65,12 @@ class User: UIViewController {
         populateFields(json);
         
         var userHash : String = Utils.getFieldFromJSON(json, field: Constants.Gravatar.hash);
-        
         imagename = Constants.Gravatar.URL + userHash + Constants.Gravatar.size;
         var url : NSURL = NSURL(string: imagename)!;
         var imgData : NSData = NSData(contentsOfURL: url, options: nil, error: nil)!
         imageURL?.image = UIImage(data: imgData);
-        imageURL?.layer.borderWidth = 2.0;
-        imageURL?.layer.borderColor = UIColor.blackColor().CGColor;
+//        imageURL?.layer.borderWidth = 2.0;
+//        imageURL?.layer.borderColor = UIColor.blackColor().CGColor;
         self.reloadInputViews();
         
     }

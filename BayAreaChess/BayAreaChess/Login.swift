@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Login: UIViewController {
+class Login: UIViewController, UITextFieldDelegate {
 	
     @IBOutlet var username : UITextField!;
     @IBOutlet var password : UITextField!;
@@ -23,6 +23,9 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.username.delegate = self;
+        self.password.delegate = self;
+        
         username.attributedPlaceholder = NSAttributedString(string:Constants.Label.user,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
         password.attributedPlaceholder = NSAttributedString(string:Constants.Label.pass,
@@ -118,5 +121,10 @@ class Login: UIViewController {
             let vc = segue.destinationViewController as User;
             vc.myUsername = self.username.text as String;
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true);
+        return false;
     }
 }
