@@ -28,7 +28,14 @@ class Login: UIViewController {
         password.attributedPlaceholder = NSAttributedString(string:Constants.Label.pass,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
     }
-
+    
+    /**
+     * Validates the login information of a user. Also makes sure that user does not
+     * enter nil values.
+     *
+     * @param sender The sending class
+    */
+    
 	@IBAction func verifyLogin (sender : AnyObject) {
         if (username.text != "" && password.text != "") {
             currentURL = Constants.Base.verifyURL + username.text + "/" + password.text;
@@ -59,7 +66,7 @@ class Login: UIViewController {
     }
     
     /**
-     * Performance login on successful server response
+     * If there is a successful server response, will attempt to log in
      *
      * @param connection The connection from which the class recieves the response
     */
@@ -101,7 +108,7 @@ class Login: UIViewController {
     }
     
     /**
-     * Pulls up side bar on event
+     * Opening sidebar triggered by an event
     */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)

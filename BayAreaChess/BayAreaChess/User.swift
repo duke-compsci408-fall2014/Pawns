@@ -53,7 +53,8 @@ class User: UIViewController {
     }
     
     /**
-     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     * Deserializes JSON coming in through the connection passed in. Use data to 
+     * populate fields and update text, as well as use image placeholders if necessary
      *
      * @param connection The connection being passed through
     */
@@ -101,7 +102,7 @@ class User: UIViewController {
     }
     
     /**
-     * Sends username to next segue
+     * Maintains username to send to the next segue
      *
      * @param connection The connection being passed through
     */
