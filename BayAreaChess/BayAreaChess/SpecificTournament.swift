@@ -55,7 +55,11 @@ class SpecificTournaments : UIViewController {
     }
     
     /**
-     * Loads data into view controller from JSON from connection
+     * Deserializes JSON data from an input connection. Uses the data
+     * to populate fields within the view, if the data exists.
+     *
+     * Includes data for the name of the tournament, any description,
+     * dates, and address, as well as a cost of the tournament.
      *
      * @param connection The connection from which data comes
     */
@@ -80,7 +84,8 @@ class SpecificTournaments : UIViewController {
     }
     
     /**
-     * Passes tournament ID and cost of tournament to next view controller
+     * Maintains tournament ID and cost of tournament to send to the next view via segue,
+     * so users know which tournament they are paying for, and how much. 
      *
      * @param segue The UIStoryboardSegue
      * @param sender The sending class
