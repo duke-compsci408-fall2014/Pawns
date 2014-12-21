@@ -49,6 +49,7 @@
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -598,7 +599,7 @@ Executive Director</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-E4-n2C">
-                                <rect key="frame" x="120" y="359" width="160" height="21"/>
+                                <rect key="frame" x="120" y="310" width="160" height="21"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -629,19 +630,19 @@ Executive Director</string>
                                 <rect key="frame" x="100" y="63" width="120" height="120"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-hW-IsD">
-                                <rect key="frame" x="120" y="299" width="160" height="21"/>
+                                <rect key="frame" x="120" y="262" width="160" height="21"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail-full.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-19-z2l">
-                                <rect key="frame" x="62" y="290" width="40" height="40"/>
+                                <rect key="frame" x="62" y="253" width="40" height="40"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-PX-yXT">
-                                <rect key="frame" x="62" y="350" width="40" height="40"/>
+                                <rect key="frame" x="62" y="301" width="40" height="40"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homewhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-my-dFP">
-                                <rect key="frame" x="62" y="410" width="40" height="40"/>
+                                <rect key="frame" x="62" y="349" width="40" height="40"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-8y-UkQ">
                                 <rect key="frame" x="120" y="470" width="80" height="30"/>
@@ -656,11 +657,20 @@ Executive Director</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-DQ-snt">
-                                <rect key="frame" x="120" y="410" width="160" height="40"/>
+                                <rect key="frame" x="120" y="349" width="160" height="40"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="US Chess ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21l-QG-TBj">
+                                <rect key="frame" x="120" y="408" width="160" height="21"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="king.png" translatesAutoresizingMaskIntoConstraints="NO" id="q74-pe-VZP">
+                                <rect key="frame" x="62" y="397" width="40" height="43"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -668,6 +678,7 @@ Executive Director</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="address" destination="oka-DQ-snt" id="Jj6-YV-RAf"/>
+                        <outlet property="chessID" destination="21l-QG-TBj" id="jbD-rM-cMg"/>
                         <outlet property="email" destination="JHr-hW-IsD" id="6we-0a-HM0"/>
                         <outlet property="imageURL" destination="rUD-4r-PYC" id="5MZ-JH-BxF"/>
                         <outlet property="name" destination="r2r-yf-O6L" id="ETb-4j-d4N"/>
@@ -677,7 +688,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0h-Q5-94p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="290"/>
+            <point key="canvasLocation" x="-702" y="335"/>
         </scene>
         <!--Login-->
         <scene sceneID="XbV-nd-yI0">
