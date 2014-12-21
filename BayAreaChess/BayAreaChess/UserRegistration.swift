@@ -47,7 +47,8 @@ class UserRegistration : UIViewController {
     
     /**
      * Pressing registration button triggers a POST event. New user credentials
-     * are sent to the database to allow them to log-in in the future
+     * are sent to the database to allow them to log-in in the future. Users
+     * update their email, first and last name, username and password
      *
      * @param sender The object that is firing the event
     */

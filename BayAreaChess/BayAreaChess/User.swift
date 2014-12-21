@@ -55,6 +55,7 @@ class User: UIViewController {
     /**
      * Deserializes JSON coming in through the connection passed in. Use data to 
      * populate fields and update text, as well as use image placeholders if necessary
+     * Currently uses images from Gravatar.
      *
      * @param connection The connection being passed through
     */
@@ -78,7 +79,8 @@ class User: UIViewController {
     }
     
     /**
-     * Populates text fields on view with information from JSON object
+     * Populates text fields on view with information from JSON object, including
+     * data for name, email, username, phone, and address
      *
      * @param json The JSON dictionary from which the fields will get data
     */
@@ -102,7 +104,7 @@ class User: UIViewController {
     }
     
     /**
-     * Maintains username to send to the next segue
+     * Maintains username to send to the next view via the segue
      *
      * @param connection The connection being passed through
     */

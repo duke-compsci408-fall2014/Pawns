@@ -44,7 +44,7 @@ class UserUpdate : UIViewController {
     
     /**
      * Button press sends PUT event to the API server. Event updates the user information with
-     * values inputted in the fields
+     * values inputted in the fields, such as an updated email or name
      * 
      * @param sender Sending object
     */

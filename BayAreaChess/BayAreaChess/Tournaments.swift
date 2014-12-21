@@ -66,6 +66,8 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
      * Deserializes JSON coming in through the connection passed in. Uses data to populate
      * any fields within the view.
      *
+     * Gets tournament names, descriptions, dates and IDs
+     *
      * @param connection The connection being passed through
     */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
