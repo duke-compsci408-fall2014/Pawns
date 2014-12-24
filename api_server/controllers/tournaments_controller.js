@@ -11,16 +11,23 @@ var connectionpool = mysql.createPool({
         database : 'backup'
     });
 
-exports.allTournaments = function (req, res) {
-	var query = queries.baseQuery;
+exports.groupedTournaments = function (req, res) {
+	var query = util.format(queries.baseQuery, req.params.gid);
     utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
         res.send(json.json);
     });
 };
 
-exports.getTournament = function (req, res) {
+exports.specificTournament = function (req, res) {
     var query = util.format(queries.queryString, req.params.id)
     utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
         res.send((json.json)[0]);
     });
 };
+
+exports.generalTournaments = function (req, res) {
+    var query = util.format(queries.generalTournaments, req.params.gid, req.params.id);
+    utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
+        res.send(json.json);
+    });
+}

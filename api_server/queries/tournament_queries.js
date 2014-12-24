@@ -1,3 +1,6 @@
+exports.generalTournaments =
+'SELECT * FROM tournament_groups';
+
 exports.baseQuery =
 'SELECT te.id, tg.name, te.date_play \
 FROM tournament_events te \
