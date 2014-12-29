@@ -30,16 +30,19 @@ exports.generalTournaments = function (req, res) {
     });
 };
 
-exports.groupedTournaments = function (req, res) {
-	var query = util.format(queries.groupedTournaments, req.params.gid);
-    utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
-        res.send(json.json);
-    });
-};
-
 exports.specificTournament = function (req, res) {
-    var query = util.format(queries.specificTournament, req.params.id)
-    utils.runQuery(connectionpool, query, req, res, function(json, res, req) {
-        res.send((json.json)[0]);
+    var url = 'https://www.googleapis.com/calendar/v3/calendars/le40uvlqte5b3uqg1b2v1h8af4%40group.calendar.google.com/events/%s?key=%s';
+    url = util.format(url, req.params.id, process.env.GOOGLE_CALENDAR_KEY);
+    return https.get(url, function (response) {
+        var body = '';
+        response.on('data', function (chunk) {
+            body+=chunk;
+        }).on('end', function() {
+            body = JSON.parse(body);
+            res.send(body);
+        });
+    }).on('error', function (err) {
+
     });
+
 };
