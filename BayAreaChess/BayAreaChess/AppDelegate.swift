@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  BayAreaChess
-//
-//  Created by Oren Bukspan on 9/15/14.
-//  Copyright (c) 2014 Bay Area Chess. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -15,8 +7,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction: "ID1", PayPalEnvironmentSandbox: "ID2"]);
+        return true;
     }
 
     func applicationWillResignActive(application: UIApplication!) {

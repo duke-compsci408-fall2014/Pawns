@@ -8,43 +8,35 @@
 
 import UIKit
 
-class Login: UIViewController {
+class Login: UIViewController, UITextFieldDelegate {
 	
     @IBOutlet var username : UITextField!;
     @IBOutlet var password : UITextField!;
     @IBOutlet var label : UILabel!;
-	
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/verify/";
-    let NAME : String = "name";
-    let DESCRIPTION : String = "description";
-    let DATE : String = "start_date";
-    let AMOUNT : String = "amount";
-    let NEWLINE : String = "\n";
-    let NAME_LABEL : String = "Name:";
-    let DESC_LABEL : String = "Description:";
-    let DID_RECEIVE : String = "didReceiveResponse";
-    var verification : String = "failure";
-    
-    var currentURL : String = "";
-    
     @IBOutlet var name : UILabel?;
     @IBOutlet var descriptions : UITextView?;
     @IBOutlet var dates : UILabel?;
     @IBOutlet var cost : UILabel?;
     
+    var currentURL : String = "";
     var myID : Int? = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        username.attributedPlaceholder = NSAttributedString(string:"Username",
+        self.username.delegate = self;
+        self.password.delegate = self;
+        
+        username.attributedPlaceholder = NSAttributedString(string:Constants.Label.user,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
-        password.attributedPlaceholder = NSAttributedString(string:"Password",
+        password.attributedPlaceholder = NSAttributedString(string:Constants.Label.pass,
             attributes:[NSForegroundColorAttributeName: UIColor.lightTextColor()]);
     }
 
 	@IBAction func verifyLogin (sender : AnyObject) {
-        currentURL = URL_STRING + username.text + "/" + password.text;
-        self.connect("");
+        if (username.text != "" && password.text != "") {
+            currentURL = Constants.Base.verifyURL + username.text + "/" + password.text;
+            self.connect("");
+        }
 	}
     
     override func didReceiveMemoryWarning() {
@@ -61,7 +53,7 @@ class Login: UIViewController {
     
     
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        println(DID_RECEIVE);
+        println(Constants.Response.recieved);
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
@@ -69,42 +61,70 @@ class Login: UIViewController {
         self.data.appendData(conData);
     }
     
+    /**
+     * Performance login on successful server response
+     *
+     * @param connection The connection from which the class recieves the response
+    */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var data : NSData = NSData();
         data = self.data;
         println(data);
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        verification = getVerification(json, field: "verification");
-        println(verification);
+        var verification = getFromJSON (json, field: Constants.JSON.verification);
+        println(Constants.JSON.failure);
 
-        if (verification == "success") {
+        if (verification == Constants.JSON.success) {
             label.text = "";
-            self.performSegueWithIdentifier("login", sender: self);
+            self.performSegueWithIdentifier(Constants.Base.login, sender: self);
         }
         else {
             label.textColor = UIColor.redColor();
-            label.text = "Rejected!";
+            label.text = Constants.Label.rejected;
         }
     }
     
     deinit {
-        println("deiniting");
+        println(Constants.Response.deiniting);
     }
     
-    func getVerification (input : NSDictionary, field : String) -> String {
+    /**
+     *  Safely returns field value from JSON
+     *
+     *  @param input The JSON object, of type NSDictionary
+     *  @param field The key to be used to retrieve a field
+     *  @return The value associated with the key, returns empty string if not found
+    */
+    func getFromJSON (input : NSDictionary, field : String) -> String {
         var tournamentData : String! = "";
-        tournamentData = input["verification"] as String;
+        if ((input[field] as? String) != nil) {
+            tournamentData = input[Constants.JSON.verification] as String;
+        }
         return tournamentData;
     }
     
+    /**
+     * Pulls up side bar on event
+    */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
     
+    /**
+     * Passes the username from the login page to the user's dashboard
+     *
+     * @param segue The UIStoryboardSegue
+     * @param sender The sending class
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "login") {
+        if (segue.identifier == Constants.Base.login) {
             let vc = segue.destinationViewController as User;
             vc.myUsername = self.username.text as String;
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true);
+        return false;
     }
 }

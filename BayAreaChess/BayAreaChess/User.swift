@@ -10,28 +10,17 @@ import UIKit
 
 class User: UIViewController {
     
-    @IBOutlet var name : UILabel!;
-    @IBOutlet var email : UILabel!;
-    @IBOutlet var username : UILabel!;
-    @IBOutlet var dateJoined : UILabel!;
-    @IBOutlet var phone : UILabel!;
-    @IBOutlet var address : UILabel!;
-    
+    @IBOutlet var name : UILabel?;
+    @IBOutlet var email : UILabel?;
+    @IBOutlet var username : UILabel?;
+    @IBOutlet var dateJoined : UILabel?;
+    @IBOutlet var phone : UILabel?;
+    @IBOutlet var address : UILabel?;
+    @IBOutlet var imageURL : UIImageView?;
+
     var imagename : String!;
     var customURL : String!;
-    @IBOutlet var imageURL : UIImageView?;
     
-    var URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/";
-    let DESCRIPTION : String = "description";
-    let DATE : String = "start_date";
-    let AMOUNT : String = "amount";
-    let NEWLINE : String = "\n";
-    let NAME_LABEL : String = "Name:";
-    let DESC_LABEL : String = "Description:";
-    let DID_RECEIVE : String = "didReceiveResponse";
-    let GRAVATAR_URL : String = "http://www.gravatar.com/avatar/";
-    let IMG_SIZE : String = "?s=120";
-
     var myID : Int? = 0;
     var myUsername : String?;
     
@@ -55,7 +44,7 @@ class User: UIViewController {
     
     
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        println(DID_RECEIVE);
+        println(Constants.Response.recieved);
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
@@ -63,6 +52,11 @@ class User: UIViewController {
         self.data.appendData(conData);
     }
     
+    /**
+     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     *
+     * @param connection The connection being passed through
+    */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var data : NSData = NSData();
         data = self.data;
@@ -70,42 +64,48 @@ class User: UIViewController {
         
         populateFields(json);
         
-        var userHash : String = getUserData(json, field: "gravatar_hash");
-        
-        imagename = GRAVATAR_URL + userHash + IMG_SIZE;
+        var userHash : String = Utils.getFieldFromJSON(json, field: Constants.Gravatar.hash);
+        imagename = Constants.Gravatar.URL + userHash + Constants.Gravatar.size;
         var url : NSURL = NSURL(string: imagename)!;
         var imgData : NSData = NSData(contentsOfURL: url, options: nil, error: nil)!
         imageURL?.image = UIImage(data: imgData);
-        imageURL?.layer.borderWidth = 2.0;
-        imageURL?.layer.borderColor = UIColor.blackColor().CGColor;
+//        imageURL?.layer.borderWidth = 2.0;
+//        imageURL?.layer.borderColor = UIColor.blackColor().CGColor;
         self.reloadInputViews();
         
     }
     
+    /**
+     * Populates text fields on view with information from JSON object
+     *
+     * @param json The JSON dictionary from which the fields will get data
+    */
     func populateFields (json : NSDictionary) {
         // Dispatch UI updates to main thread
         dispatch_async(dispatch_get_main_queue(), {
-            self.name?.text = self.getUserData(json, field: "first_name") + " " + self.getUserData(json, field: "last_name");
-            self.email?.text = self.getUserData(json, field: "email");
-            self.username?.text = self.getUserData(json, field: "username");
-            self.phone?.text = self.getUserData(json, field: "main_phone");
-            self.address?.text = self.getUserData(json, field: "address") + " " +
-                self.getUserData(json, field: "city") + ", " + self.getUserData(json, field: "state");
+            self.name?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.firstName) + " " + Utils.getFieldFromJSON(json, field: Constants.JSON.lastName);
+            self.email?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.email);
+            self.username?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.user);
+            
+            self.phone?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.phone);
+            self.address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + " " +
+                Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " + Utils.getFieldFromJSON(json, field: Constants.JSON.state);
             self.reloadInputViews();
         });
     }
 
-    func getUserData (input : NSDictionary, field : String) -> String {
-        return input[field] as String;
-    }
-    
     func viewLoaded () {
-        customURL = URL_STRING + myUsername! + "/";
+        customURL = Constants.Base.loginURL + myUsername! + "/";
         self.connect("");
     }
     
+    /**
+     * Sends username to next segue
+     *
+     * @param connection The connection being passed through
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "update") {
+        if (segue.identifier == Constants.Base.update) {
             let vc = segue.destinationViewController as UserUpdate;
             vc.myUsername = self.myUsername;
         }

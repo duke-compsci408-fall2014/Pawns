@@ -14,18 +14,30 @@
 		2C7054E019C7CBAE0049BE83 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */; };
 		81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE51A12DA7D008E302C /* light_grey.jpg */; };
 		81007AE81A12DB54008E302C /* vertical-break-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE71A12DB53008E302C /* vertical-break-line.png */; };
+		8100A2AA1A15BB5700171F5B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100A2A91A15BB5700171F5B /* Utils.swift */; };
 		810F5B901A0DE0D200140332 /* darkgray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810F5B8F1A0DE0D200140332 /* darkgray.jpg */; };
-		810F5B921A0DE9D400140332 /* Oregon LDO Extended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */; };
 		810F5BC21A0EEBB000140332 /* AboutRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810F5BC11A0EEBB000140332 /* AboutRight.swift */; };
 		810F5BC41A0F4B8900140332 /* profile_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810F5BC31A0F4B8900140332 /* profile_background.jpg */; };
+		811290B31A1EB3B100243B64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811290B21A1EB3B100243B64 /* Constants.swift */; };
 		811809C819E0879000252A70 /* SpecificTournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811809C719E0879000252A70 /* SpecificTournament.swift */; };
 		814E28DE19E1EE1300D2B4FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814E28DD19E1EE1300D2B4FB /* User.swift */; };
+		816254BD1A1B2EE500D486B3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254B61A1B2EE500D486B3 /* AudioToolbox.framework */; };
+		816254BE1A1B2EE500D486B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254B71A1B2EE500D486B3 /* AVFoundation.framework */; };
+		816254BF1A1B2EE500D486B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254B81A1B2EE500D486B3 /* CoreLocation.framework */; };
+		816254C01A1B2EE500D486B3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254B91A1B2EE500D486B3 /* CoreMedia.framework */; };
+		816254C11A1B2EE500D486B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254BA1A1B2EE500D486B3 /* MessageUI.framework */; };
+		816254C21A1B2EE500D486B3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254BB1A1B2EE500D486B3 /* MobileCoreServices.framework */; };
+		816254C31A1B2EE500D486B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254BC1A1B2EE500D486B3 /* SystemConfiguration.framework */; };
+		816254C51A1B302700D486B3 /* PayPalPortal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816254C41A1B302700D486B3 /* PayPalPortal.swift */; };
+		816254C91A1B306E00D486B3 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 816254C71A1B306E00D486B3 /* Bridge.m */; };
+		816254D91A1B317300D486B3 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 816254D11A1B317300D486B3 /* libPayPalMobile.a */; };
+		816255021A1C7CF200D486B3 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 816254FE1A1C7CF200D486B3 /* about.png */; };
+		816255031A1C7CF200D486B3 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 816254FF1A1C7CF200D486B3 /* home.png */; };
+		816255041A1C7CF200D486B3 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 816255001A1C7CF200D486B3 /* settings.png */; };
+		816255051A1C7CF200D486B3 /* tournaments.png in Resources */ = {isa = PBXBuildFile; fileRef = 816255011A1C7CF200D486B3 /* tournaments.png */; };
 		818393251A097A5600AAE892 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818393241A097A5600AAE892 /* UserUpdate.swift */; };
 		818C68841A12B51E002F5785 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 818C68831A12B51E002F5785 /* clock.png */; };
 		818C68861A12B585002F5785 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 818C68851A12B585002F5785 /* location.png */; };
-		8193588319EC774D00B79AA0 /* TournamentRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193588219EC774D00B79AA0 /* TournamentRegistration.swift */; };
-		8193588B19EDEE4800B79AA0 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8193588819EDEE4800B79AA0 /* about.jpg */; };
-		8193588C19EDEE4800B79AA0 /* about2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588919EDEE4800B79AA0 /* about2.png */; };
 		8193588D19EDEE4800B79AA0 /* BayAreaChessLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */; };
 		8193589019EDF15A00B79AA0 /* chevron-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588E19EDF15A00B79AA0 /* chevron-left.png */; };
 		8193589119EDF15A00B79AA0 /* chevron-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8193588F19EDF15A00B79AA0 /* chevron-right.png */; };
@@ -35,17 +47,11 @@
 		81C51B7719F6CC970038C4B3 /* FrostedSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */; };
 		81C51B7919F6D1120038C4B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7819F6D1120038C4B3 /* TabBarController.swift */; };
 		81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7C19F6EAD60038C4B3 /* About.swift */; };
-		81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51B7E19F6EBB40038C4B3 /* Calander.swift */; };
 		81D8D5051A072A6300671AFA /* cityscape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5041A072A6300671AFA /* cityscape.jpg */; };
 		81D8D5071A07319300671AFA /* streets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5061A07319300671AFA /* streets.jpg */; };
 		81D8D50A1A07369500671AFA /* bridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5081A07369500671AFA /* bridge.jpg */; };
 		81D8D50B1A07369600671AFA /* neighborhood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5091A07369500671AFA /* neighborhood.jpg */; };
 		81D8D50D1A07399400671AFA /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D50C1A07399400671AFA /* menu2.png */; };
-		81D8D5131A0747EC00671AFA /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D50E1A0747EC00671AFA /* about.png */; };
-		81D8D5141A0747EC00671AFA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D50F1A0747EC00671AFA /* home.png */; };
-		81D8D5151A0747EC00671AFA /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5101A0747EC00671AFA /* other.png */; };
-		81D8D5161A0747EC00671AFA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5111A0747EC00671AFA /* settings.png */; };
-		81D8D5171A0747EC00671AFA /* tournaments.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D8D5121A0747EC00671AFA /* tournaments.png */; };
 		81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8D5181A0826D000671AFA /* AboutLeft.swift */; };
 		81D98AB61A15575000B03886 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D98AB21A15575000B03886 /* HTTPRequestSerializer.swift */; };
 		81D98AB71A15575000B03886 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D98AB31A15575000B03886 /* HTTPResponseSerializer.swift */; };
@@ -112,19 +118,46 @@
 		2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
 		81007AE51A12DA7D008E302C /* light_grey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_grey.jpg; sourceTree = "<group>"; };
 		81007AE71A12DB53008E302C /* vertical-break-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical-break-line.png"; sourceTree = "<group>"; };
+		8100A2A91A15BB5700171F5B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		810F5B8F1A0DE0D200140332 /* darkgray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = darkgray.jpg; path = ../../resources/darkgray.jpg; sourceTree = "<group>"; };
-		810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oregon LDO Extended.ttf"; path = "../../resources/Oregon LDO Extended.ttf"; sourceTree = "<group>"; };
 		810F5B931A0E8B5000140332 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
 		810F5BC11A0EEBB000140332 /* AboutRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRight.swift; sourceTree = "<group>"; };
 		810F5BC31A0F4B8900140332 /* profile_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_background.jpg; sourceTree = "<group>"; };
+		811290B21A1EB3B100243B64 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		811809C719E0879000252A70 /* SpecificTournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTournament.swift; sourceTree = "<group>"; };
 		814E28DD19E1EE1300D2B4FB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		816254B61A1B2EE500D486B3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		816254B71A1B2EE500D486B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		816254B81A1B2EE500D486B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		816254B91A1B2EE500D486B3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		816254BA1A1B2EE500D486B3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		816254BB1A1B2EE500D486B3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		816254BC1A1B2EE500D486B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		816254C41A1B302700D486B3 /* PayPalPortal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalPortal.swift; sourceTree = "<group>"; };
+		816254C61A1B306D00D486B3 /* BayAreaChess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BayAreaChess-Bridging-Header.h"; sourceTree = "<group>"; };
+		816254C71A1B306E00D486B3 /* Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
+		816254C81A1B306E00D486B3 /* PayPalSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayPalSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		816254CB1A1B317300D486B3 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		816254CC1A1B317300D486B3 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		816254CD1A1B317300D486B3 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		816254CE1A1B317300D486B3 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		816254CF1A1B317300D486B3 /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
+		816254D01A1B317300D486B3 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
+		816254D11A1B317300D486B3 /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		816254D21A1B317300D486B3 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		816254D31A1B317300D486B3 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		816254D41A1B317300D486B3 /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		816254D51A1B317300D486B3 /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		816254D61A1B317300D486B3 /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		816254D71A1B317300D486B3 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		816254D81A1B317300D486B3 /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		816254FE1A1C7CF200D486B3 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		816254FF1A1C7CF200D486B3 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		816255001A1C7CF200D486B3 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		816255011A1C7CF200D486B3 /* tournaments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tournaments.png; sourceTree = "<group>"; };
 		818393241A097A5600AAE892 /* UserUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 		818C68831A12B51E002F5785 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		818C68851A12B585002F5785 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
-		8193588219EC774D00B79AA0 /* TournamentRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentRegistration.swift; sourceTree = "<group>"; };
-		8193588819EDEE4800B79AA0 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = about.jpg; path = ../../resources/about.jpg; sourceTree = "<group>"; };
-		8193588919EDEE4800B79AA0 /* about2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about2.png; path = ../../resources/about2.png; sourceTree = "<group>"; };
 		8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BayAreaChessLogo.png; path = ../../resources/BayAreaChessLogo.png; sourceTree = "<group>"; };
 		8193588E19EDF15A00B79AA0 /* chevron-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chevron-left.png"; path = "../../resources/chevron-left.png"; sourceTree = "<group>"; };
 		8193588F19EDF15A00B79AA0 /* chevron-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chevron-right.png"; path = "../../resources/chevron-right.png"; sourceTree = "<group>"; };
@@ -134,17 +167,11 @@
 		81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrostedSidebar.swift; sourceTree = "<group>"; };
 		81C51B7819F6D1120038C4B3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		81C51B7C19F6EAD60038C4B3 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		81C51B7E19F6EBB40038C4B3 /* Calander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calander.swift; sourceTree = "<group>"; };
 		81D8D5041A072A6300671AFA /* cityscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cityscape.jpg; path = ../../resources/cityscape.jpg; sourceTree = "<group>"; };
 		81D8D5061A07319300671AFA /* streets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = streets.jpg; path = ../../resources/streets.jpg; sourceTree = "<group>"; };
 		81D8D5081A07369500671AFA /* bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bridge.jpg; path = ../../resources/bridge.jpg; sourceTree = "<group>"; };
 		81D8D5091A07369500671AFA /* neighborhood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = neighborhood.jpg; path = ../../resources/neighborhood.jpg; sourceTree = "<group>"; };
 		81D8D50C1A07399400671AFA /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu2.png; path = ../../resources/menu2.png; sourceTree = "<group>"; };
-		81D8D50E1A0747EC00671AFA /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = ../../resources/about.png; sourceTree = "<group>"; };
-		81D8D50F1A0747EC00671AFA /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../resources/home.png; sourceTree = "<group>"; };
-		81D8D5101A0747EC00671AFA /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = other.png; path = ../../resources/other.png; sourceTree = "<group>"; };
-		81D8D5111A0747EC00671AFA /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../../resources/settings.png; sourceTree = "<group>"; };
-		81D8D5121A0747EC00671AFA /* tournaments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tournaments.png; path = ../../resources/tournaments.png; sourceTree = "<group>"; };
 		81D8D5181A0826D000671AFA /* AboutLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutLeft.swift; sourceTree = "<group>"; };
 		81D98AB21A15575000B03886 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
 		81D98AB31A15575000B03886 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
@@ -194,6 +221,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816254BD1A1B2EE500D486B3 /* AudioToolbox.framework in Frameworks */,
+				816254BE1A1B2EE500D486B3 /* AVFoundation.framework in Frameworks */,
+				816254BF1A1B2EE500D486B3 /* CoreLocation.framework in Frameworks */,
+				816254C01A1B2EE500D486B3 /* CoreMedia.framework in Frameworks */,
+				816254C11A1B2EE500D486B3 /* MessageUI.framework in Frameworks */,
+				816254C21A1B2EE500D486B3 /* MobileCoreServices.framework in Frameworks */,
+				816254D91A1B317300D486B3 /* libPayPalMobile.a in Frameworks */,
+				816254C31A1B2EE500D486B3 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +245,13 @@
 		2C7054BE19C7CBAE0049BE83 = {
 			isa = PBXGroup;
 			children = (
+				816254B61A1B2EE500D486B3 /* AudioToolbox.framework */,
+				816254B71A1B2EE500D486B3 /* AVFoundation.framework */,
+				816254B81A1B2EE500D486B3 /* CoreLocation.framework */,
+				816254B91A1B2EE500D486B3 /* CoreMedia.framework */,
+				816254BA1A1B2EE500D486B3 /* MessageUI.framework */,
+				816254BB1A1B2EE500D486B3 /* MobileCoreServices.framework */,
+				816254BC1A1B2EE500D486B3 /* SystemConfiguration.framework */,
 				2C7054C919C7CBAE0049BE83 /* BayAreaChess */,
 				2C7054DC19C7CBAE0049BE83 /* BayAreaChessTests */,
 				2C7054C819C7CBAE0049BE83 /* Products */,
@@ -228,25 +270,22 @@
 		2C7054C919C7CBAE0049BE83 /* BayAreaChess */ = {
 			isa = PBXGroup;
 			children = (
-				81D98AB11A15575000B03886 /* HTTP */,
+				811290B11A1EB3A100243B64 /* ApplicationSupport */,
 				2C7054CC19C7CBAE0049BE83 /* AppDelegate.swift */,
 				2C7054CE19C7CBAE0049BE83 /* ViewController.swift */,
 				2C7054D019C7CBAE0049BE83 /* Main.storyboard */,
 				2C7054D319C7CBAE0049BE83 /* Images.xcassets */,
 				2C7054CA19C7CBAE0049BE83 /* Supporting Files */,
-				B3BE14F819CBAE9A0001BE7C /* Login.swift */,
-				81BD15CE19DDF6F100890AEF /* Tournaments.swift */,
-				8193588219EC774D00B79AA0 /* TournamentRegistration.swift */,
-				811809C719E0879000252A70 /* SpecificTournament.swift */,
-				B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */,
-				818393241A097A5600AAE892 /* UserUpdate.swift */,
-				814E28DD19E1EE1300D2B4FB /* User.swift */,
-				81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */,
-				81C51B7819F6D1120038C4B3 /* TabBarController.swift */,
-				81C51B7E19F6EBB40038C4B3 /* Calander.swift */,
-				81C51B7C19F6EAD60038C4B3 /* About.swift */,
-				81D8D5181A0826D000671AFA /* AboutLeft.swift */,
-				810F5BC11A0EEBB000140332 /* AboutRight.swift */,
+				816254F11A1BF58E00D486B3 /* Sidebar */,
+				816254F01A1BF57800D486B3 /* User */,
+				816254EF1A1BF55D00D486B3 /* About */,
+				816254EE1A1BF55600D486B3 /* Tournaments */,
+				816254CA1A1B317300D486B3 /* PayPalMobile */,
+				81D98AB11A15575000B03886 /* HTTP */,
+				816254C41A1B302700D486B3 /* PayPalPortal.swift */,
+				816254C61A1B306D00D486B3 /* BayAreaChess-Bridging-Header.h */,
+				816254C71A1B306E00D486B3 /* Bridge.m */,
+				816254C81A1B306E00D486B3 /* PayPalSDK-Bridging-Header.h */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -254,29 +293,11 @@
 		2C7054CA19C7CBAE0049BE83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				81EAE8C11A102CD1000F6484 /* horizontal-break-line.png */,
-				81EADEE81A0F5992000F6484 /* dark */,
-				810F5BC31A0F4B8900140332 /* profile_background.jpg */,
-				810F5B931A0E8B5000140332 /* TitilliumWeb-Regular.ttf */,
-				810F5B911A0DE9D400140332 /* Oregon LDO Extended.ttf */,
-				810F5B8F1A0DE0D200140332 /* darkgray.jpg */,
-				81D8D50E1A0747EC00671AFA /* about.png */,
-				81D8D50F1A0747EC00671AFA /* home.png */,
-				81D8D5101A0747EC00671AFA /* other.png */,
-				81D8D5111A0747EC00671AFA /* settings.png */,
-				81D8D5121A0747EC00671AFA /* tournaments.png */,
-				81D8D50C1A07399400671AFA /* menu2.png */,
-				81D8D5081A07369500671AFA /* bridge.jpg */,
-				81D8D5091A07369500671AFA /* neighborhood.jpg */,
-				81D8D5061A07319300671AFA /* streets.jpg */,
-				81D8D5041A072A6300671AFA /* cityscape.jpg */,
-				81C51B7419F60B570038C4B3 /* menu.png */,
-				81C51B7219F600B80038C4B3 /* bayarea.jpg */,
-				8193588E19EDF15A00B79AA0 /* chevron-left.png */,
-				8193588F19EDF15A00B79AA0 /* chevron-right.png */,
-				8193588819EDEE4800B79AA0 /* about.jpg */,
-				8193588919EDEE4800B79AA0 /* about2.png */,
-				8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */,
+				816254ED1A1BF53000D486B3 /* Fonts */,
+				816254EC1A1BF4AE00D486B3 /* Pictures */,
+				816254EB1A1BF4A600D486B3 /* Components */,
+				816254E21A1BD51600D486B3 /* Sidebar-Icons */,
+				81EADEE81A0F5992000F6484 /* Dark */,
 				2C7054CB19C7CBAE0049BE83 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -299,6 +320,122 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		811290B11A1EB3A100243B64 /* ApplicationSupport */ = {
+			isa = PBXGroup;
+			children = (
+				8100A2A91A15BB5700171F5B /* Utils.swift */,
+				811290B21A1EB3B100243B64 /* Constants.swift */,
+			);
+			name = ApplicationSupport;
+			sourceTree = "<group>";
+		};
+		816254CA1A1B317300D486B3 /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				816254CB1A1B317300D486B3 /* CardIO.h */,
+				816254CC1A1B317300D486B3 /* CardIOCreditCardInfo.h */,
+				816254CD1A1B317300D486B3 /* CardIOPaymentViewController.h */,
+				816254CE1A1B317300D486B3 /* CardIOPaymentViewControllerDelegate.h */,
+				816254CF1A1B317300D486B3 /* CardIOView.h */,
+				816254D01A1B317300D486B3 /* CardIOViewDelegate.h */,
+				816254D11A1B317300D486B3 /* libPayPalMobile.a */,
+				816254D21A1B317300D486B3 /* PayPalConfiguration.h */,
+				816254D31A1B317300D486B3 /* PayPalFuturePaymentViewController.h */,
+				816254D41A1B317300D486B3 /* PayPalMobile.h */,
+				816254D51A1B317300D486B3 /* PayPalOAuthScopes.h */,
+				816254D61A1B317300D486B3 /* PayPalPayment.h */,
+				816254D71A1B317300D486B3 /* PayPalPaymentViewController.h */,
+				816254D81A1B317300D486B3 /* PayPalProfileSharingViewController.h */,
+			);
+			name = PayPalMobile;
+			path = ../PayPalMobile;
+			sourceTree = "<group>";
+		};
+		816254E21A1BD51600D486B3 /* Sidebar-Icons */ = {
+			isa = PBXGroup;
+			children = (
+				816254FE1A1C7CF200D486B3 /* about.png */,
+				816254FF1A1C7CF200D486B3 /* home.png */,
+				816255001A1C7CF200D486B3 /* settings.png */,
+				816255011A1C7CF200D486B3 /* tournaments.png */,
+			);
+			name = "Sidebar-Icons";
+			sourceTree = "<group>";
+		};
+		816254EB1A1BF4A600D486B3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				81C51B7419F60B570038C4B3 /* menu.png */,
+				81EAE8C11A102CD1000F6484 /* horizontal-break-line.png */,
+				8193588E19EDF15A00B79AA0 /* chevron-left.png */,
+				8193588F19EDF15A00B79AA0 /* chevron-right.png */,
+				81D8D50C1A07399400671AFA /* menu2.png */,
+				810F5B8F1A0DE0D200140332 /* darkgray.jpg */,
+				810F5BC31A0F4B8900140332 /* profile_background.jpg */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		816254EC1A1BF4AE00D486B3 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				8193588A19EDEE4800B79AA0 /* BayAreaChessLogo.png */,
+				81D8D5081A07369500671AFA /* bridge.jpg */,
+				81D8D5091A07369500671AFA /* neighborhood.jpg */,
+				81D8D5061A07319300671AFA /* streets.jpg */,
+				81D8D5041A072A6300671AFA /* cityscape.jpg */,
+				81C51B7219F600B80038C4B3 /* bayarea.jpg */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		816254ED1A1BF53000D486B3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				810F5B931A0E8B5000140332 /* TitilliumWeb-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		816254EE1A1BF55600D486B3 /* Tournaments */ = {
+			isa = PBXGroup;
+			children = (
+				81BD15CE19DDF6F100890AEF /* Tournaments.swift */,
+				811809C719E0879000252A70 /* SpecificTournament.swift */,
+			);
+			name = Tournaments;
+			sourceTree = "<group>";
+		};
+		816254EF1A1BF55D00D486B3 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				81C51B7C19F6EAD60038C4B3 /* About.swift */,
+				81D8D5181A0826D000671AFA /* AboutLeft.swift */,
+				810F5BC11A0EEBB000140332 /* AboutRight.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		816254F01A1BF57800D486B3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B3BE14F819CBAE9A0001BE7C /* Login.swift */,
+				B3BE14FA19CBBA600001BE7C /* UserRegistration.swift */,
+				818393241A097A5600AAE892 /* UserUpdate.swift */,
+				814E28DD19E1EE1300D2B4FB /* User.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		816254F11A1BF58E00D486B3 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				81C51B7619F6CC970038C4B3 /* FrostedSidebar.swift */,
+				81C51B7819F6D1120038C4B3 /* TabBarController.swift */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
 		81D98AB11A15575000B03886 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,7 +447,7 @@
 			path = HTTP;
 			sourceTree = "<group>";
 		};
-		81EADEE81A0F5992000F6484 /* dark */ = {
+		81EADEE81A0F5992000F6484 /* Dark */ = {
 			isa = PBXGroup;
 			children = (
 				81007AE71A12DB53008E302C /* vertical-break-line.png */,
@@ -352,6 +489,7 @@
 				81EAE3971A0F59A4000F6484 /* appbar.unlock.keyhole.png */,
 				81EAE3981A0F59A4000F6484 /* appbar.unlock.png */,
 			);
+			name = Dark;
 			path = dark;
 			sourceTree = "<group>";
 		};
@@ -404,6 +542,7 @@
 				TargetAttributes = {
 					2C7054C619C7CBAE0049BE83 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = HNACG3848H;
 					};
 					2C7054D819C7CBAE0049BE83 = {
 						CreatedOnToolsVersion = 6.0;
@@ -438,26 +577,23 @@
 				81EAE67F1A0F59A6000F6484 /* next.png in Resources */,
 				81EAE4E11A0F59A6000F6484 /* crown.png in Resources */,
 				81D8D5071A07319300671AFA /* streets.jpg in Resources */,
-				8193588C19EDEE4800B79AA0 /* about2.png in Resources */,
 				818C68861A12B585002F5785 /* location.png in Resources */,
 				81EAE4051A0F59A6000F6484 /* appbar.at.png in Resources */,
 				2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */,
 				81EAE70F1A0F59A6000F6484 /* phone.png in Resources */,
 				81EAE4EA1A0F59A6000F6484 /* dollar.png in Resources */,
+				816255041A1C7CF200D486B3 /* settings.png in Resources */,
 				81D8D50D1A07399400671AFA /* menu2.png in Resources */,
-				81D8D5151A0747EC00671AFA /* other.png in Resources */,
-				81D8D5141A0747EC00671AFA /* home.png in Resources */,
 				81EAE4501A0F59A6000F6484 /* calendar.png in Resources */,
 				81EAE4391A0F59A6000F6484 /* appbar.box.png in Resources */,
 				81EAE5381A0F59A6000F6484 /* mail-full.png in Resources */,
-				81D8D5161A0747EC00671AFA /* settings.png in Resources */,
 				81C51B7519F60B570038C4B3 /* menu.png in Resources */,
 				81EAE8841A0F59A6000F6484 /* appbar.unlock.png in Resources */,
 				81EAE4881A0F59A6000F6484 /* horse.png in Resources */,
 				818C68841A12B51E002F5785 /* clock.png in Resources */,
+				816255051A1C7CF200D486B3 /* tournaments.png in Resources */,
 				81EAE8C21A102CD1000F6484 /* horizontal-break-line.png in Resources */,
 				81EAE5D71A0F59A6000F6484 /* iphone.png in Resources */,
-				81D8D5131A0747EC00671AFA /* about.png in Resources */,
 				81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */,
 				810F5BC41A0F4B8900140332 /* profile_background.jpg in Resources */,
 				81EAE4901A0F59A6000F6484 /* up.png in Resources */,
@@ -479,7 +615,6 @@
 				81D8D50B1A07369600671AFA /* neighborhood.jpg in Resources */,
 				81EAE48E1A0F59A6000F6484 /* left.png in Resources */,
 				81EAE5371A0F59A6000F6484 /* mail.png in Resources */,
-				810F5B921A0DE9D400140332 /* Oregon LDO Extended.ttf in Resources */,
 				81EAE48A1A0F59A6000F6484 /* pawn.png in Resources */,
 				81EAE76F1A0F59A6000F6484 /* settingswhite.png in Resources */,
 				81EAE4891A0F59A6000F6484 /* king.png in Resources */,
@@ -487,13 +622,13 @@
 				810F5B901A0DE0D200140332 /* darkgray.jpg in Resources */,
 				81EAE48C1A0F59A6000F6484 /* rook.png in Resources */,
 				81EAE3FC1A0F59A6000F6484 /* downarrow.png in Resources */,
+				816255031A1C7CF200D486B3 /* home.png in Resources */,
 				81EAE4381A0F59A6000F6484 /* layered.png in Resources */,
+				816255021A1C7CF200D486B3 /* about.png in Resources */,
 				81EAE8831A0F59A6000F6484 /* appbar.unlock.keyhole.png in Resources */,
 				81EAE6621A0F59A6000F6484 /* money.png in Resources */,
-				8193588B19EDEE4800B79AA0 /* about.jpg in Resources */,
 				81EAE4871A0F59A6000F6484 /* bishop.png in Resources */,
 				81007AE81A12DB54008E302C /* vertical-break-line.png in Resources */,
-				81D8D5171A0747EC00671AFA /* tournaments.png in Resources */,
 				81EAE5A71A0F59A6000F6484 /* homewhite.png in Resources */,
 				81C51B7319F600B80038C4B3 /* bayarea.jpg in Resources */,
 			);
@@ -514,9 +649,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81C51B7719F6CC970038C4B3 /* FrostedSidebar.swift in Sources */,
+				811290B31A1EB3B100243B64 /* Constants.swift in Sources */,
 				81C51B7D19F6EAD60038C4B3 /* About.swift in Sources */,
 				B3BE14FB19CBBA600001BE7C /* UserRegistration.swift in Sources */,
 				81BD15CF19DDF6F100890AEF /* Tournaments.swift in Sources */,
+				816254C91A1B306E00D486B3 /* Bridge.m in Sources */,
 				81D98AB91A15575000B03886 /* HTTPUpload.swift in Sources */,
 				810F5BC21A0EEBB000140332 /* AboutRight.swift in Sources */,
 				81D8D5191A0826D000671AFA /* AboutLeft.swift in Sources */,
@@ -524,13 +661,13 @@
 				B3BE14F919CBAE9A0001BE7C /* Login.swift in Sources */,
 				818393251A097A5600AAE892 /* UserUpdate.swift in Sources */,
 				81D98AB61A15575000B03886 /* HTTPRequestSerializer.swift in Sources */,
-				81C51B7F19F6EBB40038C4B3 /* Calander.swift in Sources */,
 				2C7054CF19C7CBAE0049BE83 /* ViewController.swift in Sources */,
 				81D98AB81A15575000B03886 /* HTTPTask.swift in Sources */,
 				811809C819E0879000252A70 /* SpecificTournament.swift in Sources */,
+				8100A2AA1A15BB5700171F5B /* Utils.swift in Sources */,
 				2C7054CD19C7CBAE0049BE83 /* AppDelegate.swift in Sources */,
 				814E28DE19E1EE1300D2B4FB /* User.swift in Sources */,
-				8193588319EC774D00B79AA0 /* TournamentRegistration.swift in Sources */,
+				816254C51A1B302700D486B3 /* PayPalPortal.swift in Sources */,
 				81D98AB71A15575000B03886 /* HTTPResponseSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,9 +784,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BayAreaChess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/czarlos/Desktop/PayPal-iOS-SDK/PayPalMobile",
+					"$(PROJECT_DIR)/PayPalMobile",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BayAreaChess/PayPalSDK-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -658,9 +810,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BayAreaChess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/czarlos/Desktop/PayPal-iOS-SDK/PayPalMobile",
+					"$(PROJECT_DIR)/PayPalMobile",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BayAreaChess/PayPalSDK-Bridging-Header.h";
 			};
 			name = Release;
 		};

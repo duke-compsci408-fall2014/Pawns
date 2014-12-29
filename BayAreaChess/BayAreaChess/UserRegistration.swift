@@ -19,7 +19,6 @@ class UserRegistration : UIViewController {
     @IBOutlet var password : UITextField!;
     @IBOutlet var confirm_password : UITextField!;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/login/register/";
     let AMP : String = "&";
     
     
@@ -46,18 +45,25 @@ class UserRegistration : UIViewController {
     }
     
     
+    /**
+     * Sends post request with user login credentials upon registration button press
+     *
+     * @param sender The object that is firing the event
+    */
     @IBAction func buttonPressed(sender: AnyObject) {
         if(self.password.text != self.confirm_password.text) {
             return;
         }
         
-        var prelim : String = "email=" + "%22" + self.email.text + "%22" + AMP +
-            "first_name=" + "%22" + self.first_name.text + "%22" + AMP +
-            "last_name=" + "%22" + self.last_name.text + "%22" + AMP +
-            "username=" + "%22" + self.username.text + "%22" + AMP +
-            "password=" + "%22" + self.password.text + "%22";
+        var prelim : String = "email=\"" + self.email.text + "\"" + AMP +
+                            "first_name=\"" + self.first_name.text + "\"" + AMP +
+                            "last_name=\"" + self.last_name.text + "\"" + AMP +
+                            "username=\"" + self.username.text + "\"" + AMP +
+                            "password=\"" + self.password.text + "\"";
         
-        var urlString : String = URL_STRING + prelim;
+        prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
+        
+        var urlString : String = Constants.Base.registerURL + prelim;
         var url = NSURL(string: urlString);
         println(url);
         var request = NSMutableURLRequest(URL: url!);

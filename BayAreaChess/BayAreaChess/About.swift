@@ -20,6 +20,9 @@ class About: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+    * Pulls up side bar on event
+    */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true);
     }

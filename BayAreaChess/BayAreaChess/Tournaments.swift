@@ -18,23 +18,14 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     var id_dict: [String:Int]?;
     
-    let URL_STRING : String = "http://bac.colab.duke.edu:3000/api/v1/tournaments/all/";
-    let NAME : String = "name";
-    let DESCRIPTION : String = "description";
-    let DATE : String = "date_play";
-    let NEWLINE : String = "\n";
-    let NAME_LABEL : String = "Name:";
-    let DESC_LABEL : String = "Description:";
-    let DID_RECEIVE : String = "didReceiveResponse";
-    let ID : String = "id";
-    
     var selectedID : Int? = 0;
     var myName : String?;
-
-    var list : [String] = ["cell", "money"];
     
     @IBOutlet weak var tableView: UITableView!
     
+    /**
+     * Pulls up side bar on event
+    */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
     }
@@ -42,7 +33,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad();
         self.connect("");
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell");
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: Constants.Identifier.cell);
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         
@@ -57,28 +48,32 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     var data = NSMutableData();
     
     func connect(query:NSString) {
-        var url = NSURL(string: URL_STRING);
+        var url = NSURL(string: Constants.Base.allTournamentsURL);
         var request = NSURLRequest(URL: url!);
         var conn = NSURLConnection(request: request, delegate: self, startImmediately: true);
     }
     
     
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        println(DID_RECEIVE);
+        println(Constants.Response.recieved);
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
         self.data.appendData(conData);
     }
     
+    /**
+     * Deserializes JSON coming in through the connection passed in, populates fields from this object
+     *
+     * @param connection The connection being passed through
+    */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
-        var name = getTournamentData(json, field: NAME);
-        var descriptions = getTournamentData(json, field: DESCRIPTION);
-        var dates = getTournamentData(json, field: DATE);
-        var ids = getTournamentInt(json, field: ID);
-        
+        var name = Utils.getListFromJSON(json, field: Constants.JSON.name);
+        var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.description);
+        var dates = Utils.getListFromJSON(json, field: Constants.JSON.date);
+        var ids = Utils.getIntArrayFromJSON(json, field: Constants.JSON.id);
         loadEventList(name);
         loadDescriptionList(descriptions);
         loadDateList(dates);
@@ -88,7 +83,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     deinit {
-        println("deiniting");
+        println(Constants.Response.deiniting);
     }
     
     /* End Networking */
@@ -99,9 +94,16 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         return self.eventList.count;
     }
     
+    /**
+     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     *
+     * @param tableView The targeted table view
+     * @param indexPath The current index path
+     * @return UITableViewCell The resulting cell
+    */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
-        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")!;
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.cell) as UITableViewCell;
+        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: Constants.Identifier.cell);
 
         cell.textLabel?.text = self.eventList[indexPath.row];
         cell.detailTextLabel?.text = self.dateList[indexPath.row];
@@ -117,17 +119,33 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         println(self.idList[indexPath.row]);
         myName = s;
         selectedID = self.idList[indexPath.row];
-        self.performSegueWithIdentifier("selectEvent", sender: tableView as UITableView)
+        self.performSegueWithIdentifier(Constants.Identifier.selectEvent, sender: tableView as UITableView)
     }
     
     /* Delegate End */
     
+    /**
+     * Loads String array into String array used by tableview
+     *
+     * @param l The String array to be read from
+    */
     func loadEventList (l : [String]) {
         eventList = l;
     }
+    /**
+     * Loads String array into String array used by tableview
+     *
+     * @param l The String array to be read from
+    */
     func loadDescriptionList (l : [String]) {
         descriptionList = l;
     }
+    
+    /**
+     * Loads String array into String array used by tableview
+     *
+     * @param l The String array to be read from
+    */
     func loadDateList (l : [String]) {
         for item in l {
             var formatter: NSDateFormatter = NSDateFormatter();
@@ -136,32 +154,24 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
             dateList.append(stringDate);
         }
     }
+    
+    /**
+     * Loads Int array into Int array used by tableview
+     *
+     * @param l The Int array to be read from
+    */
     func loadIDList (l : [Int]) {
         idList = l;
     }
     
-    func getTournamentData (input : NSArray, field : String) -> [String] {
-        var tournamentData = [String]();
-        let json : Array = input as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var name : String = element[field] as String;
-            tournamentData.append(name);
-        }
-        return tournamentData;
-    }
-    
-    func getTournamentInt (input : NSArray, field : String) -> [Int] {
-        var tournamentData = [Int]();
-        let json : Array = input as [AnyObject];
-        for (index, element) in enumerate(json) {
-            var num : Int = element[field] as Int;
-            tournamentData.append(num);
-        }
-        return tournamentData;
-    }
-    
+    /**
+     * Sends the id and the name of the selected tournament to the destination view controller.
+     *
+     * @param segue The UIStoryboardSegue
+     * @param sender The sending class
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "selectEvent") {
+        if (segue.identifier == Constants.Identifier.selectEvent) {
             let vc = segue.destinationViewController as SpecificTournaments;
             vc.myID = self.selectedID;
             vc.myName = self.myName;
