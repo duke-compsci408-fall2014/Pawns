@@ -71,11 +71,11 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
         var name = Utils.getListFromJSON(json, field: Constants.JSON.summary);
-//        var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.description);
+        var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.location);
         var dates = Utils.getListFromSubJSON(json, fieldOne: Constants.JSON.start, fieldTwo: Constants.JSON.subDate, fieldThree: Constants.JSON.dateTime);
 //        var ids = Utils.getIntArrayFromJSON(json, field: Constants.JSON.id);
         loadEventList(name);
-//        loadDescriptionList(descriptions);
+        loadDescriptionList(descriptions);
         loadDateList(dates);
 //        loadIDList(ids);
         
@@ -106,7 +106,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: Constants.Identifier.cell);
 
         cell.textLabel?.text = self.eventList[indexPath.row];
-        cell.detailTextLabel?.text = self.dateList[indexPath.row];
+        cell.detailTextLabel?.text = self.dateList[indexPath.row] + " | " + self.descriptionList[indexPath.row];
         cell.backgroundColor = UIColor.clearColor();
         cell.textLabel?.textColor = UIColor.whiteColor();
         cell.detailTextLabel?.textColor = UIColor.whiteColor();

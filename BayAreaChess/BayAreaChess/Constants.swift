@@ -53,6 +53,7 @@ class Constants {
         static let start = "start";
         static let subDate = "date";
         static let dateTime = "dateTime";
+        static let location = "location";
     }
     struct Response {
         static let recieved = "didReceiveResponse";
