@@ -61,6 +61,25 @@ class Utils {
         return tournamentData;
     }
     
+    class func getListFromSubJSON (input : NSArray, fieldOne : String, fieldTwo : String, fieldThree : String) -> [String] {
+        var tournamentData = [String]();
+        let json : Array = input as [AnyObject];
+        for (index, element) in enumerate(json) {
+            if ((element[fieldOne] as? NSDictionary) != nil) {
+                var item : NSDictionary! = element[fieldOne] as NSDictionary!;
+                var date : String = "";
+                if ((item[fieldTwo] as String?) != nil) {
+                    date = item[fieldTwo] as String;
+                }
+                else if ((item[fieldThree] as String?) != nil) {
+                    date = item[fieldThree] as String;
+                }
+                tournamentData.append(date);
+            }
+        }
+        return tournamentData;
+    }
+    
     /**
      *  Safely returns Int array from NSArray
      *

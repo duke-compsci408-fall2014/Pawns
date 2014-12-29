@@ -16,7 +16,7 @@ class Constants {
         static let registerURL = loginURL+register+"/";
         static let updateURL = loginURL+update+"/";
         static let tournamentsURL = baseURL+tournaments+"/";
-        static let allTournamentsURL = tournamentsURL+all+"/";
+        static let allTournamentsURL = tournamentsURL+general+"/";
         static let registrationURL = baseURL+registration+"/";
         static let registrationRegisterURL = registrationURL+register+"/";
         static let login = "login";
@@ -24,13 +24,14 @@ class Constants {
         static let verify = "verify";
         static let register = "register";
         static let tournaments = "tournaments";
-        static let all = "all";
+        static let general = "general";
         static let registration = "registration";
     }
     struct JSON {
         static let user = "username";
         static let pass = "password";
         static let name = "name";
+        static let summary = "summary";
         static let description = "description";
         static let amount = "amount";
         static let date = "date_play";
@@ -49,6 +50,9 @@ class Constants {
         static let id = "id";
         static let startTime = "start_time";
         static let netPay = "net_pay";
+        static let start = "start";
+        static let subDate = "date";
+        static let dateTime = "dateTime";
     }
     struct Response {
         static let recieved = "didReceiveResponse";

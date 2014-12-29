@@ -70,14 +70,14 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray;
-        var name = Utils.getListFromJSON(json, field: Constants.JSON.name);
-        var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.description);
-        var dates = Utils.getListFromJSON(json, field: Constants.JSON.date);
-        var ids = Utils.getIntArrayFromJSON(json, field: Constants.JSON.id);
+        var name = Utils.getListFromJSON(json, field: Constants.JSON.summary);
+//        var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.description);
+        var dates = Utils.getListFromSubJSON(json, fieldOne: Constants.JSON.start, fieldTwo: Constants.JSON.subDate, fieldThree: Constants.JSON.dateTime);
+//        var ids = Utils.getIntArrayFromJSON(json, field: Constants.JSON.id);
         loadEventList(name);
-        loadDescriptionList(descriptions);
+//        loadDescriptionList(descriptions);
         loadDateList(dates);
-        loadIDList(ids);
+//        loadIDList(ids);
         
         self.tableView.reloadData();
     }
@@ -149,8 +149,17 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     func loadDateList (l : [String]) {
         for item in l {
             var formatter: NSDateFormatter = NSDateFormatter();
-            formatter.dateFormat = "dd-MM-yyyy";
-            let stringDate: String = formatter.stringFromDate(NSDate());
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssSSSZZZZ";
+            var date : NSDate = NSDate();
+            if (formatter.dateFromString(item) != nil) {
+                date = formatter.dateFromString(item)!;
+            }
+            else {
+                formatter.dateFormat = "yyyy-MM-dd";
+                date = formatter.dateFromString(item)!;
+            }
+            formatter.dateFormat = "MM-dd-yyyy ";
+            let stringDate: String = formatter.stringFromDate(date);
             dateList.append(stringDate);
         }
     }
