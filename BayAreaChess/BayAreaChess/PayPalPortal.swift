@@ -11,7 +11,7 @@ import UIKit
 class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     var config = PayPalConfiguration();
     var request = HTTPTask();
-    var myTournamentID : Int? = -1;
+    var myTournamentID : String? = "";
     var myAmount : Int? = 0;
 
     @IBOutlet var username : UITextField!;
@@ -42,7 +42,7 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
         var tournament_id : String = String(myTournamentID!);
         var url = Constants.Base.allTournamentsURL+tournament_id;
         
-        if (self.myTournamentID == -1) {
+        if (self.myTournamentID == "") {
             return;
         }
         

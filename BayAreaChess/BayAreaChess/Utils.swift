@@ -88,15 +88,16 @@ class Utils {
      *  @return The value associated with the key, returns empty array if not found
     */
     class func getIntArrayFromJSON (input : NSArray, field : String) -> [Int] {
-
         var tournamentData = [Int]();
         let json : Array = input as [AnyObject];
         for (index, element) in enumerate(json) {
+            println(element[field]);
             if ((element[field] as? Int) != nil) {
                 var num : Int = element[field] as Int;
                 tournamentData.append(num);
             }
         }
+        println(tournamentData);
         return tournamentData;
     }
 }

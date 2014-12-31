@@ -14,12 +14,11 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     var eventList: [String] = [];
     var descriptionList: [String] = [];
     var dateList: [String] = [];
-    var idList : [Int] = [];
+    var idList : [String] = [];
     
     var id_dict: [String:Int]?;
     
-    var selectedID : Int? = 0;
-    var myName : String?;
+    var selectedID : String? = "";
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -73,11 +72,11 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         var name = Utils.getListFromJSON(json, field: Constants.JSON.summary);
         var descriptions = Utils.getListFromJSON(json, field: Constants.JSON.location);
         var dates = Utils.getListFromSubJSON(json, fieldOne: Constants.JSON.start, fieldTwo: Constants.JSON.subDate, fieldThree: Constants.JSON.dateTime);
-//        var ids = Utils.getIntArrayFromJSON(json, field: Constants.JSON.id);
+        var ids = Utils.getListFromJSON(json, field: Constants.JSON.id);
         loadEventList(name);
         loadDescriptionList(descriptions);
         loadDateList(dates);
-//        loadIDList(ids);
+        loadIDList(ids);
         
         self.tableView.reloadData();
     }
@@ -117,7 +116,6 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         println("You selected cell #\(indexPath.row)!");
         var s : String = self.eventList[indexPath.row];
         println(self.idList[indexPath.row]);
-        myName = s;
         selectedID = self.idList[indexPath.row];
         self.performSegueWithIdentifier(Constants.Identifier.selectEvent, sender: tableView as UITableView)
     }
@@ -169,7 +167,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
      *
      * @param l The Int array to be read from
     */
-    func loadIDList (l : [Int]) {
+    func loadIDList (l : [String]) {
         idList = l;
     }
     
@@ -183,7 +181,6 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         if (segue.identifier == Constants.Identifier.selectEvent) {
             let vc = segue.destinationViewController as SpecificTournaments;
             vc.myID = self.selectedID;
-            vc.myName = self.myName;
         }
     }
     

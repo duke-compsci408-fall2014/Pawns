@@ -17,8 +17,7 @@ class SpecificTournaments : UIViewController {
     @IBOutlet var address : UILabel?;
     @IBOutlet var amount : UILabel?;
     
-    var myID : Int? = 0;
-    var myName : String?;
+    var myID : String? = "";
     var myAmount : Int? = 1;
     
     var changedURL : String = "";
@@ -26,7 +25,7 @@ class SpecificTournaments : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        var id : Int = myID!;
+        var id : String = myID!;
         var s : String = toString(id);
         changedURL = Constants.Base.allTournamentsURL + s + "/"
         self.connect("");
@@ -62,7 +61,7 @@ class SpecificTournaments : UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        name?.text = self.myName;
+        name?.text = "Name";
         descriptions?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.description);
         dates?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.date);
         address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + ", " +
