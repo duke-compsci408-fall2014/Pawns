@@ -80,6 +80,37 @@ class Utils {
         return tournamentData;
     }
     
+    class func getSubField(input : NSDictionary, fieldOne : String, fieldTwo : String, fieldThree : String) -> String {
+        var field : String = "";
+        if (input[fieldOne] as? NSDictionary != nil) {
+            var subDict : NSDictionary = input[fieldOne] as NSDictionary;
+            if (subDict[fieldTwo] != nil) {
+                field = subDict[fieldTwo] as String;
+            }
+            else if (subDict[fieldThree] != nil) {
+                field = subDict[fieldThree] as String;
+            }
+        }
+        return field;
+    }
+    
+    class func convertDate(item : String) -> String {
+        var formatter: NSDateFormatter = NSDateFormatter();
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssSSSZZZZ";
+        var date : NSDate = NSDate();
+        if (formatter.dateFromString(item) != nil) {
+            date = formatter.dateFromString(item)!;
+        }
+        else {
+            formatter.dateFormat = "yyyy-MM-dd";
+            date = formatter.dateFromString(item)!;
+        }
+        formatter.dateFormat = "MM-dd-yyyy ";
+        let stringDate: String = formatter.stringFromDate(date);
+        
+        return stringDate;
+    }
+    
     /**
      *  Safely returns Int array from NSArray
      *

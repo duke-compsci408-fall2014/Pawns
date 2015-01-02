@@ -61,14 +61,12 @@ class SpecificTournaments : UIViewController {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let data: NSData = self.data;
         let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
-        name?.text = "Name";
+        name?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.summary);
         descriptions?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.description);
-        dates?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.date);
-        address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + ", " +
-                        Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " +
-                        Utils.getFieldFromJSON(json, field: Constants.JSON.state);
-        start_time?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.startTime);
-        amount?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.amount);
+        dates?.text = Utils.convertDate(Utils.getSubField(json, fieldOne: Constants.JSON.start, fieldTwo: Constants.JSON.subDate, fieldThree: Constants.JSON.dateTime));
+        address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.location);
+        start_time?.text = "No";
+        amount?.text = "No";
         
         self.reloadInputViews();
         
