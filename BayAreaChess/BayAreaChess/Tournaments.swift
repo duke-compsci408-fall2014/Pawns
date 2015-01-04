@@ -104,10 +104,10 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.cell) as UITableViewCell;
         cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: Constants.Identifier.cell);
 
-        cell.textLabel?.text = self.eventList[indexPath.row];
+        cell.textLabel.text = self.eventList[indexPath.row];
         cell.detailTextLabel?.text = self.dateList[indexPath.row] + " | " + self.descriptionList[indexPath.row];
         cell.backgroundColor = UIColor.clearColor();
-        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel.textColor = UIColor.whiteColor();
         cell.detailTextLabel?.textColor = UIColor.whiteColor();
         return cell;
     }
