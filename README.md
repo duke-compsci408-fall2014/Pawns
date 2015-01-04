@@ -7,10 +7,6 @@ a Node.js API server.
 Please feel free to post issues and we’ll fix
 them as soon as we can.
 
-Team: Carlos Reyes, Oren Bukspan, Tze Kang Ng, Daniel Zhang
-Client: Judit Sztaray
-Last Updated: 12/11/14
-
 ### Version
 1.0.0 Beta
 
@@ -20,6 +16,7 @@ Last Updated: 12/11/14
 * [Node.js] - Evented I/O for the Backend.
 * [Express.js] - A Node.js Web Framework.
 * [PayPal iOS SDK] - PayPal SDK for iOS.
+* [Redis] - Advanced key-value cache.
 
 ### Building and Deploying
 
@@ -71,3 +68,4 @@ Have questions? Contact [Carlos Reyes].
 [Swift]:https://www.apple.com/swift/
 [PayPal iOS SDK]:https://github.com/paypal/PayPal-iOS-SDK
 [Apple]:https://developer.apple.com/xcode/downloads/
+[Redis]:http://redis.io/
