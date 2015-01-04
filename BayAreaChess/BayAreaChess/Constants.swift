@@ -70,6 +70,13 @@ class Constants {
         static let tournaments = "tournaments.png";
         static let about = "about.png";
         static let settings = "settings.png";
+        
+        static let homeicon = "home2-icon.png";
+        static let homeicon2 = "home1s-icon.png";
+        static let tournamentsicon = "tournaments-icon.png";
+        static let abouticon = "about-icon.png";
+        static let settingsicon1 = "setting1-icon.png";
+        static let settingsicon = "setting2-icon.png";
     }
     struct Label {
         static let user = "Username";
