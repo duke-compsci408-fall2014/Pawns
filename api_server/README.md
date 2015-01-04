@@ -5,3 +5,7 @@
   - npm start
 3. Set Google Calendar Enviroment Variable
   - API Key
+4. Setup Redis
+ - apt-get install redis-server
+ - add redis server upstart script
+ - daemonize
