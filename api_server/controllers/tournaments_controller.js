@@ -30,6 +30,7 @@ exports.generalTournaments = function (req, res) {
                     body+=chunk;
                 }).on('end', function() {
                     client.set('tournaments', body);
+                    client.expire('tournaments', 86400); // Daily Expiration
                     body = JSON.parse(body);
                     var items = body.items;
                     res.send(items);
