@@ -48,14 +48,12 @@ class UserUpdate : UIViewController {
      * @param sender Sending object
     */
     @IBAction func buttonPressed(sender: AnyObject) {
-        var prelim : String = "email=\"" + self.email.text + "\"" + AMP + "first_name=\"" +
-            self.first_name.text + "\"" + AMP + "last_name=\"" + self.last_name.text +
-            "\"" + AMP + "username=\"" + self.username.text + "\"";
+        var obj : Dictionary<String, String> = ["email":self.email.text, "first_name":self.first_name.text, "last_name":self.last_name.text, "username":self.username.text];
+        var urlString : String = Constants.Base.updateURL + self.myUsername! + "/";
         
-        prelim = prelim.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
-        var urlString : String = Constants.Base.updateURL + self.myUsername! + "/" + prelim;
+        request.requestSerializer = JSONRequestSerializer();
         
-        request.PUT(urlString, parameters: nil, success: {(response: HTTPResponse) in
+        request.PUT(urlString, parameters: obj, success: {(response: HTTPResponse) in
                 let data : NSData = response.responseObject as NSData;
                 let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary;
                 (self.presentingViewController? as User).populateFields(json);
