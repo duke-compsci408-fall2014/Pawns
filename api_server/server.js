@@ -4,12 +4,15 @@ var express = require('express'),
     registration = require('./routes/registration'),
     app     = express(),
     mysql   = require('mysql'),
+    bodyParser = require('body-parser');
     connectionpool = mysql.createPool({
         host     : 'localhost',
         user     : 'root',
         password : process.env.BACKUP,
         database : 'backup'
     });
+
+app.use(bodyParser.json());
 
 app.use('/api/v1/tournaments', tournaments);
 app.use('/api/v1/login', login);

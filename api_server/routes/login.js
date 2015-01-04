@@ -8,7 +8,7 @@ router.route('/verify/:user/:pass')
 router.route('/:user')
 	.get(login.getUser);
 
-router.route('/update/:user/:fields')
+router.route('/update/:user')
 	.put(login.updateUserData);
 
 router.route('/register/:fields')

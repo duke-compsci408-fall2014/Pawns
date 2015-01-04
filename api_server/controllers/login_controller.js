@@ -19,14 +19,11 @@ exports.getUser = function (req, res) {
 };
 
 exports.updateUserData = function (req, res) {
-    var fields = req.params.fields;
-    var result = fields.split("&");
+    var body = req.body;
     var uri = "";
-    for (var i=0; i<result.length; i++) {
-        var value = (result[i]).split("=");
-        var str = (value[1]).replace(/"/g,'');
-        if (str) {
-            uri += value[0] + '=' + value[1] + ',';
+    for (var key in body) {
+        if (body.hasOwnProperty(key) && body[key]!='') {
+            uri += key + '=' + '\"' + body[key] + '\"' + ',';
         }
     }
     if (uri) {

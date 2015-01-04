@@ -12,6 +12,12 @@
 		2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D019C7CBAE0049BE83 /* Main.storyboard */; };
 		2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7054D319C7CBAE0049BE83 /* Images.xcassets */; };
 		2C7054E019C7CBAE0049BE83 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */; };
+		31D045831A582323000E501B /* about-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045821A582323000E501B /* about-icon.png */; };
+		31D045851A5824E9000E501B /* home2-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045841A5824E9000E501B /* home2-icon.png */; };
+		31D045871A5824FC000E501B /* setting2-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045861A5824FC000E501B /* setting2-icon.png */; };
+		31D045891A582509000E501B /* tournaments-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045881A582509000E501B /* tournaments-icon.png */; };
+		31D0458B1A58252D000E501B /* setting1-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D0458A1A58252D000E501B /* setting1-icon.png */; };
+		31D0458D1A58262F000E501B /* home1-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D0458C1A58262F000E501B /* home1-icon.png */; };
 		81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE51A12DA7D008E302C /* light_grey.jpg */; };
 		81007AE81A12DB54008E302C /* vertical-break-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE71A12DB53008E302C /* vertical-break-line.png */; };
 		8100A2AA1A15BB5700171F5B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100A2A91A15BB5700171F5B /* Utils.swift */; };
@@ -116,6 +122,12 @@
 		2C7054D919C7CBAE0049BE83 /* BayAreaChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayAreaChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7054DE19C7CBAE0049BE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C7054DF19C7CBAE0049BE83 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
+		31D045821A582323000E501B /* about-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-icon.png"; sourceTree = "<group>"; };
+		31D045841A5824E9000E501B /* home2-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home2-icon.png"; sourceTree = "<group>"; };
+		31D045861A5824FC000E501B /* setting2-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting2-icon.png"; sourceTree = "<group>"; };
+		31D045881A582509000E501B /* tournaments-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournaments-icon.png"; sourceTree = "<group>"; };
+		31D0458A1A58252D000E501B /* setting1-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting1-icon.png"; sourceTree = "<group>"; };
+		31D0458C1A58262F000E501B /* home1-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home1-icon.png"; sourceTree = "<group>"; };
 		81007AE51A12DA7D008E302C /* light_grey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_grey.jpg; sourceTree = "<group>"; };
 		81007AE71A12DB53008E302C /* vertical-break-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical-break-line.png"; sourceTree = "<group>"; };
 		8100A2A91A15BB5700171F5B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -354,6 +366,12 @@
 		816254E21A1BD51600D486B3 /* Sidebar-Icons */ = {
 			isa = PBXGroup;
 			children = (
+				31D0458C1A58262F000E501B /* home1-icon.png */,
+				31D0458A1A58252D000E501B /* setting1-icon.png */,
+				31D045881A582509000E501B /* tournaments-icon.png */,
+				31D045861A5824FC000E501B /* setting2-icon.png */,
+				31D045841A5824E9000E501B /* home2-icon.png */,
+				31D045821A582323000E501B /* about-icon.png */,
 				816254FE1A1C7CF200D486B3 /* about.png */,
 				816254FF1A1C7CF200D486B3 /* home.png */,
 				816255001A1C7CF200D486B3 /* settings.png */,
@@ -583,12 +601,15 @@
 				81EAE70F1A0F59A6000F6484 /* phone.png in Resources */,
 				81EAE4EA1A0F59A6000F6484 /* dollar.png in Resources */,
 				816255041A1C7CF200D486B3 /* settings.png in Resources */,
+				31D0458B1A58252D000E501B /* setting1-icon.png in Resources */,
 				81D8D50D1A07399400671AFA /* menu2.png in Resources */,
 				81EAE4501A0F59A6000F6484 /* calendar.png in Resources */,
 				81EAE4391A0F59A6000F6484 /* appbar.box.png in Resources */,
+				31D045871A5824FC000E501B /* setting2-icon.png in Resources */,
 				81EAE5381A0F59A6000F6484 /* mail-full.png in Resources */,
 				81C51B7519F60B570038C4B3 /* menu.png in Resources */,
 				81EAE8841A0F59A6000F6484 /* appbar.unlock.png in Resources */,
+				31D045891A582509000E501B /* tournaments-icon.png in Resources */,
 				81EAE4881A0F59A6000F6484 /* horse.png in Resources */,
 				818C68841A12B51E002F5785 /* clock.png in Resources */,
 				816255051A1C7CF200D486B3 /* tournaments.png in Resources */,
@@ -604,8 +625,10 @@
 				8193589119EDF15A00B79AA0 /* chevron-right.png in Resources */,
 				81D8D50A1A07369500671AFA /* bridge.jpg in Resources */,
 				81EAE4041A0F59A6000F6484 /* uparrow.png in Resources */,
+				31D045851A5824E9000E501B /* home2-icon.png in Resources */,
 				81EAE4451A0F59A6000F6484 /* upload.png in Resources */,
 				81EAE5DA1A0F59A6000F6484 /* key1.png in Resources */,
+				31D0458D1A58262F000E501B /* home1-icon.png in Resources */,
 				81D8D5051A072A6300671AFA /* cityscape.jpg in Resources */,
 				81EAE4441A0F59A6000F6484 /* download.png in Resources */,
 				81EAE48F1A0F59A6000F6484 /* right.png in Resources */,
@@ -624,6 +647,7 @@
 				81EAE3FC1A0F59A6000F6484 /* downarrow.png in Resources */,
 				816255031A1C7CF200D486B3 /* home.png in Resources */,
 				81EAE4381A0F59A6000F6484 /* layered.png in Resources */,
+				31D045831A582323000E501B /* about-icon.png in Resources */,
 				816255021A1C7CF200D486B3 /* about.png in Resources */,
 				81EAE8831A0F59A6000F6484 /* appbar.unlock.keyhole.png in Resources */,
 				81EAE6621A0F59A6000F6484 /* money.png in Resources */,
