@@ -77,6 +77,14 @@ class Constants {
         static let abouticon = "about-icon.png";
         static let settingsicon1 = "setting1-icon.png";
         static let settingsicon = "setting2-icon.png";
+        
+        static let aboutlarge = "about-icon-bgtransparent.png"
+        static let homelarge = "home-icon-bgtransparent.png"
+        static let homelarge2 = "home2-icon-bgtransparent.png"
+        static let settinglarge = "setting1-icon-bgtransparent.png"
+        static let settinglarge2 = "setting2-icon-bgtransparent.png"
+        static let tournamentslarge = "tournaments-icon-bgtransparent.png"
+
     }
     struct Label {
         static let user = "Username";

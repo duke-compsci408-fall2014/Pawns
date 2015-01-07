@@ -18,6 +18,12 @@
 		31D045891A582509000E501B /* tournaments-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045881A582509000E501B /* tournaments-icon.png */; };
 		31D0458B1A58252D000E501B /* setting1-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D0458A1A58252D000E501B /* setting1-icon.png */; };
 		31D0458D1A58262F000E501B /* home1-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D0458C1A58262F000E501B /* home1-icon.png */; };
+		31D045941A5921AF000E501B /* about-icon-bgtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D0458E1A5921AF000E501B /* about-icon-bgtransparent.png */; };
+		31D045951A5921AF000E501B /* home-icon-bgtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D0458F1A5921AF000E501B /* home-icon-bgtransparent.png */; };
+		31D045961A5921AF000E501B /* home2-icon-bgtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045901A5921AF000E501B /* home2-icon-bgtransparent.png */; };
+		31D045971A5921AF000E501B /* setting1-icon-bgtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045911A5921AF000E501B /* setting1-icon-bgtransparent.png */; };
+		31D045981A5921AF000E501B /* setting2-icon-bgtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045921A5921AF000E501B /* setting2-icon-bgtransparent.png */; };
+		31D045991A5921AF000E501B /* tournaments-icon-bgtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D045931A5921AF000E501B /* tournaments-icon-bgtransparent.png */; };
 		81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE51A12DA7D008E302C /* light_grey.jpg */; };
 		81007AE81A12DB54008E302C /* vertical-break-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 81007AE71A12DB53008E302C /* vertical-break-line.png */; };
 		8100A2AA1A15BB5700171F5B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100A2A91A15BB5700171F5B /* Utils.swift */; };
@@ -128,6 +134,12 @@
 		31D045881A582509000E501B /* tournaments-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournaments-icon.png"; sourceTree = "<group>"; };
 		31D0458A1A58252D000E501B /* setting1-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting1-icon.png"; sourceTree = "<group>"; };
 		31D0458C1A58262F000E501B /* home1-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home1-icon.png"; sourceTree = "<group>"; };
+		31D0458E1A5921AF000E501B /* about-icon-bgtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-icon-bgtransparent.png"; sourceTree = "<group>"; };
+		31D0458F1A5921AF000E501B /* home-icon-bgtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon-bgtransparent.png"; sourceTree = "<group>"; };
+		31D045901A5921AF000E501B /* home2-icon-bgtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home2-icon-bgtransparent.png"; sourceTree = "<group>"; };
+		31D045911A5921AF000E501B /* setting1-icon-bgtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting1-icon-bgtransparent.png"; sourceTree = "<group>"; };
+		31D045921A5921AF000E501B /* setting2-icon-bgtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting2-icon-bgtransparent.png"; sourceTree = "<group>"; };
+		31D045931A5921AF000E501B /* tournaments-icon-bgtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournaments-icon-bgtransparent.png"; sourceTree = "<group>"; };
 		81007AE51A12DA7D008E302C /* light_grey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_grey.jpg; sourceTree = "<group>"; };
 		81007AE71A12DB53008E302C /* vertical-break-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical-break-line.png"; sourceTree = "<group>"; };
 		8100A2A91A15BB5700171F5B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -366,6 +378,12 @@
 		816254E21A1BD51600D486B3 /* Sidebar-Icons */ = {
 			isa = PBXGroup;
 			children = (
+				31D0458E1A5921AF000E501B /* about-icon-bgtransparent.png */,
+				31D0458F1A5921AF000E501B /* home-icon-bgtransparent.png */,
+				31D045901A5921AF000E501B /* home2-icon-bgtransparent.png */,
+				31D045911A5921AF000E501B /* setting1-icon-bgtransparent.png */,
+				31D045921A5921AF000E501B /* setting2-icon-bgtransparent.png */,
+				31D045931A5921AF000E501B /* tournaments-icon-bgtransparent.png */,
 				31D0458C1A58262F000E501B /* home1-icon.png */,
 				31D0458A1A58252D000E501B /* setting1-icon.png */,
 				31D045881A582509000E501B /* tournaments-icon.png */,
@@ -596,8 +614,10 @@
 				81EAE4E11A0F59A6000F6484 /* crown.png in Resources */,
 				81D8D5071A07319300671AFA /* streets.jpg in Resources */,
 				818C68861A12B585002F5785 /* location.png in Resources */,
+				31D045981A5921AF000E501B /* setting2-icon-bgtransparent.png in Resources */,
 				81EAE4051A0F59A6000F6484 /* appbar.at.png in Resources */,
 				2C7054D219C7CBAE0049BE83 /* Main.storyboard in Resources */,
+				31D045961A5921AF000E501B /* home2-icon-bgtransparent.png in Resources */,
 				81EAE70F1A0F59A6000F6484 /* phone.png in Resources */,
 				81EAE4EA1A0F59A6000F6484 /* dollar.png in Resources */,
 				816255041A1C7CF200D486B3 /* settings.png in Resources */,
@@ -618,6 +638,7 @@
 				81007AE61A12DA7D008E302C /* light_grey.jpg in Resources */,
 				810F5BC41A0F4B8900140332 /* profile_background.jpg in Resources */,
 				81EAE4901A0F59A6000F6484 /* up.png in Resources */,
+				31D045991A5921AF000E501B /* tournaments-icon-bgtransparent.png in Resources */,
 				8193589019EDF15A00B79AA0 /* chevron-left.png in Resources */,
 				81EAE6801A0F59A6000F6484 /* prev.png in Resources */,
 				81EAE4B41A0F59A6000F6484 /* cog.png in Resources */,
@@ -632,6 +653,8 @@
 				81D8D5051A072A6300671AFA /* cityscape.jpg in Resources */,
 				81EAE4441A0F59A6000F6484 /* download.png in Resources */,
 				81EAE48F1A0F59A6000F6484 /* right.png in Resources */,
+				31D045971A5921AF000E501B /* setting1-icon-bgtransparent.png in Resources */,
+				31D045941A5921AF000E501B /* about-icon-bgtransparent.png in Resources */,
 				2C7054D419C7CBAE0049BE83 /* Images.xcassets in Resources */,
 				8193588D19EDEE4800B79AA0 /* BayAreaChessLogo.png in Resources */,
 				81EAE48B1A0F59A6000F6484 /* queen.png in Resources */,
@@ -647,6 +670,7 @@
 				81EAE3FC1A0F59A6000F6484 /* downarrow.png in Resources */,
 				816255031A1C7CF200D486B3 /* home.png in Resources */,
 				81EAE4381A0F59A6000F6484 /* layered.png in Resources */,
+				31D045951A5921AF000E501B /* home-icon-bgtransparent.png in Resources */,
 				31D045831A582323000E501B /* about-icon.png in Resources */,
 				816255021A1C7CF200D486B3 /* about.png in Resources */,
 				81EAE8831A0F59A6000F6484 /* appbar.unlock.keyhole.png in Resources */,
