@@ -17,6 +17,7 @@ class User: UIViewController {
     @IBOutlet var phone : UILabel?;
     @IBOutlet var address : UILabel?;
     @IBOutlet var imageURL : UIImageView?;
+//    @IBOutlet var chessID: UILabel?;
 
     var imagename : String!;
     var customURL : String!;
@@ -89,7 +90,7 @@ class User: UIViewController {
             self.name?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.firstName) + " " + Utils.getFieldFromJSON(json, field: Constants.JSON.lastName);
             self.email?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.email);
             self.username?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.user);
-            
+//            self.chessID?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.chessID);
             self.phone?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.phone);
             self.address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + " " +
                 Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " + Utils.getFieldFromJSON(json, field: Constants.JSON.state);
