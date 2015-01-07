@@ -183,7 +183,7 @@
                                 <rect key="frame" x="181" y="94" width="120" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Beatriz Marinello
-Board Member</string>
+                                    Board Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -192,7 +192,7 @@ Board Member</string>
                                 <rect key="frame" x="13" y="92" width="138" height="53"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Salman Azhar, PhD
-Chair of the Board</string>
+                                    Chair of the Board</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -201,7 +201,7 @@ Chair of the Board</string>
                                 <rect key="frame" x="13" y="152" width="119" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">GM Gabor Kallai
-Board Member</string>
+                                    Board Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -209,7 +209,7 @@ Board Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yRo-BM-Bna">
                                 <rect key="frame" x="184" y="149" width="117" height="52"/>
                                 <string key="text">Jay Stallings
-Board Member</string>
+                                    Board Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -217,7 +217,7 @@ Board Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5FJ-J1-dHc">
                                 <rect key="frame" x="175" y="273" width="133" height="67"/>
                                 <string key="text">Lynn Reed
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -225,7 +225,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OvT-7P-HzB">
                                 <rect key="frame" x="13" y="273" width="138" height="67"/>
                                 <string key="text">Surekha Nidamarty
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -233,7 +233,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-C4-AS1">
                                 <rect key="frame" x="18" y="373" width="128" height="67"/>
                                 <string key="text">Delia Sabau
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -241,7 +241,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eYI-Lp-hqc">
                                 <rect key="frame" x="91" y="448" width="133" height="72"/>
                                 <string key="text">Scott Cameron
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -249,7 +249,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hJG-LG-hAj">
                                 <rect key="frame" x="179" y="373" width="126" height="67"/>
                                 <string key="text">Eric Schiller
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -310,22 +310,22 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5r-Tn-6KC">
                                 <rect key="frame" x="40" y="71" width="240" height="489"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Bay Area Chess started as a parent volunteer organization when my son moved to a new school with a low-quality high-cost commercial program. Our goal was to sharpen the minds of our own children through top-notch instruction by deeply passionate teachers. 
-
-Our work was so successful that other parents requested programs and events at their school. We had to grow fast and hired professional coaching and administrative staff to support the growth. Nine years later, our values have remained the same and we treat all children like our own and do for them what we would do for our children. We have constantly evolved and improved our program to stay committed to that goal. 
-
-Here are some of our key manifestations of that commitment: 
-1. We maintain a low average student-teacher ratio of 9. 
-2. We bring coaching and events to your area at times convenient for you. 
-3. We recruit the best professional coaches by compensating them higher than commercial companies. 
-4. We maintain our fees low with the help of key volunteers who have reached a phase in their life where giving back to the community is the most important thing. 
-
-I thank you for your trust in Bay Area Chess team, whether you are new to our community or a perennial supporter. Help us grow our the next generation and widen our reach by enrolling and encouraging others to enroll with us. 
-
-Sincerely, 
-
-Salman Azhar, Ph.D., 
-Executive Director</string>
+                                <string key="text">Bay Area Chess started as a parent volunteer organization when my son moved to a new school with a low-quality high-cost commercial program. Our goal was to sharpen the minds of our own children through top-notch instruction by deeply passionate teachers.
+                                    
+                                    Our work was so successful that other parents requested programs and events at their school. We had to grow fast and hired professional coaching and administrative staff to support the growth. Nine years later, our values have remained the same and we treat all children like our own and do for them what we would do for our children. We have constantly evolved and improved our program to stay committed to that goal.
+                                    
+                                    Here are some of our key manifestations of that commitment:
+                                    1. We maintain a low average student-teacher ratio of 9.
+                                    2. We bring coaching and events to your area at times convenient for you.
+                                    3. We recruit the best professional coaches by compensating them higher than commercial companies.
+                                    4. We maintain our fees low with the help of key volunteers who have reached a phase in their life where giving back to the community is the most important thing.
+                                    
+                                    I thank you for your trust in Bay Area Chess team, whether you are new to our community or a perennial supporter. Help us grow our the next generation and widen our reach by enrolling and encouraging others to enroll with us.
+                                    
+                                    Sincerely,
+                                    
+                                    Salman Azhar, Ph.D.,
+                                    Executive Director</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

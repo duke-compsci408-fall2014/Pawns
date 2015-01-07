@@ -21,7 +21,7 @@ class About: UIViewController {
     }
     
     /**
-    * Pulls up side bar on event
+    * Opening sidebar triggered by an event
     */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true);

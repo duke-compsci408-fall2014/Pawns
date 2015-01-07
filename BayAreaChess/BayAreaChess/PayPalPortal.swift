@@ -32,9 +32,13 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     
     
     /**
-     * Sends GET request verify login credentials and another
-     * GET request to retrieve payment information about the
-     * tournaments specific costs.
+     * Sends GET request to the API server to verify login
+     * credentials, as well as another GET request that receives
+     * payment information in regards to the tournament specific
+     * costs.
+     * 
+     * Also sends user feedback if payment is completed successfully
+     * or not. 
      *
      * @param sender The sending class
     */
@@ -90,7 +94,9 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     }
     
     /**
-     * PayPal payment view controller.
+     * View controller for the PayPal payment view. 
+     * Verifies payments and dismisses view when
+     * Payment is completed.
      *
      * @param completedPayment A PayPal payment
     */
@@ -114,7 +120,7 @@ class PalPalPortal: UIViewController, PayPalPaymentDelegate {
     
     /**
      * On confirmation of payment, sends details about payment back to the server
-     * to be processed.
+     * to be processed. Data sent includes user, tournament id, and payment amount
      *
      * @param completedPayment A PayPal payment
     */

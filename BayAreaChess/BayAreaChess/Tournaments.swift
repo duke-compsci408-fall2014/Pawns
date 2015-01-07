@@ -23,7 +23,7 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     
     /**
-     * Pulls up side bar on event
+     * Opening sidebar triggered by an event
     */
     @IBAction func onMenu() {
         (tabBarController as TabBarController).sidebar.showInViewController(self, animated: true)
@@ -62,7 +62,10 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     /**
-     * Deserializes JSON coming in through the connection passed in, populates fields from this object
+     * Deserializes JSON coming in through the connection passed in. Uses data to populate
+     * any fields within the view.
+     *
+     * Gets tournament names, descriptions, dates and IDs
      *
      * @param connection The connection being passed through
     */
@@ -94,7 +97,8 @@ class Tournaments : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     /**
-     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     * Deserializes JSON coming in through the connection passed in. Uses data to populate any
+     * text fields, and uses image placeholders if necessary.
      *
      * @param tableView The targeted table view
      * @param indexPath The current index path

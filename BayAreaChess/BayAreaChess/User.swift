@@ -17,6 +17,7 @@ class User: UIViewController {
     @IBOutlet var phone : UILabel?;
     @IBOutlet var address : UILabel?;
     @IBOutlet var imageURL : UIImageView?;
+//    @IBOutlet var chessID: UILabel?;
 
     var imagename : String!;
     var customURL : String!;
@@ -53,7 +54,9 @@ class User: UIViewController {
     }
     
     /**
-     * Deserializes JSON coming in through the connection passed in, populates text, and image placeholders
+     * Deserializes JSON coming in through the connection passed in. Use data to 
+     * populate fields and update text, as well as use image placeholders if necessary
+     * Currently uses images from Gravatar.
      *
      * @param connection The connection being passed through
     */
@@ -76,7 +79,8 @@ class User: UIViewController {
     }
     
     /**
-     * Populates text fields on view with information from JSON object
+     * Populates text fields on view with information from JSON object, including
+     * data for name, email, username, phone, and address
      *
      * @param json The JSON dictionary from which the fields will get data
     */
@@ -86,7 +90,7 @@ class User: UIViewController {
             self.name?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.firstName) + " " + Utils.getFieldFromJSON(json, field: Constants.JSON.lastName);
             self.email?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.email);
             self.username?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.user);
-            
+//            self.chessID?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.chessID);
             self.phone?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.phone);
             self.address?.text = Utils.getFieldFromJSON(json, field: Constants.JSON.address) + " " +
                 Utils.getFieldFromJSON(json, field: Constants.JSON.city) + ", " + Utils.getFieldFromJSON(json, field: Constants.JSON.state);
@@ -100,7 +104,7 @@ class User: UIViewController {
     }
     
     /**
-     * Sends username to next segue
+     * Maintains username to send to the next view via the segue
      *
      * @param connection The connection being passed through
     */
