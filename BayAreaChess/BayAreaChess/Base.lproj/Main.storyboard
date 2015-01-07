@@ -2,10 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pfa-Sn-gE3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="TitilliumWeb-Regular.ttf">
-            <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
@@ -183,7 +183,7 @@
                                 <rect key="frame" x="181" y="94" width="120" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Beatriz Marinello
-Board Member</string>
+                                    Board Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -192,7 +192,7 @@ Board Member</string>
                                 <rect key="frame" x="13" y="92" width="138" height="53"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Salman Azhar, PhD
-Chair of the Board</string>
+                                    Chair of the Board</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -201,7 +201,7 @@ Chair of the Board</string>
                                 <rect key="frame" x="13" y="152" width="119" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">GM Gabor Kallai
-Board Member</string>
+                                    Board Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -209,7 +209,7 @@ Board Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yRo-BM-Bna">
                                 <rect key="frame" x="184" y="149" width="117" height="52"/>
                                 <string key="text">Jay Stallings
-Board Member</string>
+                                    Board Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -217,7 +217,7 @@ Board Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5FJ-J1-dHc">
                                 <rect key="frame" x="175" y="273" width="133" height="67"/>
                                 <string key="text">Lynn Reed
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -225,7 +225,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OvT-7P-HzB">
                                 <rect key="frame" x="13" y="273" width="138" height="67"/>
                                 <string key="text">Surekha Nidamarty
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -233,7 +233,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-C4-AS1">
                                 <rect key="frame" x="18" y="373" width="128" height="67"/>
                                 <string key="text">Delia Sabau
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -241,7 +241,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eYI-Lp-hqc">
                                 <rect key="frame" x="91" y="448" width="133" height="72"/>
                                 <string key="text">Scott Cameron
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -249,7 +249,7 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hJG-LG-hAj">
                                 <rect key="frame" x="179" y="373" width="126" height="67"/>
                                 <string key="text">Eric Schiller
-Board of Advisors Member</string>
+                                    Board of Advisors Member</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -310,22 +310,22 @@ Board of Advisors Member</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5r-Tn-6KC">
                                 <rect key="frame" x="40" y="71" width="240" height="489"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Bay Area Chess started as a parent volunteer organization when my son moved to a new school with a low-quality high-cost commercial program. Our goal was to sharpen the minds of our own children through top-notch instruction by deeply passionate teachers. 
-
-Our work was so successful that other parents requested programs and events at their school. We had to grow fast and hired professional coaching and administrative staff to support the growth. Nine years later, our values have remained the same and we treat all children like our own and do for them what we would do for our children. We have constantly evolved and improved our program to stay committed to that goal. 
-
-Here are some of our key manifestations of that commitment: 
-1. We maintain a low average student-teacher ratio of 9. 
-2. We bring coaching and events to your area at times convenient for you. 
-3. We recruit the best professional coaches by compensating them higher than commercial companies. 
-4. We maintain our fees low with the help of key volunteers who have reached a phase in their life where giving back to the community is the most important thing. 
-
-I thank you for your trust in Bay Area Chess team, whether you are new to our community or a perennial supporter. Help us grow our the next generation and widen our reach by enrolling and encouraging others to enroll with us. 
-
-Sincerely, 
-
-Salman Azhar, Ph.D., 
-Executive Director</string>
+                                <string key="text">Bay Area Chess started as a parent volunteer organization when my son moved to a new school with a low-quality high-cost commercial program. Our goal was to sharpen the minds of our own children through top-notch instruction by deeply passionate teachers.
+                                    
+                                    Our work was so successful that other parents requested programs and events at their school. We had to grow fast and hired professional coaching and administrative staff to support the growth. Nine years later, our values have remained the same and we treat all children like our own and do for them what we would do for our children. We have constantly evolved and improved our program to stay committed to that goal.
+                                    
+                                    Here are some of our key manifestations of that commitment:
+                                    1. We maintain a low average student-teacher ratio of 9.
+                                    2. We bring coaching and events to your area at times convenient for you.
+                                    3. We recruit the best professional coaches by compensating them higher than commercial companies.
+                                    4. We maintain our fees low with the help of key volunteers who have reached a phase in their life where giving back to the community is the most important thing.
+                                    
+                                    I thank you for your trust in Bay Area Chess team, whether you are new to our community or a perennial supporter. Help us grow our the next generation and widen our reach by enrolling and encouraging others to enroll with us.
+                                    
+                                    Sincerely,
+                                    
+                                    Salman Azhar, Ph.D.,
+                                    Executive Director</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -465,7 +465,7 @@ Executive Director</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="fDm-CN-7aP" kind="show" identifier="selectEvent" id="CGA-pw-AOY"/>
+                                            <segue destination="fDm-CN-7aP" kind="show" identifier="selectEvent" id="UyZ-Ns-AH6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -481,7 +481,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nen-ja-ZlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="1029"/>
+            <point key="canvasLocation" x="1133" y="1029"/>
         </scene>
         <!--User Update-->
         <scene sceneID="IUC-9T-Qbd">
@@ -592,20 +592,27 @@ Executive Director</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkgray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J48-QK-roF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkgray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J48-QK-roF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6nx-Gl-uA5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6nx-Gl-uA5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-E4-n2C">
-                                <rect key="frame" x="120" y="310" width="160" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-E4-n2C">
+                                <rect key="frame" x="120" y="359" width="160" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Bd6-YM-tV1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6w-NQ-CuO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6w-NQ-CuO">
                                 <rect key="frame" x="15" y="15" width="35" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="mAm-QI-mN7"/>
+                                    <constraint firstAttribute="height" constant="40" id="um4-0d-1TC"/>
+                                </constraints>
                                 <state key="normal" image="prev.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -614,37 +621,47 @@ Executive Director</string>
                                     <action selector="back" destination="hXa-LD-oke" eventType="touchUpInside" id="4Ec-Qg-Lxr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2r-yf-O6L">
-                                <rect key="frame" x="0.0" y="191" width="320" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2r-yf-O6L">
+                                <rect key="frame" x="0.0" y="221" width="320" height="35"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-Cb-XNw">
-                                <rect key="frame" x="62" y="224" width="197" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-Cb-XNw">
+                                <rect key="frame" x="62" y="254" width="197" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4pO-EP-WW7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUD-4r-PYC">
-                                <rect key="frame" x="100" y="63" width="120" height="120"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-hW-IsD">
-                                <rect key="frame" x="120" y="262" width="160" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-hW-IsD">
+                                <rect key="frame" x="120" y="299" width="160" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="p30-wa-IXF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail-full.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-19-z2l">
-                                <rect key="frame" x="62" y="253" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-full.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-19-z2l">
+                                <rect key="frame" x="62" y="290" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3Gx-9F-3Mb"/>
+                                    <constraint firstAttribute="height" constant="40" id="s0P-Ei-DPq"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-PX-yXT">
-                                <rect key="frame" x="62" y="301" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-PX-yXT">
+                                <rect key="frame" x="62" y="350" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homewhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-my-dFP">
-                                <rect key="frame" x="62" y="349" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homewhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-my-dFP">
+                                <rect key="frame" x="62" y="410" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5Va-fv-IsB"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-8y-UkQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-8y-UkQ">
                                 <rect key="frame" x="120" y="470" width="80" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="15"/>
@@ -656,29 +673,68 @@ Executive Director</string>
                                     <segue destination="Aeb-kP-UiZ" kind="show" identifier="update" id="dub-ae-zsd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-DQ-snt">
-                                <rect key="frame" x="120" y="349" width="160" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-DQ-snt">
+                                <rect key="frame" x="120" y="410" width="160" height="40"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="US Chess ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21l-QG-TBj">
-                                <rect key="frame" x="120" y="408" width="160" height="21"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="king.png" translatesAutoresizingMaskIntoConstraints="NO" id="q74-pe-VZP">
-                                <rect key="frame" x="62" y="397" width="40" height="43"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rUD-4r-PYC">
+                                <rect key="frame" x="100" y="81" width="120" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J48-QK-roF" firstAttribute="top" secondItem="xQT-Sm-Jyt" secondAttribute="top" id="1d7-c8-J5w"/>
+                            <constraint firstItem="dlK-8y-UkQ" firstAttribute="top" secondItem="oka-DQ-snt" secondAttribute="bottom" constant="20" id="2MN-Wg-8w1"/>
+                            <constraint firstItem="BCG-19-z2l" firstAttribute="leading" secondItem="6vK-PX-yXT" secondAttribute="leading" id="3Vy-ki-Dmd"/>
+                            <constraint firstItem="oka-DQ-snt" firstAttribute="leading" secondItem="dlK-8y-UkQ" secondAttribute="leading" id="4yv-Id-INO"/>
+                            <constraint firstItem="JHr-hW-IsD" firstAttribute="top" secondItem="ABd-Cb-XNw" secondAttribute="bottom" constant="24" id="5hD-8v-07B"/>
+                            <constraint firstItem="oka-DQ-snt" firstAttribute="bottom" secondItem="n1c-my-dFP" secondAttribute="bottom" id="6m4-be-Xev"/>
+                            <constraint firstItem="BCG-19-z2l" firstAttribute="leading" secondItem="ABd-Cb-XNw" secondAttribute="leading" id="7n0-dx-jqx"/>
+                            <constraint firstItem="J48-QK-roF" firstAttribute="leading" secondItem="r2r-yf-O6L" secondAttribute="leading" id="CXV-YF-hNl"/>
+                            <constraint firstItem="r2r-yf-O6L" firstAttribute="top" secondItem="rUD-4r-PYC" secondAttribute="bottom" constant="20" id="DXa-7v-YoT"/>
+                            <constraint firstAttribute="bottom" secondItem="J48-QK-roF" secondAttribute="bottom" id="FuV-P4-S5x"/>
+                            <constraint firstItem="BCG-19-z2l" firstAttribute="top" secondItem="r2r-yf-O6L" secondAttribute="bottom" constant="34" id="G2L-zg-vCx"/>
+                            <constraint firstItem="JHr-hW-IsD" firstAttribute="leading" secondItem="BCG-19-z2l" secondAttribute="trailing" constant="18" id="GFf-88-Xje"/>
+                            <constraint firstAttribute="trailing" secondItem="r2r-yf-O6L" secondAttribute="trailing" id="HNK-rm-7dj"/>
+                            <constraint firstItem="rUD-4r-PYC" firstAttribute="top" secondItem="qf1-Dd-4ao" secondAttribute="bottom" constant="61" id="HXB-Dk-gks"/>
+                            <constraint firstItem="6vK-PX-yXT" firstAttribute="trailing" secondItem="n1c-my-dFP" secondAttribute="trailing" id="Ihu-vW-Kul"/>
+                            <constraint firstItem="JHr-hW-IsD" firstAttribute="leading" secondItem="JiK-E4-n2C" secondAttribute="leading" id="LRc-g6-udl"/>
+                            <constraint firstItem="BCG-19-z2l" firstAttribute="top" secondItem="6nx-Gl-uA5" secondAttribute="bottom" constant="8" symbolic="YES" id="ONU-U3-XeC"/>
+                            <constraint firstItem="ABd-Cb-XNw" firstAttribute="centerX" secondItem="r2r-yf-O6L" secondAttribute="centerX" id="RIk-lq-m5n"/>
+                            <constraint firstItem="6nx-Gl-uA5" firstAttribute="trailing" secondItem="r2r-yf-O6L" secondAttribute="trailing" id="RLN-ff-ptM"/>
+                            <constraint firstItem="6vK-PX-yXT" firstAttribute="top" secondItem="BCG-19-z2l" secondAttribute="bottom" constant="20" id="Req-fy-bUN"/>
+                            <constraint firstItem="R6w-NQ-CuO" firstAttribute="leading" secondItem="xQT-Sm-Jyt" secondAttribute="leadingMargin" constant="-1" id="SpV-ce-oDP"/>
+                            <constraint firstItem="6nx-Gl-uA5" firstAttribute="top" secondItem="J48-QK-roF" secondAttribute="top" id="TUF-sG-KeN"/>
+                            <constraint firstItem="BCG-19-z2l" firstAttribute="trailing" secondItem="6vK-PX-yXT" secondAttribute="trailing" id="Tt9-vH-KdO"/>
+                            <constraint firstItem="JiK-E4-n2C" firstAttribute="trailing" secondItem="oka-DQ-snt" secondAttribute="trailing" id="VhW-cH-Z8x"/>
+                            <constraint firstItem="n1c-my-dFP" firstAttribute="top" secondItem="oka-DQ-snt" secondAttribute="top" id="W6h-2P-xQn"/>
+                            <constraint firstItem="JiK-E4-n2C" firstAttribute="leading" secondItem="oka-DQ-snt" secondAttribute="leading" id="WK1-wW-WzI"/>
+                            <constraint firstItem="J48-QK-roF" firstAttribute="leading" secondItem="xQT-Sm-Jyt" secondAttribute="leading" id="X3E-jH-PE2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JHr-hW-IsD" secondAttribute="trailing" constant="24" id="a5z-JZ-hFQ"/>
+                            <constraint firstItem="qqE-E5-fup" firstAttribute="top" secondItem="n1c-my-dFP" secondAttribute="bottom" constant="69" id="afv-eq-79F"/>
+                            <constraint firstItem="JiK-E4-n2C" firstAttribute="top" secondItem="JHr-hW-IsD" secondAttribute="bottom" constant="39" id="c0o-gc-Gv7"/>
+                            <constraint firstItem="BCG-19-z2l" firstAttribute="top" secondItem="ABd-Cb-XNw" secondAttribute="bottom" constant="15" id="cf0-H4-6Kz"/>
+                            <constraint firstItem="qqE-E5-fup" firstAttribute="top" secondItem="dlK-8y-UkQ" secondAttribute="bottom" constant="19" id="fbj-p6-1mZ"/>
+                            <constraint firstItem="n1c-my-dFP" firstAttribute="leading" secondItem="6vK-PX-yXT" secondAttribute="leading" id="gDa-CE-EbF"/>
+                            <constraint firstItem="n1c-my-dFP" firstAttribute="top" secondItem="6vK-PX-yXT" secondAttribute="bottom" constant="20" id="h24-pS-wFz"/>
+                            <constraint firstItem="R6w-NQ-CuO" firstAttribute="top" secondItem="xQT-Sm-Jyt" secondAttribute="topMargin" constant="15" id="i3i-KA-f1d"/>
+                            <constraint firstItem="r2r-yf-O6L" firstAttribute="centerX" secondItem="rUD-4r-PYC" secondAttribute="centerX" id="iDR-kg-9Ll"/>
+                            <constraint firstItem="rUD-4r-PYC" firstAttribute="leading" secondItem="xQT-Sm-Jyt" secondAttribute="leadingMargin" constant="84" id="iP1-l7-4Wb"/>
+                            <constraint firstItem="6nx-Gl-uA5" firstAttribute="leading" secondItem="r2r-yf-O6L" secondAttribute="leading" id="jDU-8u-jDf"/>
+                            <constraint firstItem="JiK-E4-n2C" firstAttribute="trailing" secondItem="JHr-hW-IsD" secondAttribute="trailing" id="lZg-d9-R0F"/>
+                            <constraint firstItem="J48-QK-roF" firstAttribute="trailing" secondItem="r2r-yf-O6L" secondAttribute="trailing" id="olH-eQ-KY2"/>
+                            <constraint firstItem="oka-DQ-snt" firstAttribute="top" secondItem="JiK-E4-n2C" secondAttribute="bottom" constant="30" id="qTL-kn-yRb"/>
+                            <constraint firstItem="dlK-8y-UkQ" firstAttribute="centerX" secondItem="ABd-Cb-XNw" secondAttribute="centerX" id="uUc-AS-2qn"/>
+                            <constraint firstItem="ABd-Cb-XNw" firstAttribute="top" secondItem="rUD-4r-PYC" secondAttribute="bottom" constant="53" id="vfp-ZB-oyj"/>
+                            <constraint firstItem="ABd-Cb-XNw" firstAttribute="leading" secondItem="xQT-Sm-Jyt" secondAttribute="leadingMargin" constant="46" id="xPq-hY-T78"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cB5-7U-Kye"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="address" destination="oka-DQ-snt" id="Jj6-YV-RAf"/>
-                        <outlet property="chessID" destination="21l-QG-TBj" id="jbD-rM-cMg"/>
                         <outlet property="email" destination="JHr-hW-IsD" id="6we-0a-HM0"/>
                         <outlet property="imageURL" destination="rUD-4r-PYC" id="5MZ-JH-BxF"/>
                         <outlet property="name" destination="r2r-yf-O6L" id="ETb-4j-d4N"/>
@@ -688,7 +744,7 @@ Executive Director</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0h-Q5-94p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="335"/>
+            <point key="canvasLocation" x="-702" y="290"/>
         </scene>
         <!--Login-->
         <scene sceneID="XbV-nd-yI0">
@@ -816,7 +872,6 @@ Executive Director</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ynf-00-vfQ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -896,12 +951,6 @@ Executive Director</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkgray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-uY-93P">
                                 <rect key="frame" x="0.0" y="-1" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tournament Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-mR-bWH">
-                                <rect key="frame" x="87" y="50" width="205" height="27"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WG-ma-HlC">
                                 <rect key="frame" x="15" y="15" width="35" height="40"/>
                                 <state key="normal" image="prev.png">
@@ -934,40 +983,37 @@ Executive Director</string>
                                 <rect key="frame" x="0.0" y="460" width="325" height="5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horizontal-break-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-co-jS7">
-                                <rect key="frame" x="73" y="74" width="252" height="5"/>
+                                <rect key="frame" x="73" y="100" width="252" height="5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4:30 PM PST" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-tH-7H1">
-                                <rect key="frame" x="89" y="127" width="150" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="November 18, 2020" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o8-9b-gER">
-                                <rect key="frame" x="89" y="187" width="215" height="50"/>
+                                <rect key="frame" x="89" y="100" width="215" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money.png" translatesAutoresizingMaskIntoConstraints="NO" id="qCq-a6-zuC">
-                                <rect key="frame" x="9" y="307" width="50" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm1-nc-46g">
-                                <rect key="frame" x="9" y="127" width="50" height="50"/>
+                                <rect key="frame" x="9" y="310" width="50" height="50"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location.png" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-tq-ix6">
-                                <rect key="frame" x="9" y="247" width="50" height="50"/>
+                                <rect key="frame" x="9" y="210" width="50" height="50"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar.png" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-5C-YlN">
-                                <rect key="frame" x="9" y="187" width="50" height="50"/>
+                                <rect key="frame" x="9" y="110" width="50" height="50"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$15" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-IJ-LAb">
-                                <rect key="frame" x="89" y="307" width="215" height="50"/>
+                                <rect key="frame" x="89" y="300" width="215" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Smith Rd." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-HC-Xnt">
-                                <rect key="frame" x="89" y="247" width="215" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tournament Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-mR-bWH">
+                                <rect key="frame" x="87" y="30" width="205" height="62"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Smith Rd." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-HC-Xnt">
+                                <rect key="frame" x="89" y="200" width="215" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -982,7 +1028,6 @@ Executive Director</string>
                         <outlet property="amount" destination="xDV-IJ-LAb" id="K53-De-GM3"/>
                         <outlet property="dates" destination="7o8-9b-gER" id="6NK-ln-OEv"/>
                         <outlet property="name" destination="T1r-mR-bWH" id="LWa-jh-YZk"/>
-                        <outlet property="start_time" destination="RsP-tH-7H1" id="zrM-nD-Y4B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbO-81-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1058,7 +1103,6 @@ Executive Director</string>
     <resources>
         <image name="bayarea.jpg" width="760" height="1350"/>
         <image name="calendar.png" width="76" height="76"/>
-        <image name="clock.png" width="76" height="76"/>
         <image name="darkgray.jpg" width="640" height="1136"/>
         <image name="homewhite.png" width="76" height="76"/>
         <image name="horizontal-break-line.png" width="160" height="33"/>

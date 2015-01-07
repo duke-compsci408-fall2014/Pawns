@@ -16,7 +16,7 @@ class Constants {
         static let registerURL = loginURL+register+"/";
         static let updateURL = loginURL+update+"/";
         static let tournamentsURL = baseURL+tournaments+"/";
-        static let allTournamentsURL = tournamentsURL+all+"/";
+        static let allTournamentsURL = tournamentsURL+general+"/";
         static let registrationURL = baseURL+registration+"/";
         static let registrationRegisterURL = registrationURL+register+"/";
         static let login = "login";
@@ -24,13 +24,14 @@ class Constants {
         static let verify = "verify";
         static let register = "register";
         static let tournaments = "tournaments";
-        static let all = "all";
+        static let general = "general";
         static let registration = "registration";
     }
     struct JSON {
         static let user = "username";
         static let pass = "password";
         static let name = "name";
+        static let summary = "summary";
         static let description = "description";
         static let amount = "amount";
         static let date = "date_play";
@@ -49,6 +50,10 @@ class Constants {
         static let id = "id";
         static let startTime = "start_time";
         static let netPay = "net_pay";
+        static let start = "start";
+        static let subDate = "date";
+        static let dateTime = "dateTime";
+        static let location = "location";
     }
     struct Response {
         static let recieved = "didReceiveResponse";
@@ -65,6 +70,21 @@ class Constants {
         static let tournaments = "tournaments.png";
         static let about = "about.png";
         static let settings = "settings.png";
+        
+        static let homeicon = "home2-icon.png";
+        static let homeicon2 = "home1s-icon.png";
+        static let tournamentsicon = "tournaments-icon.png";
+        static let abouticon = "about-icon.png";
+        static let settingsicon1 = "setting1-icon.png";
+        static let settingsicon = "setting2-icon.png";
+        
+        static let aboutlarge = "about-icon-bgtransparent.png"
+        static let homelarge = "home-icon-bgtransparent.png"
+        static let homelarge2 = "home2-icon-bgtransparent.png"
+        static let settinglarge = "setting1-icon-bgtransparent.png"
+        static let settinglarge2 = "setting2-icon-bgtransparent.png"
+        static let tournamentslarge = "tournaments-icon-bgtransparent.png"
+
     }
     struct Label {
         static let user = "Username";

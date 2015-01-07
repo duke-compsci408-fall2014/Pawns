@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var tournaments = require('../controllers/tournaments_controller');
 
-router.route('/all/:id')
-	.get(tournaments.getTournament);
+router.route('/general')
+    .get(tournaments.generalTournaments);
 
-router.route('/all')
-	.get(tournaments.allTournaments);
+router.route('/general/:id')
+	.get(tournaments.specificTournament);
 
 module.exports = router;
