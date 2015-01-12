@@ -17,7 +17,7 @@ class User: UIViewController {
     @IBOutlet var phone : UILabel?;
     @IBOutlet var address : UILabel?;
     @IBOutlet var imageURL : UIImageView?;
-//    @IBOutlet var chessID: UILabel?;
+    @IBOutlet var chessID: UILabel?;
 
     var imagename : String!;
     var customURL : String!;
