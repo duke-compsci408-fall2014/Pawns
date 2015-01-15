@@ -50,6 +50,7 @@
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
             <string>TitilliumWeb-Regular</string>
+            <string>TitilliumWeb-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -598,8 +599,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6nx-Gl-uA5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-E4-n2C">
-                                <rect key="frame" x="120" y="359" width="160" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiK-E4-n2C">
+                                <rect key="frame" x="120" y="337" width="160" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Bd6-YM-tV1"/>
                                 </constraints>
@@ -636,8 +637,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-hW-IsD">
-                                <rect key="frame" x="120" y="299" width="160" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-hW-IsD">
+                                <rect key="frame" x="120" y="294" width="160" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="p30-wa-IXF"/>
                                 </constraints>
@@ -645,18 +646,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-full.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-19-z2l">
-                                <rect key="frame" x="62" y="290" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mail-full.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-19-z2l">
+                                <rect key="frame" x="62" y="285" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="3Gx-9F-3Mb"/>
                                     <constraint firstAttribute="height" constant="40" id="s0P-Ei-DPq"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-PX-yXT">
-                                <rect key="frame" x="62" y="350" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-PX-yXT">
+                                <rect key="frame" x="62" y="328" width="40" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homewhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-my-dFP">
-                                <rect key="frame" x="62" y="410" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="homewhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-my-dFP">
+                                <rect key="frame" x="62" y="376" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Va-fv-IsB"/>
                                 </constraints>
@@ -673,14 +674,26 @@
                                     <segue destination="Aeb-kP-UiZ" kind="show" identifier="update" id="dub-ae-zsd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-DQ-snt">
-                                <rect key="frame" x="120" y="410" width="160" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-DQ-snt">
+                                <rect key="frame" x="120" y="376" width="160" height="40"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="US Chess ID" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCb-HJ-Swj">
+                                <rect key="frame" x="120" y="424" width="160" height="40"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rUD-4r-PYC">
                                 <rect key="frame" x="100" y="81" width="120" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pawn.png" translatesAutoresizingMaskIntoConstraints="NO" id="ITz-fd-6QB">
+                                <rect key="frame" x="62" y="424" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4cp-bz-SUR"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -735,6 +748,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="address" destination="oka-DQ-snt" id="Jj6-YV-RAf"/>
+                        <outlet property="chessID" destination="dCb-HJ-Swj" id="t8h-vb-DqX"/>
                         <outlet property="email" destination="JHr-hW-IsD" id="6we-0a-HM0"/>
                         <outlet property="imageURL" destination="rUD-4r-PYC" id="5MZ-JH-BxF"/>
                         <outlet property="name" destination="r2r-yf-O6L" id="ETb-4j-d4N"/>
@@ -1111,6 +1125,7 @@
         <image name="mail-full.png" width="76" height="76"/>
         <image name="menu2.png" width="60" height="60"/>
         <image name="money.png" width="76" height="76"/>
+        <image name="pawn.png" width="76" height="76"/>
         <image name="phone.png" width="76" height="76"/>
         <image name="prev.png" width="76" height="76"/>
         <image name="profile_background.jpg" width="500" height="333"/>
